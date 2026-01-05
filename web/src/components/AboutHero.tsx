@@ -8,7 +8,7 @@ export function AboutHero() {
     const t = useTranslations("About.hero");
 
     return (
-        <SectionWrap className="pt-12 pb-24 border-b border-border min-h-[70vh] flex flex-col justify-end">
+        <SectionWrap id="about-hero" variant="light" className="pt-12 pb-24 border-b border-border min-h-[70vh] flex flex-col justify-end">
             <div className="space-y-12 md:space-y-16">
                 <div className="space-y-6">
                     <motion.div

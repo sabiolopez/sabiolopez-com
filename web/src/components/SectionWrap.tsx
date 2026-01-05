@@ -26,29 +26,28 @@ export function SectionWrap({
 
     useEffect(() => {
         const observerOptions = {
-            // Trigger when the section is well within the viewport
-            // Making it more responsive to scroll direction
             rootMargin: "-20% 0% -20% 0%",
-            threshold: [0, 0.1, 0.5],
+            threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.8],
         };
 
         const themeObserver = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                // If the section is prominently in the viewport
-                if (entry.isIntersecting && entry.intersectionRatio > 0.1) {
-                    if (variant === "dark") {
-                        document.body.classList.add("section-dark");
-                        document.body.classList.remove("bg-canvas");
-                    } else {
-                        document.body.classList.remove("section-dark");
-                        document.body.classList.add("bg-canvas");
-                    }
-                }
+            // Sort to find the most "visible" section in this notification batch
+            const sortedEntries = [...entries].sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+            const mostVisible = sortedEntries[0];
 
-                // Gatilho para animação de reveal
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
+            if (mostVisible.isIntersecting && mostVisible.intersectionRatio > 0.1) {
+                if (variant === "dark") {
+                    document.body.classList.add("section-dark");
+                    document.body.classList.remove("bg-canvas");
+                } else {
+                    document.body.classList.remove("section-dark");
+                    document.body.classList.add("bg-canvas");
                 }
+            }
+
+            // Animate only if intersecting
+            entries.forEach(entry => {
+                if (entry.isIntersecting) setIsVisible(true);
             });
         }, observerOptions);
 

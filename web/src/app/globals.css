@@ -22,11 +22,13 @@
   /* Indigo Profundo - For serious accents */
 
   /* Dark Mode Variant (Conceptual) */
-  --color-canvas-dark: #121212;
-  --color-surface-dark: #1A1A1A;
+  --color-canvas-dark: #0D0D0D;
+  --color-surface-dark: #151515;
+  --color-surface-elevated-dark: #1F1F1F;
   --color-ink-primary-dark: #F9F9F7;
   --color-ink-secondary-dark: #A0A0A0;
-  --color-border-dark: #2A2A2A;
+  --color-ink-tertiary-dark: #888888;
+  --color-border-dark: #1A1A1A;
 
   /* Fonts */
   --font-sans: var(--font-inter);
@@ -66,8 +68,10 @@
   .section-dark {
     --color-canvas: var(--color-canvas-dark);
     --color-surface: var(--color-surface-dark);
+    --color-surface-elevated: var(--color-surface-elevated-dark);
     --color-ink-primary: var(--color-ink-primary-dark);
     --color-ink-secondary: var(--color-ink-secondary-dark);
+    --color-ink-tertiary: var(--color-ink-tertiary-dark);
     --color-border: var(--color-border-dark);
     background-color: var(--color-canvas);
     color: var(--color-ink-primary);
@@ -207,7 +211,7 @@ body {
   color: var(--color-ink-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: background-color 0.6s cubic-bezier(0.22, 1, 0.36, 1), color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: background-color 0.8s cubic-bezier(0.16, 1, 0.3, 1), color 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   scroll-behavior: smooth;
 }
 

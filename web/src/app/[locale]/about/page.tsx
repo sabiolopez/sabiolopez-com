@@ -28,14 +28,14 @@ export default async function AboutPage({
             <AboutHero />
 
             {/* Narrative Sections */}
-            <SectionWrap className="py-24">
+            <SectionWrap id="narrative" variant="dark" className="py-24">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
 
                     {/* Left: Deep Dive */}
                     <div className="lg:col-span-7 space-y-12">
                         <div className="prose prose-xl text-ink-primary font-light leading-relaxed space-y-8 max-w-2xl">
                             {/* Currently indication - Refined & Subtle */}
-                            <div className="bg-surface-elevated/10 border-l border-accent/30 pl-6 py-1 mb-12">
+                            <div className="bg-white/5 border-l border-accent/40 pl-6 py-1 mb-12">
                                 <span className="block font-mono text-[10px] text-accent uppercase mb-1 tracking-widest opacity-80">{t("current.label")}</span>
                                 <p className="text-base font-normal text-ink-primary/90">
                                     {t("current.description")}
@@ -84,11 +84,11 @@ export default async function AboutPage({
                             </ul>
                         </div>
 
-                        <div className="bg-surface-elevated p-8 border border-border space-y-6">
-                            <h4 className="text-label-caps text-ink-tertiary">{t("stack.title")}</h4>
+                        <div className="bg-surface-elevated/40 backdrop-blur-sm p-8 border border-border/20 space-y-6 group/stack hover:border-accent/30 transition-all duration-500">
+                            <h4 className="text-label-caps text-ink-tertiary group-hover/stack:text-accent transition-colors">{t("stack.title")}</h4>
                             <div className="flex flex-wrap gap-2">
                                 {(t.raw("stack.tools") as string[]).map(tool => (
-                                    <span key={tool} className="tag-chip">
+                                    <span key={tool} className="tag-chip !bg-white/5 !border-white/10 hover:!border-accent/30 hover:!text-accent transition-all">
                                         {tool}
                                     </span>
                                 ))}

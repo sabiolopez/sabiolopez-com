@@ -1,0 +1,417 @@
+{
+    "Common": {
+        "nav": {
+            "home": "Home",
+            "work": "Work",
+            "thinking": "Thinking",
+            "methodology": "Methodology",
+            "about": "About",
+            "contact": "Contact"
+        }
+    },
+    "HomePage": {
+        "hero": {
+            "title1": "Product &",
+            "title2": "Growth Designer",
+            "title3": "for SaaS B2B",
+            "description": "With 20 years of experience, I architect end-to-end B2B journeys. Specialized in acquisition, activation, and onboarding strategies for SLG/PLG products, bridging AI into the design workflow.",
+            "socialProof": "Product Designer"
+        },
+        "expertise": {
+            "title": "Technical Mastery & Practice",
+            "label": "Specialties",
+            "categories": {
+                "saas_b2b": {
+                    "tab_name": "SaaS B2B & B2B2C",
+                    "years": "+20",
+                    "label": "BUSINESS CONTEXT",
+                    "title": "SaaS B2B & B2B2C Strategy",
+                    "description": "Deep understanding of complex ecosystems. From mapping non-linear buyer journeys and Job-to-be-Done (JTBD) to granular segmentation and persona-based personalization.",
+                    "processes": [
+                        "mapping of journeys and critical flows",
+                        "segmentation by profile and intent",
+                        "information architecture for platforms",
+                        "decisions driven by constraints and operation",
+                        "alignment between product, data, and service"
+                    ],
+                    "stack": "Amplitude · GA · Datadog · Miro · Jira"
+                },
+                "product_design": {
+                    "tab_name": "Product & Growth",
+                    "years": "+15",
+                    "label": "PRODUCT CONTEXT",
+                    "title": "Product & Growth Design",
+                    "description": "Hypothesis-driven design integrated into the revenue engine. I focus on high-complexity technical products where design is a tool for validation, not just an output.",
+                    "processes": [
+                        "information architecture and navigation",
+                        "componentization and UI patterns",
+                        "design system and tokens (consumption and alignment)",
+                        "navigable prototypes and validation",
+                        "specification for handoff"
+                    ],
+                    "stack": "Figma · Framer · Maze · Dovetail"
+                },
+                "product_growth": {
+                    "tab_name": "PRODUCT GROWTH",
+                    "years": "+5",
+                    "label": "PERFORMANCE CONTEXT",
+                    "title": "Experiments in acquisition, activation, and retention",
+                    "description": "Planning and execution of tests in critical journeys, connecting value proposition, communication, and flow frictions. Funnel reading, behavior, and cohorts to prioritize hypotheses and iterate.",
+                    "processes": [
+                        "instrumentation and funnel reading",
+                        "hypotheses and experiment design",
+                        "A/B testing and rapid validation",
+                        "onboarding and activation optimization",
+                        "collaboration with marketing, sales, and product"
+                    ],
+                    "stack": "Amplitude · GA · Hotjar · Optimizely"
+                },
+                "ai_design": {
+                    "tab_name": "AI Implementation",
+                    "years": "2",
+                    "label": "STRATEGIC CONTEXT",
+                    "title": "AI Implementation",
+                    "description": "I don't just talk about AI; I implement it. Using Large Language Models (LLMs) and custom agents to accelerate discovery, automate synthesis, and prototype intelligent product features.",
+                    "processes": [
+                        "prototyping with AI",
+                        "structuring of prompts and agents",
+                        "support for discovery and synthesis",
+                        "automation of design flows"
+                    ],
+                    "stack": "ChatGPT · Claude · Perplexity · GitHub · Webflow · Windsurf"
+                }
+            },
+            "ui": {
+                "processes_label": "Processes & Applications",
+                "years_label": "years",
+                "expertise_label": "EXPERTISE"
+            }
+        },
+        "acting_areas": {
+            "title_main": "Processes &",
+            "title_accent": "End-to-End Vision",
+            "label": "Methodology",
+            "items": {
+                "research": {
+                    "title": "Research, Journeys & Personas",
+                    "description": "Mapping non-linear buyer journeys, identifying Buying Personas, and applying JTBD to guide product and communication decisions.",
+                    "tags": "research · B2B buying journey · JTBD"
+                },
+                "strategy": {
+                    "title": "Product Strategy & Discovery",
+                    "description": "From reading the problem to defining hypotheses and success criteria that guide design and engineering.",
+                    "tags": "discovery · strategy · context"
+                },
+                "systems": {
+                    "title": "Systems and Experience Design",
+                    "description": "Designing digital products considering complex architecture and flows. Interfaces treated as systems.",
+                    "tags": "systems · architecture · UX"
+                },
+                "processes": {
+                    "title": "Agile Processes and Documentation",
+                    "description": "Structuring PRDs and results-oriented decision flows. Connecting discovery, backlog, and execution.",
+                    "tags": "agile · documentation · PRD"
+                },
+                "growth": {
+                    "title": "Growth, Experimentation & Metrics",
+                    "description": "Planning and executing experiments in acquisition and activation. Defining metrics and behavioral analysis.",
+                    "tags": "growth · experimentation · metrics"
+                },
+                "ai": {
+                    "title": "AI Implementation & Process",
+                    "description": "Practical use of LLMs and custom agents to accelerate discovery, automate synthesis, and prototype intelligent product features.",
+                    "tags": "AI implementation · LLMs · efficiency"
+                },
+                "execution": {
+                    "title": "Execution in Complex Environments",
+                    "description": "Transversal action between product, design, and engineering. From problem to delivery, ensuring continuous evolution.",
+                    "tags": "end-to-end · scalability · delivery"
+                }
+            }
+        },
+        "problems": {
+            "title": "The Problems I Solve",
+            "p1": "Engineering vs. Intuition",
+            "p2": "The Activation Gap",
+            "p3": "Disconnected Growth"
+        },
+        "work": {
+            "title": "Selected Projects",
+            "abstract_label": "Summary",
+            "competencies_label": "Core Competencies",
+            "read_more": "Learn More",
+            "cases": {
+                "edenred": {
+                    "tag": "Ticket Edenred",
+                    "front_title": "Hiring journey map nearly triples conversion",
+                    "back_text": "Restructuring of the acquisition and activation journey based on buyer profile mapping, intentions, and operational frictions, reducing complexity and increasing clarity for B2B managers.",
+                    "chips": [
+                        "Acquisition",
+                        "Activation",
+                        "Buyer Persona",
+                        "User Journey",
+                        "B2B SaaS"
+                    ]
+                },
+                "qive": {
+                    "tag": "Qive",
+                    "front_title": "Activation strategy for 7-day trial journey",
+                    "back_text": "Definition of behavior-oriented activation strategy for trial users, connecting perceived value, initial product usage, and success criteria in the first few days.",
+                    "chips": [
+                        "Activation",
+                        "Trial",
+                        "Product Growth",
+                        "B2B SaaS",
+                        "Metrics"
+                    ]
+                },
+                "gympass_redesign": {
+                    "tag": "Gympass",
+                    "front_title": "Global redesign of the acquisition experience",
+                    "back_text": "Redesign of the acquisition experience across multiple markets, balancing global consistency, local personalization, and distinct needs between B2B and B2C audiences.",
+                    "chips": [
+                        "Acquisition",
+                        "Global Platform",
+                        "B2B2C",
+                        "Systems Design",
+                        "Scale"
+                    ]
+                },
+                "gympass_geo": {
+                    "tag": "Gympass",
+                    "front_title": "Geolocation feature and impact on B2B and B2C sales",
+                    "back_text": "Creation of a geolocation feature to make network capillarity visible, supporting purchase decisions, sales arguments, and value perception in different markets.",
+                    "chips": [
+                        "Geolocation",
+                        "Conversion",
+                        "B2B2C",
+                        "Feature Strategy",
+                        "Digital Product"
+                    ]
+                },
+                "cma_brasil": {
+                    "tag": "CMA Brasil",
+                    "front_title": "Landing page for international NGO launch in Brazil",
+                    "back_text": "Development of a landing page for the Brazilian operation launch of a global NGO, structuring message, context, and clear action for different audience profiles.",
+                    "chips": [
+                        "Landing Page",
+                        "Content Strategy",
+                        "Social Impact",
+                        "Launch"
+                    ]
+                },
+                "portfolio": {
+                    "tag": "Sábio Lopez",
+                    "front_title": "Portfolio: AI-driven end-to-end development",
+                    "back_text": "End-to-end use of generative AI to develop this portfolio, from architecture and code to content creation and CMS structure for dynamic management.",
+                    "chips": [
+                        "AI Engineering",
+                        "Product Design",
+                        "CMS Automation",
+                        "Next.js"
+                    ]
+                }
+            }
+        },
+        "thinking": {
+            "title": "Featured Work & Thoughts",
+            "status": "[ STATUS: CURATING_ARCHIVE ]",
+            "wip_suffix": "2024 — WIP",
+            "note": "I finally took some time off from debugging other people's products to fix my own. The gallery is currently being restored. I'm archiving legacy work to make room for new \"Product-Led\" cases and AI workflow insights."
+        },
+        "contact": {
+            "title_main": "Get in",
+            "title_accent": "Touch",
+            "description": "If you are dealing with a complex problem that needs more than just \"prettier buttons,\" let’s talk.",
+            "chat_topics_label": "What's on your mind?",
+            "chat_topics": [
+                "Exchange Experiences",
+                "Projects",
+                "Mentorship"
+            ],
+            "mentoring_label": "Mentoring & Support",
+            "mentoring": "I always make time for designers starting out or looking to pivot into Growth. If you need an outside perspective or a career push, let’s chat.",
+            "social_label": "Social & Direct",
+            "email": "sabio@sabiolopez.com",
+            "linkedin_label": "LinkedIn",
+            "linkedin_url": "https://linkedin.com/in/sabiolopez",
+            "cta": "Send a Message"
+        },
+        "footer": {
+            "cta_title": "Let's build",
+            "cta_highlight": "the future.",
+            "cta_button": "Start a Project",
+            "email": "sabio@sabiolopez.com",
+            "linkedin_url": "https://linkedin.com/in/sabiolopez",
+            "rights": "© 2025 Sabio Lopez — Architectural Intelligence"
+        }
+    },
+    "HowIWork": {
+        "hero": {
+            "title": "Design as a Tool for Validation",
+            "subtitle": "My methodology bridges high-fidelity intuition with engineering-grade execution."
+        },
+        "principle": {
+            "title": "Operating Principle",
+            "description": "My work isn't about pixels; it's about documented decisions. Design serves as an interface to validate business hypotheses and reduce technical risk."
+        },
+        "process": {
+            "title": "Operational Flow",
+            "step1": {
+                "title": "Context Ingestion",
+                "desc": "Deep dive into qualitative and quantitative data (SQL, Hotjar, Research)."
+            },
+            "step2": {
+                "title": "Hypothesis Mapping",
+                "desc": "Defining JTBD and buyer personas for complex B2B ecosystems."
+            },
+            "step3": {
+                "title": "Prototyping for Validation",
+                "desc": "Creating the minimum necessary logic to test behavior in real-world scenarios."
+            },
+            "step4": {
+                "title": "Results Engineering",
+                "desc": "Tight alignment with PMs and Devs to ensure high-performance delivery."
+            }
+        },
+        "cta": {
+            "title": "Looking for more than just aesthetics?",
+            "button": "Let's document decisions"
+        }
+    },
+    "About": {
+        "hero": {
+            "title_main": "Design, Strategy &",
+            "title_accent": "The Evolution of Experience",
+            "subtitle": "Over 20 years of transforming complexity into operational clarity. My journey is driven by a passion for solving real problems, bridging strategic design, growth, and the potential of AI.",
+            "ui": {
+                "profile_strategy": "PROFILE & STRATEGY",
+                "professional_summary": "Professional Summary",
+                "career_length": "20+ Years Trajectory"
+            }
+        },
+        "current": {
+            "label": "Currently",
+            "description": "Product Designer at Ticket Edenred Serviços, focused on the self-service acquisition journey and activation strategies."
+        },
+        "narrative": {
+            "intro": "My initial education was in Advertising and Publicity (technical), followed by a degree in Social Communication with a focus on Public Relations from PUC-RS, and later an MBA in Business Management from FGV.",
+            "early_career": "The beginning of my career took place in traditional communication contexts, with a brief stint in the broadcasting industry, followed by a role in corporate communications within chemical industries, where I remained for about three years.",
+            "transition": "Joining the marketing department of a management systems company marked the beginning of a deeper transition. It was in this environment that a deliberate career change began: moving from a focus on communication and marketing to an increasingly technical area linked to product design, processes, and technology. This transition did not happen abruptly, but as a continuous process of relearning—methods, techniques, tools, and ways of working—over time.",
+            "growth": "Later, the experience at Gympass (now Wellhub) was the gateway into the Growth universe. Acting as the company's first Growth Designer, I found in Product Growth an axis that connected product, business, data, and communication, and I began to use this mindset as a guide for career decisions and professional performance.",
+            "ai_focus": "Over the last two years, an interest in artificial intelligence has taken on a significant role. It is a field still in formation, and the focus has been on exploring practical applications, understanding how AI can integrate into work processes, design methods, and, in some cases, be thought of as a product. Whenever possible, this exploration happens not only in the final result but throughout the process itself—just like in this portfolio."
+        },
+        "education": {
+            "title": "Education & Specializations",
+            "degrees": [
+                {
+                    "degree": "MBA in Business Management",
+                    "institution": "FGV"
+                },
+                {
+                    "degree": "B.A. in Social Communication (PR)",
+                    "institution": "PUC-RS"
+                },
+                {
+                    "degree": "Technical in Advertising & Publicity",
+                    "institution": "UFRGS/Escola de Comércio"
+                }
+            ],
+            "courses": [
+                {
+                    "pilar": "Design Systems",
+                    "course": "Design System Specialist",
+                    "institution": "Meiuca",
+                    "focus": "Planning, construction, and governance of scalable design systems"
+                },
+                {
+                    "pilar": "Product",
+                    "course": "Product Management",
+                    "institution": "PM3",
+                    "focus": "Fundamentals of product management, life cycle, and working in squads"
+                },
+                {
+                    "pilar": "Product",
+                    "course": "Product Discovery",
+                    "institution": "PM3",
+                    "focus": "Research techniques, problem definition, and hypothesis validation"
+                },
+                {
+                    "pilar": "Product",
+                    "course": "Product Analytics",
+                    "institution": "PM3",
+                    "focus": "Using data to guide product decisions"
+                },
+                {
+                    "pilar": "UX / Architecture",
+                    "course": "OOUX Certification",
+                    "institution": "OOUX.org",
+                    "focus": "Structuring UX from objects, relationships, and domain rules"
+                },
+                {
+                    "pilar": "Growth Design",
+                    "course": "Growth Design",
+                    "institution": "Growth.Design",
+                    "focus": "User psychology applied to acquisition, activation, and retention"
+                },
+                {
+                    "pilar": "Product / Growth",
+                    "course": "Product Design 2.0 – Product-Led Growth",
+                    "institution": "BTX",
+                    "focus": "Product-oriented design and growth in PLG environments"
+                }
+            ]
+        },
+        "stats": {
+            "seniority_label": "Seniority",
+            "seniority_value": "20+ Years",
+            "location_label": "Location",
+            "location_value": "Remote / Global",
+            "specialization_label": "Specialization",
+            "specialization_value": "B2B SaaS Growth"
+        },
+        "principles": {
+            "title": "Operational Principles",
+            "p1": "Data-Driven Discovery",
+            "p2": "Systemic Thinking",
+            "p3": "Frictionless Handoff"
+        },
+        "stack": {
+            "title": "Stack & Tools",
+            "tools": [
+                "Figma",
+                "React",
+                "Next.js",
+                "TailwindCSS",
+                "Python",
+                "LLM Fine-tuning",
+                "Mixpanel",
+                "Amplitude"
+            ]
+        },
+        "images": {
+            "primary_alt": "Professional close-up of Sabio Lopez"
+        }
+    },
+    "ProjectWIP": {
+        "subtitle": "STOP LOOKING AT THE PIXELS FOR A SECOND",
+        "title": "Oops, you caught me.",
+        "intro": "This page doesn't exist (yet).",
+        "message": "But since you're here, let me tell you what's going on. I decided to plan and build this portfolio from end-to-end using AI — from discovery and images to the last line of code.",
+        "context": "The cases you clicked on aren't available yet because I'm currently finalizing the proprietary CMS architecture that will manage these projects. My goal is to deliver a structured content system, not just a static page.",
+        "footer_note": "So yes, you fell into an \"error.\" But even this error is part of the plan.",
+        "cta_home": "Back to Home"
+    },
+    "NotFound": {
+        "subtitle": "404 — NOT FOUND",
+        "title": "Unknown path",
+        "message": "The page you are looking for doesn't exist or has been moved to a new architecture.",
+        "cta": "Back to Home"
+    },
+    "Error": {
+        "subtitle": "500 — SERVER ERROR",
+        "title": "Something went wrong",
+        "message": "We encountered an unexpected error in our architecture. Our team of agents has been notified.",
+        "cta": "Try Again"
+    }
+}

@@ -1,0 +1,276 @@
+@import "tailwindcss";
+
+@theme {
+  /* Modernist Atelier Palette - Refined */
+  --color-canvas: #F9F9F7;
+  --color-surface: #FFFFFF;
+  --color-surface-elevated: #FFFFFF;
+
+  --color-ink-primary: #1A1A1A;
+  --color-ink-secondary: #555555;
+  --color-ink-tertiary: #888888;
+
+  --color-border: #E5E5E0;
+  --color-border-strong: #D1D1D1;
+
+  /* Refined Accent Palette */
+  --color-accent: #C68E17;
+  /* Ocre Queimado - For primary highlights */
+  --color-accent-soft: #3A504B;
+  /* Verde Juniper - For secondary balance */
+  --color-highlight: #1B263B;
+  /* Indigo Profundo - For serious accents */
+
+  /* Dark Mode Variant (Conceptual) */
+  --color-canvas-dark: #121212;
+  --color-surface-dark: #1A1A1A;
+  --color-ink-primary-dark: #F9F9F7;
+  --color-ink-secondary-dark: #A0A0A0;
+  --color-border-dark: #2A2A2A;
+
+  /* Fonts */
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
+
+  /* Spacing */
+  --spacing-gutter: 2rem;
+
+  /* Typography Tokens (Standardized Hierarchy) */
+  --font-size-display: clamp(4rem, 8vw, 7rem);
+  /* Main Hero Only */
+  --font-size-h1: clamp(2.5rem, 5vw, 4rem);
+  /* Page Titles (About, Thinking) */
+  --font-size-h2: clamp(1.75rem, 3.5vw, 2.75rem);
+  /* Section Titles */
+  --font-size-h3: 1.5rem;
+  /* Card Titles (Desktop) */
+  --font-size-h4: 1.25rem;
+  /* Small Card Titles (Desktop) */
+
+  --font-size-body-lg: clamp(1.125rem, 1.5vw, 1.25rem);
+  --font-size-body: 1rem;
+  --font-size-body-sm: 0.875rem;
+
+  --font-size-caps-label: 12px;
+  --font-size-caps-utility: 12px;
+  --font-size-caps-detail: 10px;
+
+  --letter-spacing-caps-wide: 0.25em;
+  --letter-spacing-caps-normal: 0.15em;
+  --letter-spacing-caps-tight: 0.1em;
+
+  --animate-spin-slow: spin 12s linear infinite;
+}
+
+@layer base {
+  .section-dark {
+    --color-canvas: var(--color-canvas-dark);
+    --color-surface: var(--color-surface-dark);
+    --color-ink-primary: var(--color-ink-primary-dark);
+    --color-ink-secondary: var(--color-ink-secondary-dark);
+    --color-border: var(--color-border-dark);
+    background-color: var(--color-canvas);
+    color: var(--color-ink-primary);
+  }
+
+  h1,
+  .text-display {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    line-height: 0.95;
+    font-size: var(--font-size-h1);
+    @apply text-ink-primary;
+  }
+
+  h2,
+  .text-h1 {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+    font-size: var(--font-size-h2);
+    @apply text-ink-primary;
+  }
+
+  h3,
+  .text-h2 {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+    font-size: var(--font-size-h3);
+    @apply text-ink-primary;
+  }
+
+  p,
+  .text-body {
+    font-family: var(--font-sans);
+    font-weight: 300;
+    line-height: 1.625;
+    font-size: var(--font-size-body);
+  }
+
+  .text-body-lg {
+    font-family: var(--font-sans);
+    font-weight: 300;
+    line-height: 1.6;
+    font-size: var(--font-size-body-lg);
+  }
+
+  .text-body-sm {
+    font-family: var(--font-sans);
+    font-weight: 300;
+    line-height: 1.5;
+    font-size: var(--font-size-body-sm);
+  }
+}
+
+@layer components {
+  .bg-ink-fixed {
+    background-color: #1A1A1A;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-4 px-8 py-4 bg-accent text-canvas font-mono text-sm font-bold uppercase tracking-widest transition-all duration-300 hover:bg-highlight hover:scale-[1.02] active:scale-[0.98] shadow-sm;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-3 px-6 py-3 border border-ink-primary/20 bg-canvas/40 backdrop-blur-sm text-ink-primary font-mono text-xs font-bold uppercase tracking-widest transition-all duration-300 hover:border-accent hover:text-accent;
+  }
+
+  /* Para overlines de seção e marcadores (ex: "EXPERTISE") */
+  .text-label-caps {
+    @apply font-mono font-semibold uppercase text-ink-secondary;
+    font-size: var(--font-size-caps-label);
+    letter-spacing: var(--letter-spacing-caps-wide);
+  }
+
+  /* Para links de navegação e botões (ex: Menu, CTA Scroll) */
+  .text-utility-caps {
+    @apply font-mono font-medium uppercase;
+    font-size: var(--font-size-caps-utility);
+    letter-spacing: var(--letter-spacing-caps-normal);
+  }
+
+  /* Para dados técnicos e micro-metadados (ex: Spec Card, Year) */
+  .text-detail-caps {
+    @apply font-mono font-medium uppercase;
+    font-size: var(--font-size-caps-detail);
+    letter-spacing: var(--letter-spacing-caps-tight);
+  }
+
+  .cta-link {
+    @apply inline-flex items-center gap-2 border-b border-accent/40 pb-1 text-ink-primary hover:text-accent hover:border-accent transition-all duration-300 font-mono font-medium uppercase;
+    font-size: var(--font-size-caps-utility);
+    letter-spacing: var(--letter-spacing-caps-normal);
+  }
+
+  .tag-chip {
+    @apply inline-flex px-2.5 py-1 border border-border/20 bg-surface/30 text-xs font-mono uppercase tracking-[0.1em] text-ink-primary transition-colors;
+  }
+
+  /* Hero Specific Utilities */
+  .hero-tag {
+    @apply font-mono font-bold uppercase text-accent mb-6 block;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+  }
+
+  .hero-title {
+    @apply font-sans font-bold tracking-tighter leading-[0.9] text-ink-primary;
+    font-size: var(--font-size-display);
+  }
+
+  .hero-title-accent {
+    @apply font-light italic text-ink-tertiary;
+  }
+
+  .section-title {
+    @apply font-sans font-bold tracking-tighter leading-[1.05] text-ink-primary;
+    font-size: var(--font-size-h2);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .glass-panel {
+    background-color: color-mix(in srgb, var(--color-surface) 90%, transparent);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--color-border);
+  }
+}
+
+body {
+  background-color: var(--color-canvas);
+  color: var(--color-ink-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.6s cubic-bezier(0.22, 1, 0.36, 1), color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
+}
+
+/* Reveal Animations */
+.reveal-observer {
+  opacity: 0;
+  transform: translateY(30px) scale(0.98);
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-observer.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+@utility text-reveal {
+  overflow: hidden;
+
+  &>* {
+    display: block;
+    animation: text-reveal-anim 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+}
+
+@keyframes text-reveal-anim {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Scrollbar Minimalista */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-ink-tertiary);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

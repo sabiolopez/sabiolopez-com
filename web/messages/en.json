@@ -235,6 +235,9 @@
             "email": "sabio@sabiolopez.com",
             "linkedin_label": "LinkedIn",
             "linkedin_url": "https://linkedin.com/in/sabiolopez",
+            "github_label": "GitHub",
+            "github_url": "https://github.com/sabiolopez",
+            "profile_image_alt": "Portrait of Sabio Lopez in the contact section",
             "cta": "Send a Message"
         },
         "footer": {

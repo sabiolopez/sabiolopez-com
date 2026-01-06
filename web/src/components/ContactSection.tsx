@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { SectionWrap } from "./SectionWrap";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import { AboutProfileImage } from "./AboutProfileImage";
 
 export function ContactSection() {
     const t = useTranslations("HomePage.contact");
@@ -77,39 +78,60 @@ export function ContactSection() {
                             ))}
                         </div>
                     </motion.div>
-
-                    {/* Mentoring Card - Preserved in backlog.md for future re-activation */}
                 </div>
 
                 <div className="md:col-span-12 lg:col-span-5 space-y-16 lg:pl-12 lg:pt-12">
-                    <div className="space-y-8">
-                        <span className="block text-label-caps text-ink-tertiary/60">{t("social_label")}</span>
-                        <div className="flex flex-col gap-8">
-                            <motion.a
-                                href={`mailto:${t("email")}`}
-                                whileHover={{ x: 10 }}
-                                className="group flex flex-col gap-2 w-fit"
-                            >
-                                <span className="text-detail-caps text-accent opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0">Email</span>
-                                <div className="flex items-center gap-6 text-h1 font-sans font-medium border-b border-border/20 pb-4 group-hover:border-accent transition-all">
-                                    <span className="text-ink-primary group-hover:text-ink-primary transition-colors">{t("email")}</span>
-                                    <ArrowUpRight className="w-6 h-6 text-accent opacity-40 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
-                                </div>
-                            </motion.a>
+                    {/* Portrait - Subtle subtle presence */}
+                    <div className="flex flex-col gap-12">
+                        <AboutProfileImage
+                            src="/images/about/sabio-face.jpg"
+                            alt={t("profile_image_alt")}
+                            className="!max-w-[180px] grayscale contrast-125 hover:grayscale-0 transition-all duration-700"
+                        />
 
-                            <motion.a
-                                href={t("linkedin_url")}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                whileHover={{ x: 10 }}
-                                className="group flex flex-col gap-2 w-fit"
-                            >
-                                <span className="text-detail-caps text-accent opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0">LinkedIn</span>
-                                <div className="flex items-center gap-6 text-h1 font-sans font-medium border-b border-border/20 pb-4 group-hover:border-accent transition-all">
-                                    <span className="text-ink-primary group-hover:text-ink-primary transition-colors">{t("linkedin_label")}</span>
-                                    <ArrowUpRight className="w-6 h-6 text-accent opacity-40 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
-                                </div>
-                            </motion.a>
+                        <div className="space-y-8">
+                            <span className="block text-label-caps text-ink-tertiary/60">{t("social_label")}</span>
+                            <div className="flex flex-col gap-8">
+                                <motion.a
+                                    href={`mailto:${t("email")}`}
+                                    whileHover={{ x: 10 }}
+                                    className="group flex flex-col gap-2 w-fit"
+                                >
+                                    <span className="text-detail-caps text-accent opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0">Email</span>
+                                    <div className="flex items-center gap-6 text-h1 font-sans font-medium border-b border-border/20 pb-4 group-hover:border-accent transition-all">
+                                        <span className="text-ink-primary group-hover:text-ink-primary transition-colors">{t("email")}</span>
+                                        <ArrowUpRight className="w-6 h-6 text-accent opacity-40 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
+                                    </div>
+                                </motion.a>
+
+                                <motion.a
+                                    href={t("linkedin_url")}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    whileHover={{ x: 10 }}
+                                    className="group flex flex-col gap-2 w-fit"
+                                >
+                                    <span className="text-detail-caps text-accent opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0">LinkedIn</span>
+                                    <div className="flex items-center gap-6 text-h1 font-sans font-medium border-b border-border/20 pb-4 group-hover:border-accent transition-all">
+                                        <span className="text-ink-primary group-hover:text-ink-primary transition-colors">{t("linkedin_label")}</span>
+                                        <ArrowUpRight className="w-6 h-6 text-accent opacity-40 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
+                                    </div>
+                                </motion.a>
+
+                                <motion.a
+                                    href={t("github_url")}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    whileHover={{ x: 10 }}
+                                    className="group flex flex-col gap-2 w-fit"
+                                >
+                                    <span className="text-detail-caps text-accent opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0">GitHub</span>
+                                    <div className="flex items-center gap-6 text-h1 font-sans font-medium border-b border-border/20 pb-4 group-hover:border-accent transition-all">
+                                        <span className="text-ink-primary group-hover:text-ink-primary transition-colors">{t("github_label")}</span>
+                                        <ArrowUpRight className="w-6 h-6 text-accent opacity-40 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
+                                    </div>
+                                </motion.a>
+                            </div>
                         </div>
                     </div>
                 </div>

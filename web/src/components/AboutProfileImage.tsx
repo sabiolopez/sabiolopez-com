@@ -6,16 +6,17 @@ import Image from "next/image";
 interface AboutProfileImageProps {
     src: string;
     alt: string;
+    className?: string;
 }
 
-export function AboutProfileImage({ src, alt }: AboutProfileImageProps) {
+export function AboutProfileImage({ src, alt, className }: AboutProfileImageProps) {
     return (
         <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="relative aspect-square max-w-[280px] group cursor-default"
+            className={`relative aspect-square max-w-[280px] group cursor-default ${className || ""}`}
         >
             {/* Glow effect - Subtle accent gold */}
             <div className="absolute inset-0 bg-accent/5 rounded-none blur-3xl group-hover:bg-accent/15 transition-colors duration-1000" />

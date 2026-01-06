@@ -93,39 +93,39 @@
       "label": "Metodologia",
       "items": {
         "research": {
-          "title": "Pesquisa, Jornadas & Personas",
-          "description": "Mapeamento de jornadas de compra não lineares, identificação de Buying Personas e aplicação de JTBD para orientar decisões de produto e comunicação.",
-          "tags": "research · B2B buying journey · JTBD"
+          "title": "Pesquisa de Jornadas e Personas (B2B)",
+          "description": "Construção da base de entendimento do problema a partir de jornadas reais em contextos B2B. O trabalho envolve identificar jobs to be done, personas decisoras e operacionais, segmentações e fluxos existentes antes de qualquer decisão de produto ou design.",
+          "tags": "B2B Journeys · Jornadas · Personas · Segmentação · JTBD"
         },
         "strategy": {
-          "title": "Estratégia de Produto & Discovery",
-          "description": "Atuação desde a leitura do problema até a definição de hipóteses e critérios de sucesso que orientam design e engenharia.",
-          "tags": "discovery · strategy · context"
+          "title": "Estratégia de Produto e Discovery",
+          "description": "Atuação em discovery orientado a hipóteses, combinando dados quantitativos e qualitativos para estruturar decisões de produto. O foco está na triangulação de evidências para validar suposições, priorizar oportunidades e evoluir hipóteses ao longo da jornada.",
+          "tags": "Product Discovery · Hipóteses · Dados Quantitativos · Dados Qualitativos · Triangulação"
         },
         "systems": {
-          "title": "Design de Sistemas e Experiências",
-          "description": "Desenho de produtos digitais considerando arquitetura, regras e fluxos complexos. Interfaces tratadas como sistemas.",
-          "tags": "systems · architecture · UX"
+          "title": "Design Systems e Arquitetura de Experiências",
+          "description": "Entendimento da experiência como consequência da arquitetura do produto. Atuação em design systems, tokens, componentes e estruturas de tela, considerando limitações técnicas, legados e necessidade de escala para sustentar ideação e evolução contínua.",
+          "tags": "Design Systems · Arquitetura de Produto · Componentização · Tokens · Templates · Estrutura de Telas"
         },
         "processes": {
-          "title": "Processos Ágeis e Documentação",
-          "description": "Estruturação de PRDs e fluxos de decisão orientados a resultados. Conexão entre discovery, backlog e execução.",
-          "tags": "agile · documentation · PRD"
+          "title": "Processos Ágeis e Operação de Produto",
+          "description": "Integração do design em contextos reais de produto e engenharia. Experiência prática com processos ágeis, documentação (PRDs), gestão de backlog e alinhamento contínuo entre design, produto e operação, mantendo foco em objetivos e métricas-chave.",
+          "tags": "Agile · Backlog · Produto · Engenharia · Operação · OKRs · North Star · Key Metrics"
         },
         "growth": {
-          "title": "Growth, Experimentação e Métricas",
-          "description": "Planejamento e execução de experimentos em aquisição, ativação e uso. Definição de métricas e análise de comportamento.",
-          "tags": "growth · experimentation · metrics"
+          "title": "5. Growth, Experimentação e Métricas",
+          "description": "Mentalidade orientada a experimentação, com clareza entre iniciativas estruturais e testes rápidos. Atuação em ciclos de validação, MVPs e leitura de métricas ao longo da jornada de growth, considerando aquisição, ativação e monetização.",
+          "tags": "Growth · Experimentação · Métricas · AARRR · Aquisição · Ativação · Monetização"
         },
         "ai": {
-          "title": "Implementação de IA & Processo",
-          "description": "Uso prático de LLMs e agentes customizados para acelerar o discovery, automatizar sínteses e prototipar funcionalidades inteligentes.",
-          "tags": "AI implementation · LLMs · efficiency"
+          "title": "Inteligência Artificial aplicada ao Processo de Design",
+          "description": "Uso transversal de IA ao longo de todo o processo de design e produto, desde discovery e ideação até prototipação, documentação e geração de artefatos. Foco em integrar IA a processos existentes, conectando design, produto e engenharia.",
+          "tags": "AI in Design · AI in Discovery · Prototipação · Vibe Coding · Produto · Processo"
         },
         "execution": {
-          "title": "Execução em Ambientes Complexos",
-          "description": "Atuação transversal entre produto, design e engenharia. Do problema à entrega, garantindo evolução contínua.",
-          "tags": "end-to-end · scalability · delivery"
+          "title": "Atuação em Ambientes Complexos",
+          "description": "Experiência em produtos B2B de alta complexidade, envolvendo sistemas legados, ERPs, modelos de dados e integrações múltiplas. Consideração constante dessas estruturas como parte do processo decisório de design e gestão de produto.",
+          "tags": "Sistemas Complexos · ERP · ERD · Integrações · Legado · B2B"
         }
       }
     },

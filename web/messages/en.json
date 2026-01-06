@@ -93,39 +93,39 @@
             "label": "Methodology",
             "items": {
                 "research": {
-                    "title": "Research, Journeys & Personas",
-                    "description": "Mapping non-linear buyer journeys, identifying Buying Personas, and applying JTBD to guide product and communication decisions.",
-                    "tags": "research · B2B buying journey · JTBD"
+                    "title": "Research on B2B Journeys & Personas",
+                    "description": "Building a base for understanding the problem from real-world B2B journeys. Work involves identifying jobs to be done, decision-making and operational personas, segmentation, and existing flows before any product or design decisions.",
+                    "tags": "B2B Journeys · Journeys · Personas · Segmentation · JTBD"
                 },
                 "strategy": {
                     "title": "Product Strategy & Discovery",
-                    "description": "From reading the problem to defining hypotheses and success criteria that guide design and engineering.",
-                    "tags": "discovery · strategy · context"
+                    "description": "Active in hypothesis-driven discovery, combining quantitative and qualitative data to structure product decisions. Focus is on triangulating evidence to validate assumptions, prioritize opportunities, and evolve hypotheses throughout the journey.",
+                    "tags": "Product Discovery · Hypotheses · Quantitative Data · Qualitative Data · Triangulation"
                 },
                 "systems": {
-                    "title": "Systems and Experience Design",
-                    "description": "Designing digital products considering complex architecture and flows. Interfaces treated as systems.",
-                    "tags": "systems · architecture · UX"
+                    "title": "Design Systems & Experience Architecture",
+                    "description": "Understanding experience as a consequence of product architecture. Working on design systems, tokens, components, and screen structures, considering technical limitations, legacy systems, and the need for scale to sustain continuous ideation and evolution.",
+                    "tags": "Design Systems · Product Architecture · Componentization · Tokens · Templates · Screen Structure"
                 },
                 "processes": {
-                    "title": "Agile Processes and Documentation",
-                    "description": "Structuring PRDs and results-oriented decision flows. Connecting discovery, backlog, and execution.",
-                    "tags": "agile · documentation · PRD"
+                    "title": "Agile Processes & Product Operations",
+                    "description": "Integrating design into real-world product and engineering contexts. Hands-on experience with agile processes, documentation (PRDs), backlog management, and continuous alignment between design, product, and operations, focusing on key objectives and metrics.",
+                    "tags": "Agile · Backlog · Product · Engineering · Operations · OKRs · North Star · Key Metrics"
                 },
                 "growth": {
                     "title": "Growth, Experimentation & Metrics",
-                    "description": "Planning and executing experiments in acquisition and activation. Defining metrics and behavioral analysis.",
-                    "tags": "growth · experimentation · metrics"
+                    "description": "Experimentation-driven mindset, with clarity between structural initiatives and rapid tests. Working on validation cycles, MVPs, and metric analysis across the growth journey, considering acquisition, activation, and monetization.",
+                    "tags": "Growth · Experimentation · Metrics · AARRR · Acquisition · Activation · Monetization"
                 },
                 "ai": {
-                    "title": "AI Implementation & Process",
-                    "description": "Practical use of LLMs and custom agents to accelerate discovery, automate synthesis, and prototype intelligent product features.",
-                    "tags": "AI implementation · LLMs · efficiency"
+                    "title": "Artificial Intelligence in the Design Process",
+                    "description": "Transversal use of AI across the entire design and product process, from discovery and ideation to prototyping, documentation, and artifact generation. Focus on integrating AI into existing processes, connecting design, product, and engineering.",
+                    "tags": "AI in Design · AI in Discovery · Prototyping · Vibe Coding · Product · Process"
                 },
                 "execution": {
-                    "title": "Execution in Complex Environments",
-                    "description": "Transversal action between product, design, and engineering. From problem to delivery, ensuring continuous evolution.",
-                    "tags": "end-to-end · scalability · delivery"
+                    "title": "Working in Complex Environments",
+                    "description": "Experience in high-complexity B2B products involving legacy systems, ERPs, data models, and multiple integrations. Constant consideration of these structures as part of the design and product management decision-making process.",
+                    "tags": "Complex Systems · ERP · ERD · Integrations · Legacy · B2B"
                 }
             }
         },

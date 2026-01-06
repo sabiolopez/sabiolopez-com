@@ -3,7 +3,8 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { SectionWrap } from "@/components/SectionWrap";
 import { AboutHero } from "@/components/AboutHero";
-import { Clock, Globe, Target, GraduationCap, BookOpen } from "lucide-react";
+import { Clock, Globe, Target, GraduationCap } from "lucide-react";
+import { AboutProfileImage } from "@/components/AboutProfileImage";
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -70,6 +71,11 @@ export default async function AboutPage({
 
                     {/* Right: Principles & Tools */}
                     <div className="lg:col-span-5 space-y-16">
+                        <AboutProfileImage
+                            src="/images/about/sabio-face.jpg"
+                            alt={t("images.profile_face_alt")}
+                        />
+
                         <div className="space-y-8">
                             <h3 className="text-label-caps text-accent">{t("principles.title")}</h3>
                             <ul className="space-y-6">

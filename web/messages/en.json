@@ -37,10 +37,10 @@
                     "stack": "Amplitude · GA · Datadog · Miro · Jira"
                 },
                 "product_design": {
-                    "tab_name": "Product & Growth",
+                    "tab_name": "Product Design",
                     "years": "+15",
                     "label": "PRODUCT CONTEXT",
-                    "title": "Product & Growth Design",
+                    "title": "Product Design",
                     "description": "Hypothesis-driven design integrated into the revenue engine. I focus on high-complexity technical products where design is a tool for validation, not just an output.",
                     "processes": [
                         "information architecture and navigation",
@@ -52,7 +52,7 @@
                     "stack": "Figma · Framer · Maze · Dovetail"
                 },
                 "product_growth": {
-                    "tab_name": "PRODUCT GROWTH",
+                    "tab_name": "Product Growth",
                     "years": "+5",
                     "label": "PERFORMANCE CONTEXT",
                     "title": "Experiments in acquisition, activation, and retention",

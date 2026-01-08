@@ -162,7 +162,7 @@ export function ExpertiseTabs() {
                                             }`}>
                                             {t("ui.expertise_label")}
                                         </span>
-                                        <span className={`text-xs md:text-sm lg:text-lg font-bold tracking-tight transition-colors whitespace-nowrap ${activeTab === key ? "text-ink-primary" : "text-ink-tertiary group-hover:text-ink-secondary"
+                                        <span className={`text-xs md:text-sm lg:text-lg font-bold tracking-tight transition-colors ${activeTab === key ? "text-ink-primary" : "text-ink-tertiary group-hover:text-ink-secondary"
                                             }`}>
                                             {t(`categories.${key}.tab_name`)}
                                         </span>

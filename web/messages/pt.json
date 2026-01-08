@@ -37,10 +37,10 @@
           "stack": "Amplitude · GA · Datadog · Miro · Jira"
         },
         "product_design": {
-          "tab_name": "Product & Growth",
+          "tab_name": "Product Design",
           "years": "+15",
           "label": "CONTEXTO DE PRODUTO",
-          "title": "Product & Growth Design",
+          "title": "Product Design",
           "description": "Design orientado a hipóteses e integrado ao motor de receita. Foco em produtos técnicos de alta complexidade onde o design é uma ferramenta de validação, não apenas um entregável.",
           "processes": [
             "arquitetura da informação e navegação",
@@ -52,7 +52,7 @@
           "stack": "Figma · Framer · Maze · Dovetail"
         },
         "product_growth": {
-          "tab_name": "PRODUCT GROWTH",
+          "tab_name": "Product Growth",
           "years": "+5",
           "label": "CONTEXTO DE PERFORMANCE",
           "title": "Experimentos em aquisição, ativação e retenção",

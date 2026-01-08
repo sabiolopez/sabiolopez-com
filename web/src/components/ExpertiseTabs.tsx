@@ -136,7 +136,8 @@ export function ExpertiseTabs() {
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
                     {/* Sidebar Navigation - Responsive Variation */}
-                    <div className="lg:col-span-4 flex flex-row lg:flex-col gap-3 lg:gap-2 overflow-x-auto lg:overflow-visible pb-4 lg:pb-0 scroll-smooth no-scrollbar justify-center lg:justify-start">
+                    {/* Sidebar Navigation - Responsive Variation */}
+                    <div className="lg:col-span-4 flex flex-row lg:flex-col gap-1.5 lg:gap-2 overflow-x-auto lg:overflow-visible pb-4 lg:pb-0 scroll-smooth no-scrollbar justify-center lg:justify-start">
                         {categories.map((key) => (
                             <motion.button
                                 layout
@@ -144,13 +145,13 @@ export function ExpertiseTabs() {
                                 onClick={() => handleTabClick(key)}
                                 onMouseEnter={handleMouseEnter}
                                 onMouseLeave={handleMouseLeave}
-                                className={`relative group flex items-center justify-center lg:justify-between p-4 lg:p-6 transition-all duration-500 rounded-lg overflow-hidden flex-shrink-0 ${activeTab === key
-                                    ? "bg-surface-elevated shadow-lg border-l-4 lg:border-l-4 border-accent min-w-[200px] md:min-w-[180px] lg:min-w-0"
-                                    : "border-l-4 border-transparent hover:bg-surface-elevated/40 min-w-[64px] md:min-w-[180px] lg:min-w-0"
+                                className={`relative group flex items-center justify-center lg:justify-between p-3 lg:p-6 transition-all duration-500 rounded-lg overflow-hidden flex-shrink-0 ${activeTab === key
+                                    ? "bg-surface-elevated shadow-lg border-l-4 lg:border-l-4 border-accent min-w-[160px] md:min-w-[180px] lg:min-w-0"
+                                    : "border-l-4 border-transparent hover:bg-surface-elevated/40 min-w-[56px] md:min-w-[180px] lg:min-w-0"
                                     }`}
                             >
-                                <motion.div layout className="flex items-center gap-4">
-                                    <div className={`p-2 rounded-md transition-colors ${activeTab === key ? "bg-accent/10 text-accent" : "bg-ink-tertiary/5 text-ink-tertiary"
+                                <motion.div layout className="flex items-center gap-3 lg:gap-4">
+                                    <div className={`p-2 rounded-md transition-colors ${activeTab === key ? "hidden lg:flex bg-accent/10 text-accent" : "bg-ink-tertiary/5 text-ink-tertiary"
                                         }`}>
                                         {(() => {
                                             const Icon = CATEGORY_ICONS[key];

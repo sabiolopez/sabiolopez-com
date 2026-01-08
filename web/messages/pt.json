@@ -41,13 +41,13 @@
           "years": "+15",
           "label": "CONTEXTO DE PRODUTO",
           "title": "Product Design",
-          "description": "Design orientado a hipóteses e integrado ao motor de receita. Foco em produtos técnicos de alta complexidade onde o design é uma ferramenta de validação, não apenas um entregável.",
+          "description": "Foco na construção da experiência e do sistema. Atuação desde o discovery e pesquisa de usuários até a materialização em interfaces de alta fidelidade e sistemas de design escaláveis.",
           "processes": [
-            "arquitetura da informação e navegação",
-            "componentização e padrões de UI",
-            "design system e tokens (consumo e alinhamento)",
-            "protótipos navegáveis e validação",
-            "especificação para handoff"
+            "User Research e Pesquisa de Usuários",
+            "Ideação e Fluxos de Experiência",
+            "Design Systems e UI Foundations",
+            "Prototipagem de Baixa e Alta Fidelidade",
+            "Testes de Usabilidade e Acessibilidade"
           ],
           "stack": "Figma · Framer · Maze · Dovetail"
         },
@@ -55,14 +55,14 @@
           "tab_name": "Product Growth",
           "years": "+5",
           "label": "CONTEXTO DE PERFORMANCE",
-          "title": "Experimentos em aquisição, ativação e retenção",
-          "description": "Planejamento e execução de testes em jornadas críticas, conectando proposta de valor, comunicação e fricções de fluxo. Leitura de funil, comportamento e coortes para priorizar hipóteses e iterar.",
+          "title": "Product Growth",
+          "description": "Design orientado a hipóteses e resultados de negócio. Foco em validar alavancas de crescimento através de experimentação contínua, leitura de dados e otimização de jornadas críticas.",
           "processes": [
-            "instrumentação e leitura de funil",
-            "hipóteses e desenho de experimento",
-            "testes A/B e validação rápida",
-            "otimização de onboarding e ativação",
-            "colaboração com marketing, vendas e produto"
+            "Análise de funil e comportamento",
+            "Desenho de experimentos e Testes A/B",
+            "Otimização de Onboarding e Ativação",
+            "Estratégias de retenção e monetização",
+            "Conexão entre design, dados e negócio"
           ],
           "stack": "Amplitude · GA · Hotjar · Optimizely"
         },

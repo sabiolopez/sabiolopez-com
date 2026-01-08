@@ -41,13 +41,13 @@
                     "years": "+15",
                     "label": "PRODUCT CONTEXT",
                     "title": "Product Design",
-                    "description": "Hypothesis-driven design integrated into the revenue engine. I focus on high-complexity technical products where design is a tool for validation, not just an output.",
+                    "description": "Focus on building the experience and the system. Acting from discovery and user research to materialization into high-fidelity interfaces and scalable design systems.",
                     "processes": [
-                        "information architecture and navigation",
-                        "componentization and UI patterns",
-                        "design system and tokens (consumption and alignment)",
-                        "navigable prototypes and validation",
-                        "specification for handoff"
+                        "User Research and Discovery",
+                        "Ideation and Experience Flows",
+                        "Design Systems and UI Foundations",
+                        "Low and High-Fidelity Prototyping",
+                        "Usability and Accessibility Testing"
                     ],
                     "stack": "Figma · Framer · Maze · Dovetail"
                 },
@@ -55,14 +55,14 @@
                     "tab_name": "Product Growth",
                     "years": "+5",
                     "label": "PERFORMANCE CONTEXT",
-                    "title": "Experiments in acquisition, activation, and retention",
-                    "description": "Planning and execution of tests in critical journeys, connecting value proposition, communication, and flow frictions. Funnel reading, behavior, and cohorts to prioritize hypotheses and iterate.",
+                    "title": "Product Growth",
+                    "description": "Hypothesis-driven design and business results. Focus on validating growth levers through continuous experimentation, data analysis, and optimization of critical journeys.",
                     "processes": [
-                        "instrumentation and funnel reading",
-                        "hypotheses and experiment design",
-                        "A/B testing and rapid validation",
-                        "onboarding and activation optimization",
-                        "collaboration with marketing, sales, and product"
+                        "Funnel and Behavior Analysis",
+                        "Experiment Design and A/B Testing",
+                        "Onboarding and Activation Optimization",
+                        "Retention and Monetization Strategies",
+                        "Bridging Design, Data, and Business"
                     ],
                     "stack": "Amplitude · GA · Hotjar · Optimizely"
                 },

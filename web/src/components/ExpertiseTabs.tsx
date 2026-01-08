@@ -138,17 +138,18 @@ export function ExpertiseTabs() {
                     {/* Sidebar Navigation - Responsive Variation */}
                     <div className="lg:col-span-4 flex flex-row lg:flex-col gap-3 lg:gap-2 overflow-x-auto lg:overflow-visible pb-4 lg:pb-0 scroll-smooth no-scrollbar justify-center lg:justify-start">
                         {categories.map((key) => (
-                            <button
+                            <motion.button
+                                layout
                                 key={key}
                                 onClick={() => handleTabClick(key)}
                                 onMouseEnter={handleMouseEnter}
                                 onMouseLeave={handleMouseLeave}
-                                className={`relative group flex items-center justify-center lg:justify-between p-4 lg:p-6 transition-all duration-500 rounded-lg overflow-hidden flex-shrink-0 min-w-[72px] md:min-w-[180px] lg:min-w-0 ${activeTab === key
-                                    ? "bg-surface-elevated shadow-lg border-l-4 lg:border-l-4 border-accent"
-                                    : "border-l-4 border-transparent hover:bg-surface-elevated/40"
+                                className={`relative group flex items-center justify-center lg:justify-between p-4 lg:p-6 transition-all duration-500 rounded-lg overflow-hidden flex-shrink-0 ${activeTab === key
+                                    ? "bg-surface-elevated shadow-lg border-l-4 lg:border-l-4 border-accent min-w-[200px] md:min-w-[180px] lg:min-w-0"
+                                    : "border-l-4 border-transparent hover:bg-surface-elevated/40 min-w-[64px] md:min-w-[180px] lg:min-w-0"
                                     }`}
                             >
-                                <div className="flex items-center gap-4">
+                                <motion.div layout className="flex items-center gap-4">
                                     <div className={`p-2 rounded-md transition-colors ${activeTab === key ? "bg-accent/10 text-accent" : "bg-ink-tertiary/5 text-ink-tertiary"
                                         }`}>
                                         {(() => {
@@ -156,20 +157,20 @@ export function ExpertiseTabs() {
                                             return <Icon size={20} />;
                                         })()}
                                     </div>
-                                    <div className="hidden md:flex flex-col items-start gap-1">
+                                    <div className={`${activeTab === key ? "flex" : "hidden md:flex"} flex-col items-start gap-1`}>
                                         <span className={`text-[10px] font-mono tracking-widest hidden lg:block ${activeTab === key ? "text-accent" : "text-ink-tertiary"
                                             }`}>
                                             {t("ui.expertise_label")}
                                         </span>
-                                        <span className={`text-sm lg:text-lg font-bold tracking-tight transition-colors ${activeTab === key ? "text-ink-primary" : "text-ink-tertiary group-hover:text-ink-secondary"
+                                        <span className={`text-xs md:text-sm lg:text-lg font-bold tracking-tight transition-colors whitespace-nowrap ${activeTab === key ? "text-ink-primary" : "text-ink-tertiary group-hover:text-ink-secondary"
                                             }`}>
                                             {t(`categories.${key}.tab_name`)}
                                         </span>
                                     </div>
-                                </div>
+                                </motion.div>
 
-                                <div className="hidden lg:flex flex-col items-end">
-                                    <span className={`text-2xl font-bold tracking-tighter ${activeTab === key ? "text-ink-primary" : "text-ink-tertiary/40"
+                                <div className={`${activeTab === key ? "flex" : "hidden lg:flex"} flex-col items-end ml-4 lg:ml-0`}>
+                                    <span className={`text-xl lg:text-2xl font-bold tracking-tighter ${activeTab === key ? "text-ink-primary" : "text-ink-tertiary/40"
                                         }`}>
                                         {t(`categories.${key}.years`)}
                                     </span>
@@ -188,7 +189,7 @@ export function ExpertiseTabs() {
                                         transition={{ duration: ROTATION_INTERVAL / 1000, ease: "linear" }}
                                     />
                                 )}
-                            </button>
+                            </motion.button>
                         ))}
                     </div>
 
@@ -277,7 +278,7 @@ export function ExpertiseTabs() {
                     </div>
                 </div>
             </div>
-        </SectionWrap>
+        </SectionWrap >
     );
 }
 

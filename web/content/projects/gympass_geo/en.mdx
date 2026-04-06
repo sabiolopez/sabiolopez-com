@@ -1,0 +1,117 @@
+---
+id: "case05"
+title: "Value in territory"
+tag: "Wellhub (Gympass)"
+date: "2021–2022"
+order: 5
+description: "Use of geolocation to make the network's capillarity visible and support purchase decisions in B2B and B2C contexts."
+context: "The project started from the observation that the partner network's breadth was not clearly perceptible in the digital experience. Despite being a core product asset, capillarity remained abstract for companies and end-users. The challenge was to transform this territorial dimension into a concrete element for understanding and decision support.\n\nDuring the project period, the company operated in multiple markets and communicated a broad network of gyms and partners. However, this competitive advantage was not easily understood in digital navigation. Sales teams often needed to supplement product explanations with external materials to demonstrate territorial coverage."
+chips: ["B2B Acquisition", "B2C", "Data Visualization", "Geolocation", "Capillarity"]
+cover: "/assets/work/case05_geo_v3.png"
+status: "published"
+segment: "B2B2C · Corporate Wellbeing"
+journey: "Acquisition"
+role: "Growth Product Designer"
+featured: true
+problemSection:
+  title: "Making existing value visible"
+  description: "Despite an extensive partner network, geographic coverage — the product's main differentiator — remained invisible in the digital experience. B2C users couldn't quickly identify if the service fit their routine; B2B decision-makers struggled to make the benefit tangible for their teams. The result was uncertainty and low trial conversion."
+  problems:
+    - title: "Invisible value in the interface"
+      description: "The main competitive advantage — network capillarity — wasn't clearly represented on the site, making the product abstract at the moment of decision."
+    - title: "Difficulty connecting locally"
+      description: "Users couldn't quickly understand whether there were nearby or relevant gyms for their reality, creating an early barrier to interest."
+    - title: "B2B and B2C misalignment"
+      description: "Companies sought coverage and scale; end users sought local convenience — and the site didn't connect these two narratives in an integrated way."
+    - title: "Decision based on assumption"
+      description: "Without a concrete visualization of the network, starting a trial relied on abstract trust — increasing friction and reducing conversion."
+darkSection:
+  solutionTitle: "Transforming data into value perception"
+  solutionDescription: "The solution translated network capillarity into immediate visual perception, creating an interactive layer capable of transforming geographic data into tangible value. Integrating product strategy, narrative, and design, it connected Gympass's global value proposition with each user's local reality — reducing uncertainty and bringing the trial decision closer."
+  strategyTitle: "Project Guidelines"
+  strategies:
+    - title: "Real-time network visualization"
+      description: "Interactive map showing the density and distribution of the gym and partner network, allowing direct geographic exploration by the user."
+    - title: "Location as a value entry point"
+      description: "Location search to personalize the experience, immediately displaying relevant and nearby options to the user."
+    - title: "Translating data into visual narrative"
+      description: "Clusters, density, and visual organization to communicate scale and coverage without overwhelming the interface with complexity."
+    - title: "Alignment between product and sales narrative"
+      description: "The visualization became a strategic argument for B2B sales as well, reinforcing the perception of network value during decision-making."
+  carouselImages:
+    - "/assets/work/case05_geo_v3.png"
+---
+
+
+
+<ProcessSection
+  title="Decide, adapt, and validate in production"
+  description="In a high-urgency context, part of the functionality already existed in the app and needed to be reinterpreted for the web. Without time for traditional validation cycles, the process focused on efficient adaptation, cross-team alignment, and post-launch impact monitoring."
+>
+  <ProcessGrid>
+    <ProcessStep 
+      number="01"
+      title="Strategic reuse of existing solution"
+      description="The map feature already existed in the app as a conceptual foundation. The challenge was to reinterpret its logic for the web context, adjusting the experience for an acquisition journey."
+    />
+    <ProcessStep 
+      number="02"
+      title="Cross-platform collaboration"
+      description="Joint work with the app product team to ensure experience consistency, while adapting the solution for different goals: exploration vs. conversion."
+    />
+    <ProcessStep 
+      number="03"
+      title="Adaptation for acquisition context"
+      description="While the map had a utilitarian function in the app, on the web it was redesigned as a decision-making tool — focused on value perception and trial incentive."
+    />
+    <ProcessStep 
+      number="04"
+      title="Validation through real-time data"
+      description="Due to urgency, there were no formal pre-launch tests. Validation was done through continuous monitoring of B2B and B2C metrics after launch, evaluating direct impact on conversion and engagement."
+    />
+  </ProcessGrid>
+</ProcessSection>
+
+<ResultsSection 
+  title="Immediate impact and learning in production"
+  results={[
+    { 
+      value: "↑",
+      label: "Clarity in value proposition",
+      description: "The network visualization made the product's coverage more tangible, reducing uncertainty in the initial journey and strengthening the value argument for new users."
+    },
+    { 
+      value: "↓",
+      label: "Initial drop in B2C trials",
+      description: "After launch, a significant reduction in B2C trial generation was observed in certain US cities, indicating a possible negative effect of the new experience."
+    },
+    { 
+      value: "!",
+      label: "Insight via segmented analysis",
+      description: "City-level analysis revealed that the drop was concentrated in regions with low partner density — where the map exposed a real product limitation."
+    },
+    { 
+      value: "✓",
+      label: "Fast fix with feature flag",
+      description: "A feature flag was implemented to hide the map in low-coverage regions, restoring funnel performance and adapting the experience to the local context."
+    }
+  ]}
+/>
+
+{/* <LearningsSection
+  title="What this project taught me"
+  learnings={[
+    {
+      title: "Visualization as support",
+      description: "Distributed assets require clear visual representation to support complex decision processes."
+    },
+    {
+      title: "Differentiator translation",
+      description: "Competitive differentiators can remain abstract without proper translation in the interface."
+    },
+    {
+      title: "Interface as a tool",
+      description: "Product elements can and should act as direct support for sales argumentation and social proof."
+    }
+  ]}
+/> */}

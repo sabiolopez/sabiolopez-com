@@ -22,10 +22,10 @@
       "label": "Especialidades",
       "categories": {
         "saas_b2b": {
-          "tab_name": "SaaS B2B & B2B2C",
+          "tab_name": "SaaS B2B",
           "years": "+20",
           "label": "CONTEXTO DE NEGÓCIO",
-          "title": "Estratégia SaaS B2B & B2B2C",
+          "title": "Estratégia SaaS B2B",
           "description": "Profundo entendimento de ecossistemas complexos. Do mapeamento de jornadas de compra não lineares e Job-to-be-Done (JTBD) à segmentação granular e personalização baseada em personas.",
           "processes": [
             "mapeamento de jornadas e fluxos críticos",
@@ -141,22 +141,45 @@
       "competencies_label": "Competências Centrais",
       "read_more": "Saiba mais",
       "cases": {
-        "edenred": {
+        "case01": {
           "tag": "Ticket Edenred",
-          "front_title": "Mapa da jornada de contratação quase triplica a conversão",
-          "back_text": "Reestruturação da jornada de aquisição e ativação a partir do mapeamento de perfis compradores, intenções e fricções operacionais, reduzindo complexidade e aumentando a clareza para gestores B2B.",
+          "front_title": "Personalização da jornada de compra B2B",
+          "back_text": "Mapeamento da jornada de nutrição e personalização da experiência para aumentar conversão em contexto da buyer persona B2B.",
           "chips": [
             "Aquisição",
             "Ativação",
             "Buyer Persona",
-            "Jornada de Cliente",
+            "Jornada B2B",
             "SaaS B2B"
           ]
         },
-        "qive": {
+        "case02": {
+          "tag": "CMA Brasil",
+          "front_title": "CMA Brasil Website",
+          "back_text": "Website para o primeiro grupo CMA no Brasil — também o primeiro em língua portuguesa — equilibrando diretrizes internacionais com uma experiência simples e acessível.",
+          "chips": [
+            "Design sensível",
+            "Comunicação institucional",
+            "SEO",
+            "Website introdutório"
+          ]
+        },
+        "case03": {
+          "tag": "Wellhub (Gympass)",
+          "front_title": "Redesign de Website em 10 mercados",
+          "back_text": "Como estruturar a aquisição digital de uma startup em 10 países simultâneos, lidando com stakeholders globais, roadmaps complexos e barreiras linguísticas pela primeira vez.",
+          "chips": [
+            "Growth Design",
+            "Escala Global",
+            "SaaS B2B2C",
+            "Breakthrough",
+            "Liderança"
+          ]
+        },
+        "case04": {
           "tag": "Qive",
-          "front_title": "Estratégia de ativação para jornada de trial em 7 dias",
-          "back_text": "Definição de estratégia de ativação orientada a comportamento para usuários em período de trial, conectando valor percebido, uso inicial do produto e critérios de sucesso nos primeiros dias.",
+          "front_title": "Redesign da jornada 7 days trial",
+          "back_text": "Redesign da experiência de trial de 7 dias para transformar um período limitado em um motor de ativação — mesmo diante de barreiras técnicas e cognitivas.",
           "chips": [
             "Ativação",
             "Trial",
@@ -165,20 +188,8 @@
             "Métricas"
           ]
         },
-        "gympass_redesign": {
-          "tag": "Gympass",
-          "front_title": "Redesign global da experiência de aquisição",
-          "back_text": "Redesenho da experiência de aquisição em múltiplos mercados, equilibrando consistência global, personalização local e necessidades distintas entre públicos B2B e B2C.",
-          "chips": [
-            "Aquisição",
-            "Plataforma Global",
-            "B2B2C",
-            "Design de Sistemas",
-            "Escala"
-          ]
-        },
-        "gympass_geo": {
-          "tag": "Gympass",
+        "case05": {
+          "tag": "Wellhub (Gympass)",
           "front_title": "Feature de geolocalização e impacto em vendas B2B e B2C",
           "back_text": "Criação de uma feature de geolocalização para tornar visível a capilaridade da rede, apoiando decisão de compra, argumentação comercial e percepção de valor em diferentes mercados.",
           "chips": [
@@ -189,18 +200,7 @@
             "Produto Digital"
           ]
         },
-        "cma_brasil": {
-          "tag": "CMA Brasil",
-          "front_title": "Landing para lançamento de ONG internacional no Brasil",
-          "back_text": "Desenvolvimento de landing page para lançamento da operação brasileira de uma ONG global, estruturando mensagem, contexto e clareza de ação para diferentes perfis de público.",
-          "chips": [
-            "Landing Page",
-            "Estratégia de Conteúdo",
-            "Impacto Social",
-            "Lançamento"
-          ]
-        },
-        "portfolio": {
+        "case06": {
           "tag": "Sábio Lopez",
           "front_title": "Portfólio: Desenvolvimento end-to-end orientado por IA",
           "back_text": "Uso de IA generativa ponta a ponta para desenvolver este portfólio, desde a arquitetura e código até a criação de conteúdo e estrutura de CMS para gestão dinâmica.",
@@ -246,7 +246,7 @@
       "cta_button": "Iniciar um Projeto",
       "email": "sabio@sabiolopez.com",
       "linkedin_url": "https://linkedin.com/in/sabiolopez",
-      "rights": "© 2025 Sabio Lopez — Architectural Intelligence"
+      "rights": "© 2026 Sabio Lopez — Portfolio"
     }
   },
   "HowIWork": {
@@ -383,13 +383,30 @@
       "title": "Stack & Ferramentas",
       "tools": [
         "Figma",
-        "React",
+        "Miro",
+        "Framer",
+        "Maze",
+        "Dovetail",
+        "UserTesting",
+        "Amplitude",
+        "Mixpanel",
+        "GA",
+        "Hotjar",
+        "Optimizely",
+        "Jira",
+        "GitHub",
+        "ChatGPT",
+        "Claude",
+        "Perplexity",
+        "Antigravity",
+        "Windsurf",
+        "VS Code",
+        "Replit",
         "Next.js",
+        "React",
         "TailwindCSS",
         "Python",
-        "LLM Fine-tuning",
-        "Mixpanel",
-        "Amplitude"
+        "Webflow"
       ]
     },
     "images": {
@@ -406,6 +423,22 @@
     "footer_note": "Sim, você caiu em um \"erro\". Mas até esse erro faz parte do plano.",
     "cta_home": "Voltar pra Home"
   },
+  "CaseStudy": {
+    "back": "Voltar para Projetos",
+    "client": "Empresa",
+    "segment": "Segmento e Mercado",
+    "journey": "Jornada",
+    "year": "Ano",
+    "role": "Papel",
+    "period": "Período",
+    "challenge_label": "O DESAFIO",
+    "solution_label": "A SOLUÇÃO",
+    "contentType": {
+      "project": "PROJETO",
+      "article": "ARTIGO",
+      "side_project": "PROJETO PARALELO"
+    }
+  },
   "NotFound": {
     "subtitle": "404 — NÃO ENCONTRADO",
     "title": "Caminho desconhecido",
@@ -417,5 +450,8 @@
     "title": "Algo deu errado",
     "message": "Encontramos um erro inesperado em nossa arquitetura. Nossa equipe de agentes já foi notificada.",
     "cta": "Tentar Novamente"
+  },
+  "NavigationList": {
+    "title": "Projetos & Artigos"
   }
 }

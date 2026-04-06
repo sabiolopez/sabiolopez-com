@@ -22,10 +22,10 @@
             "label": "Specialties",
             "categories": {
                 "saas_b2b": {
-                    "tab_name": "SaaS B2B & B2B2C",
+                    "tab_name": "SaaS B2B",
                     "years": "+20",
                     "label": "BUSINESS CONTEXT",
-                    "title": "SaaS B2B & B2B2C Strategy",
+                    "title": "SaaS B2B Strategy",
                     "description": "Deep understanding of complex ecosystems. From mapping non-linear buyer journeys and Job-to-be-Done (JTBD) to granular segmentation and persona-based personalization.",
                     "processes": [
                         "mapping of journeys and critical flows",
@@ -141,22 +141,45 @@
             "competencies_label": "Core Competencies",
             "read_more": "Learn More",
             "cases": {
-                "edenred": {
+                "case01": {
                     "tag": "Ticket Edenred",
-                    "front_title": "Hiring journey map nearly triples conversion",
-                    "back_text": "Restructuring of the acquisition and activation journey based on buyer profile mapping, intentions, and operational frictions, reducing complexity and increasing clarity for B2B managers.",
+                    "front_title": "B2B Buying Journey Personalization",
+                    "back_text": "Mapping the nurturing journey and personalizing the experience to increase conversion within the B2B buyer persona context.",
                     "chips": [
                         "Acquisition",
                         "Activation",
                         "Buyer Persona",
-                        "User Journey",
+                        "B2B Journey",
                         "B2B SaaS"
                     ]
                 },
-                "qive": {
+                "case02": {
+                    "tag": "CMA Brasil",
+                    "front_title": "CMA Brasil Website",
+                    "back_text": "Website for the first CMA group in Brazil — also the first in Portuguese — balancing international guidelines with a simple and accessible experience.",
+                    "chips": [
+                        "Sensitive Design",
+                        "Institutional Communication",
+                        "SEO",
+                        "Introductory Website"
+                    ]
+                },
+                "case03": {
+                    "tag": "Wellhub (Gympass)",
+                    "front_title": "Website Redesign Across 10 Markets",
+                    "back_text": "Structuring digital acquisition across 10 countries simultaneously, managing global stakeholders, complex roadmaps, and language barriers for the first time.",
+                    "chips": [
+                        "Growth Design",
+                        "Global Scale",
+                        "B2B2C SaaS",
+                        "Breakthrough",
+                        "Leadership"
+                    ]
+                },
+                "case04": {
                     "tag": "Qive",
-                    "front_title": "Activation strategy for 7-day trial journey",
-                    "back_text": "Definition of behavior-oriented activation strategy for trial users, connecting perceived value, initial product usage, and success criteria in the first few days.",
+                    "front_title": "7-day trial journey redesign",
+                    "back_text": "Redesign of the 7-day trial experience to transform a limited period into an activation engine — even in the face of technical and cognitive barriers.",
                     "chips": [
                         "Activation",
                         "Trial",
@@ -165,20 +188,8 @@
                         "Metrics"
                     ]
                 },
-                "gympass_redesign": {
-                    "tag": "Gympass",
-                    "front_title": "Global redesign of the acquisition experience",
-                    "back_text": "Redesign of the acquisition experience across multiple markets, balancing global consistency, local personalization, and distinct needs between B2B and B2C audiences.",
-                    "chips": [
-                        "Acquisition",
-                        "Global Platform",
-                        "B2B2C",
-                        "Systems Design",
-                        "Scale"
-                    ]
-                },
-                "gympass_geo": {
-                    "tag": "Gympass",
+                "case05": {
+                    "tag": "Wellhub (Gympass)",
                     "front_title": "Geolocation feature and impact on B2B and B2C sales",
                     "back_text": "Creation of a geolocation feature to make network capillarity visible, supporting purchase decisions, sales arguments, and value perception in different markets.",
                     "chips": [
@@ -189,18 +200,7 @@
                         "Digital Product"
                     ]
                 },
-                "cma_brasil": {
-                    "tag": "CMA Brasil",
-                    "front_title": "Landing page for international NGO launch in Brazil",
-                    "back_text": "Development of a landing page for the Brazilian operation launch of a global NGO, structuring message, context, and clear action for different audience profiles.",
-                    "chips": [
-                        "Landing Page",
-                        "Content Strategy",
-                        "Social Impact",
-                        "Launch"
-                    ]
-                },
-                "portfolio": {
+                "case06": {
                     "tag": "Sábio Lopez",
                     "front_title": "Portfolio: AI-driven end-to-end development",
                     "back_text": "End-to-end use of generative AI to develop this portfolio, from architecture and code to content creation and CMS structure for dynamic management.",
@@ -246,7 +246,7 @@
             "cta_button": "Start a Project",
             "email": "sabio@sabiolopez.com",
             "linkedin_url": "https://linkedin.com/in/sabiolopez",
-            "rights": "© 2025 Sabio Lopez — Architectural Intelligence"
+            "rights": "© 2026 Sabio Lopez — Portfolio"
         }
     },
     "HowIWork": {
@@ -383,13 +383,30 @@
             "title": "Stack & Tools",
             "tools": [
                 "Figma",
-                "React",
+                "Miro",
+                "Framer",
+                "Maze",
+                "Dovetail",
+                "UserTesting",
+                "Amplitude",
+                "Mixpanel",
+                "GA",
+                "Hotjar",
+                "Optimizely",
+                "Jira",
+                "GitHub",
+                "ChatGPT",
+                "Claude",
+                "Perplexity",
+                "Antigravity",
+                "Windsurf",
+                "VS Code",
+                "Replit",
                 "Next.js",
+                "React",
                 "TailwindCSS",
                 "Python",
-                "LLM Fine-tuning",
-                "Mixpanel",
-                "Amplitude"
+                "Webflow"
             ]
         },
         "images": {
@@ -406,6 +423,22 @@
         "footer_note": "So yes, you fell into an \"error.\" But even this error is part of the plan.",
         "cta_home": "Back to Home"
     },
+    "CaseStudy": {
+        "back": "Back to Work",
+        "client": "Company",
+        "segment": "Segment & Market",
+        "journey": "Journey",
+        "year": "Year",
+        "role": "Role",
+        "period": "Period",
+        "challenge_label": "THE CHALLENGE",
+        "solution_label": "THE SOLUTION",
+        "contentType": {
+            "project": "PROJECT",
+            "article": "ARTICLE",
+            "side_project": "SIDE PROJECT"
+        }
+    },
     "NotFound": {
         "subtitle": "404 — NOT FOUND",
         "title": "Unknown path",
@@ -417,5 +450,8 @@
         "title": "Something went wrong",
         "message": "We encountered an unexpected error in our architecture. Our team of agents has been notified.",
         "cta": "Try Again"
+    },
+    "NavigationList": {
+        "title": "Projects & Articles"
     }
 }

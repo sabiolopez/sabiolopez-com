@@ -1,0 +1,123 @@
+---
+id: "case02"
+title: "CMA Brasil Website"
+tag: "CMA Brasil"
+date: "2026"
+order: 2
+description: "Website para o primeiro grupo CMA no Brasil — também o primeiro em língua portuguesa — equilibrando diretrizes internacionais com uma experiência simples e acessível."
+context: "O CMA (Crystal Meth Anonymous) é uma irmandade internacional baseada no programa de 12 passos, com diretrizes bem definidas e foco em apoio por meio de reuniões e uma rede de acolhimento.\n\nO projeto foi desenvolvido para o primeiro grupo de CMA no Brasil — também o primeiro em língua portuguesa. As reuniões começaram em novembro de 2024, marcando o início da presença local.\n\nO website surge como ponto de entrada: explicar o que é o CMA, como funciona e como participar, facilitando o acesso de novos membros.\n\nO projeto foi conduzido por mim em parceria com um profissional do CMA de Los Angeles. O website foi entregue em 2026."
+chips: ["Design sensível", "Comunicação institucional", "SEO", "Website introdutório", "Voluntariado"]
+cover: "/assets/work/case02_cma_brasil.jpg"
+status: "published"
+segment: "ONG · Saúde · Apoio comunitário"
+journey: "Informação · Primeiro contato"
+role: "Product / Growth Designer (voluntário)"
+featured: true
+problemSection:
+  title: "Tornar acessível sem distorcer"
+  description: "Traduzir um sistema estruturado e institucional para um público com baixa familiaridade, mantendo fidelidade às diretrizes do CMA e reduzindo barreiras no primeiro contato."
+  problems:
+    - title: "Complexidade institucional"
+      description: "Diretrizes, linguagem e estrutura global rígidas, com pouca margem para adaptação livre."
+    - title: "Baixa familiaridade do público"
+      description: "Usuários sem repertório sobre o modelo, exigindo clareza e introdução progressiva."
+    - title: "Primeiro contato sensível"
+      description: "Entrada precisa gerar confiança e acolhimento, evitando sobrecarga ou afastamento."
+darkSection:
+  solutionTitle: "Foco no recém-chegado"
+  solutionDescription: "Reorientar o website para quem está chegando pela primeira vez, simplificando a experiência, reduzindo a complexidade e tornando o conteúdo mais claro e acolhedor, sem perder alinhamento com as diretrizes do CMA. Como complemento, foi criado um aplicativo com função de contagem de dias de sobriedade, utilizado também como canal de divulgação e acesso às reuniões do grupo."
+  solutionLinks:
+    - label: "metanfetaminaanonimos.org"
+      href: "https://metanfetaminaanonimos.org"
+    - label: "Versão Vibe Code"
+      href: "https://cmabrasil.vercel.app/"
+  strategyTitle: "Estratégias de Projeto"
+  strategies:
+    - title: "Conteúdo essencial primeiro"
+      description: "Priorização do que é necessário para entender o grupo e participar, evitando excesso de informação."
+    - title: "CMS para autonomia do grupo"
+      description: "Versão oficial construída em CMS para permitir manutenção simples por pessoas não técnicas."
+    - title: "Webcoding como evolução"
+      description: "Versão mais sofisticada desenvolvida em paralelo, pensada como V2 caso o grupo opte por expandir recursos."
+    - title: "Aplicativo como canal de acesso"
+      description: "App com contagem de sobriedade integrado a informações e links das reuniões, funcionando também como ferramenta de divulgação."
+  carouselImages:
+    - "/assets/work/case02_cma_brasil.jpg"
+---
+
+
+
+<ProcessSection title="Processo de design">
+  <ProcessGrid>
+    <ProcessStep 
+      number="01"
+      title="Discovery institucional"
+      description="Mapeamento das diretrizes globais do CMA — princípios, linguagem e regras — para garantir aderência sem distorções."
+    />
+    <ProcessStep 
+      number="02"
+      title="Análise de referências"
+      description="Leitura dos sites de outros países para identificar padrões existentes e o que precisava ser ajustado para o contexto brasileiro."
+    />
+    <ProcessStep 
+      number="03"
+      title="Definição de escopo"
+      description="Decisão consciente de reduzir páginas e conteúdo, priorizando clareza e orientação para o primeiro acesso."
+    />
+    <ProcessStep 
+      number="04"
+      title="Desenvolvimento orientado ao contexto"
+      description="Escolha de uma stack sustentável (CMS) e estruturação do site com foco em manutenção simples e descoberta orgânica (SEO voltado à busca por ajuda)."
+    />
+    <ProcessStep 
+      number="05"
+      title="Validação com stakeholders"
+      description="Revisões iterativas com o grupo no Brasil e alinhamentos com a comissão internacional (CMA/LA) para garantir consistência com as diretrizes e adequação ao contexto local."
+    />
+    <ProcessStep 
+      number="06"
+      title="Desenvolvimento do aplicativo"
+      description="Criação do app (iOS e Android) com contagem de sobriedade e acesso às reuniões. Atualmente em fase de SDK/beta, com validação por usuários antes de publicação nas lojas."
+    />
+  </ProcessGrid>
+</ProcessSection>
+
+<ProcessImagesCarousel
+  title="Processo de Design — Imagens"
+  images={[
+    { src: "/assets/projects/cmacase/Cover.jpg", alt: "Cover do projeto CMA Brasil", caption: "Cover" },
+    { src: "/assets/projects/cmacase/Roadmap.jpg", alt: "Roadmap do projeto", caption: "Roadmap" },
+    { src: "/assets/projects/cmacase/Discovery.jpg", alt: "Discovery e pesquisa institucional", caption: "Discovery" },
+    { src: "/assets/projects/cmacase/Design.jpg", alt: "Design do website", caption: "Design" },
+    { src: "/assets/projects/cmacase/Delivery.jpg", alt: "Entrega e publicação do site", caption: "Deployment" },
+    { src: "/assets/projects/cmacase/App.jpg", alt: "Website CMA Brasil publicado", caption: "App" },
+  ]}
+/>
+
+{/* <EditorialSection variant="light" className="border-t border-border/40">
+  <span className="hero-tag">RESULTADOS & IMPACTO</span>
+  <h3>
+    Referência oficial <br />
+    <span className="italic font-light">de apoio comunitário</span>
+  </h3>
+  <p>
+    O website foi publicado e passou a funcionar como o ponto oficial de referência do CMA no Brasil, cumprindo seu papel de prover clareza e acolhimento institucional para quem busca o movimento.
+  </p>
+</EditorialSection> */}
+
+<LearningsSection 
+  learnings={[
+    {
+      title: "Evolução técnica em produção",
+      description: "Segundo website desenvolvido com VibeCode e primeiro aplicativo funcional publicado em ambiente real, ampliando domínio técnico do processo completo."
+    },
+    {
+      title: "Decisões de stack impactam o produto",
+      description: "Diferença entre CMS e webcoding evidenciou como escolhas técnicas influenciam manutenção, autonomia e evolução do projeto."
+    },
+    {
+      title: "Colaboração garante consistência",
+      description: "Trabalho próximo com stakeholders locais e internacionais foi essencial para alinhar conteúdo, linguagem e contexto cultural."
+    }
+  ]}
+/>

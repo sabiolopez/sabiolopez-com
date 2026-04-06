@@ -1,12 +1,13 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { ArrowUpRight } from "lucide-react";
+import { SectionWrap } from "./SectionWrap";
 
 export function ThinkingWIP() {
     const t = useTranslations("HomePage.thinking");
 
     return (
-        <section id="thinking" className="py-24 px-6 md:px-12 max-w-[1920px] mx-auto border-t border-border">
+        <SectionWrap id="thinking" className="py-24 border-t border-border">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
                 <div className="md:col-span-4">
                     <h2 className="font-mono text-xs text-ink-tertiary uppercase tracking-[0.2em] sticky top-24">
@@ -53,6 +54,6 @@ export function ThinkingWIP() {
                     </div>
                 </div>
             </div>
-        </section>
+        </SectionWrap>
     );
 }

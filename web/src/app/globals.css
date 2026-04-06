@@ -7,8 +7,8 @@
   --color-surface-elevated: #FFFFFF;
 
   --color-ink-primary: #1A1A1A;
-  --color-ink-secondary: #555555;
-  --color-ink-tertiary: #888888;
+  --color-ink-secondary: #4A4A4A;
+  --color-ink-tertiary: #6B6B6B;
 
   --color-border: #E5E5E0;
   --color-border-strong: #D1D1D1;
@@ -26,9 +26,9 @@
   --color-surface-dark: #151515;
   --color-surface-elevated-dark: #1F1F1F;
   --color-ink-primary-dark: #F9F9F7;
-  --color-ink-secondary-dark: #A0A0A0;
-  --color-ink-tertiary-dark: #888888;
-  --color-border-dark: #1A1A1A;
+  --color-ink-secondary-dark: #B0B0B0;
+  --color-ink-tertiary-dark: #909090;
+  --color-border-dark: #2A2A2A;
 
   /* Fonts */
   --font-sans: var(--font-inter);
@@ -60,6 +60,13 @@
   --letter-spacing-caps-wide: 0.25em;
   --letter-spacing-caps-normal: 0.15em;
   --letter-spacing-caps-tight: 0.1em;
+
+  /* Global Layout Standards */
+  --layout-max-width: 1920px;
+  --layout-padding-x-mobile: 1.5rem;
+  /* 24px */
+  --layout-padding-x-desktop: 3rem;
+  /* 48px */
 
   --animate-spin-slow: spin 12s linear infinite;
 }

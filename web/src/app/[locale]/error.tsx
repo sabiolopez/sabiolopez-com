@@ -77,7 +77,7 @@ export default function Error({
                 {/* Meta / Technical Footer */}
                 <div className="mt-24 pt-8 border-t border-white/5">
                     <p className="text-white/10 text-xs font-mono tracking-widest uppercase">
-                        Product & Growth Design Framework — Architectural Intelligence
+                        Product & Growth Design Framework — Portfolio
                     </p>
                 </div>
             </motion.div>

@@ -51,3 +51,10 @@ Drop shadows should be diffuse and large, lifting elements gently off the page r
 For the "Works in Progress" sections:
 - Metaphor: **"Archiving"** or **"Curation"**.
 - Visuals: Blurred content, skeletons that look like sketches, "Coming Soon" tags that look like gallery labels.
+
+## 5. Motion & Technology (The Digital Layer)
+The "Atelier" is not static. It is a modern digital space.
+- **Physics:** Motion should feel "weighted" (paper moving), not "bouncy" (cartoon).
+- **Transitions:** Use `Lenis` for smooth scroll. Elements should reveal themselves with a soft opacity/y-axis ease.
+- **WebGL:** Use primarily for "Atmosphere" (grain, distortion on hover) in Brand contexts. Avoid in Editorial contexts.
+

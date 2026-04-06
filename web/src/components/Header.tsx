@@ -11,14 +11,14 @@ export function Header() {
 
     const navLinks = [
         { href: "/", label: t("home") },
-        { href: "/#work", label: t("work") },
+        { href: "/#projects-navigation", label: t("work") },
         { href: "/about", label: t("about") },
         { href: "/#contact", label: t("contact") },
     ];
 
     return (
         <header className="fixed top-0 left-0 right-0 z-50 bg-canvas/80 backdrop-blur-md border-b border-border/50">
-            <nav className="max-w-[1920px] mx-auto px-6 md:px-12 py-4 flex justify-between items-center">
+            <nav className="max-w-[var(--layout-max-width)] mx-auto px-[var(--layout-padding-x-mobile)] md:px-[var(--layout-padding-x-desktop)] py-4 flex justify-between items-center">
                 <Link href="/" className="font-sans font-bold text-lg tracking-tighter text-ink-primary">
                     Sábio Lopez<span className="text-highlight">.</span>
                 </Link>

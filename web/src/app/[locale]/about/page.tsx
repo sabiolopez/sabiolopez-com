@@ -5,6 +5,7 @@ import { SectionWrap } from "@/components/SectionWrap";
 import { AboutHero } from "@/components/AboutHero";
 import { Clock, Globe, Target, GraduationCap } from "lucide-react";
 import { AboutProfileImage } from "@/components/AboutProfileImage";
+import { NavigationList } from "@/components/NavigationList";
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -36,9 +37,9 @@ export default async function AboutPage({
                     <div className="lg:col-span-7 space-y-12">
                         <div className="prose prose-xl text-ink-primary font-light leading-relaxed space-y-8 max-w-2xl">
                             {/* Currently indication - Refined & Subtle */}
-                            <div className="bg-white/5 border-l border-accent/40 pl-6 py-1 mb-12">
-                                <span className="block font-mono text-[10px] text-accent uppercase mb-1 tracking-widest opacity-80">{t("current.label")}</span>
-                                <p className="text-base font-normal text-ink-primary/90">
+                            <div className="bg-ink-tertiary/5 border-l border-accent/40 pl-6 py-1 mb-12">
+                                <span className="block font-mono text-[10px] text-accent uppercase mb-1 tracking-widest">{t("current.label")}</span>
+                                <p className="text-base font-normal text-ink-primary">
                                     {t("current.description")}
                                 </p>
                             </div>
@@ -94,7 +95,7 @@ export default async function AboutPage({
                             <h4 className="text-label-caps text-ink-tertiary group-hover/stack:text-accent transition-colors">{t("stack.title")}</h4>
                             <div className="flex flex-wrap gap-2">
                                 {(t.raw("stack.tools") as string[]).map(tool => (
-                                    <span key={tool} className="tag-chip !bg-white/5 !border-white/10 hover:!border-accent/30 hover:!text-accent transition-all">
+                                    <span key={tool} className="tag-chip !bg-ink-tertiary/5 !border-ink-tertiary/10 hover:!border-accent/30 hover:!text-accent transition-all">
                                         {tool}
                                     </span>
                                 ))}
@@ -162,7 +163,8 @@ export default async function AboutPage({
                 </div>
             </SectionWrap>
 
-            <Footer variant="light" />
+            <NavigationList locale={locale} />
+            <Footer />
         </main>
     );
 }

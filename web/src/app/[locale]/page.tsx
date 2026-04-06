@@ -6,12 +6,15 @@ import { WorkGrid } from "@/components/WorkGrid";
 import { ExpertiseTabs } from "@/components/ExpertiseTabs";
 import { ActingAreas } from "@/components/ActingAreas";
 import { ContactSection } from "@/components/ContactSection";
+import { NavigationList } from "@/components/NavigationList";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Sabio Lopez | Product & Growth Design for SaaS B2B",
   description: "Senior Product Designer specializing in B2B SaaS, Growth and AI. 20 years of experience architecting end-to-end digital journeys.",
 };
+
+import { getAllProjects } from "@/lib/projects";
 
 export default async function Home({
   params
@@ -21,14 +24,18 @@ export default async function Home({
   const { locale } = await params;
   setRequestLocale(locale);
 
+  const allProjects = await getAllProjects(locale);
+  const featuredProjects = allProjects.filter(p => p.featured);
+
   return (
     <main className="bg-canvas min-h-screen pt-16">
       <Header />
       <Hero />
-      <WorkGrid />
+      <WorkGrid projects={featuredProjects} />
       <ExpertiseTabs />
       <ActingAreas />
       <ContactSection />
+      <NavigationList locale={locale} />
       <Footer />
     </main>
   );

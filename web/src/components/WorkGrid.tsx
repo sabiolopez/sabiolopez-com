@@ -7,46 +7,13 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Link } from "@/i18n/routing";
 
-interface Project {
-    id: string;
-    cover: string;
+import { ProjectMetadata } from "@/lib/projects";
+
+interface WorkGridProps {
+    projects: ProjectMetadata[];
 }
 
-interface CaseData {
-    tag: string;
-    front_title: string;
-    back_text: string;
-    chips: string[];
-}
-
-const CASES = [
-    {
-        id: "edenred",
-        cover: "/assets/work/case_edenred.jpg",
-    },
-    {
-        id: "qive",
-        cover: "/assets/work/case_qive.jpg",
-    },
-    {
-        id: "gympass_redesign",
-        cover: "/assets/work/case_gympass_geo.jpg",
-    },
-    {
-        id: "gympass_geo",
-        cover: "/assets/work/case_gympass_redesign.png",
-    },
-    {
-        id: "cma_brasil",
-        cover: "/assets/work/case_cma_brasil.jpg",
-    },
-    {
-        id: "portfolio",
-        cover: "/assets/work/case_portfolio.jpg",
-    },
-];
-
-export function WorkGrid() {
+export function WorkGrid({ projects }: WorkGridProps) {
     const t = useTranslations("HomePage.work");
 
     return (
@@ -62,20 +29,37 @@ export function WorkGrid() {
 
             {/* Cases Grid - 3 Columns with generous gaps for whitespace */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 lg:gap-x-16 gap-y-20 lg:gap-y-32">
-                {CASES.map((project) => (
-                    <ProjectCard key={project.id} project={project} t={t} />
+                {projects.map((project) => (
+                    <ProjectCard key={project.slug} project={project} t={t} />
                 ))}
             </div>
         </SectionWrap>
     );
 }
 
+interface CaseData {
+    tag: string;
+    front_title: string;
+    back_text: string;
+    chips: string[];
+}
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-function ProjectCard({ project, t }: { project: Project, t: any }) {
-    const caseData = t.raw(`cases.${project.id}`) as CaseData;
+function ProjectCard({ project, t }: { project: ProjectMetadata, t: any }) {
+    // We try to use translations if they exist for specific IDs, 
+    // but fall back to metadata for scalability.
+    const rawData = t.raw(`cases.${project.id}`);
+    const hasTranslation = typeof rawData !== 'string' && rawData !== undefined;
+
+    const displayData = hasTranslation ? (rawData as CaseData) : {
+        tag: project.tag,
+        front_title: project.title,
+        back_text: project.description,
+        chips: project.chips
+    };
 
     return (
-        <Link href="/project-wip" className="block h-full group">
+        <Link href={`/work/${project.slug}`} className="block h-full group">
             <motion.div
                 className="flex flex-col h-full border border-white/5 bg-white/[0.01] hover:border-white/10 hover:bg-white/[0.02] transition-all duration-500 p-6 lg:p-8"
                 initial="initial"
@@ -94,10 +78,10 @@ function ProjectCard({ project, t }: { project: Project, t: any }) {
                     >
                         <Image
                             src={project.cover}
-                            alt={caseData.tag}
+                            alt={displayData.tag}
                             fill
                             className="object-cover transition-all duration-1000 ease-out grayscale group-hover:grayscale-0"
-                            priority={project.id === "edenred" || project.id === "qive"}
+                            priority={project.slug === "edenred" || project.slug === "qive"}
                         />
                         {/* Subtle Overlay to ensure high-end feel */}
                         <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-700" />
@@ -122,25 +106,25 @@ function ProjectCard({ project, t }: { project: Project, t: any }) {
                     {/* Taxonomy info in Mono font */}
                     <div className="flex items-center gap-3">
                         <span className="text-detail-caps text-accent font-bold">
-                            {caseData.tag}
+                            {displayData.tag}
                         </span>
                     </div>
 
                     <div className="space-y-3 lg:space-y-4">
-                        <h3 className="text-h2 font-bold tracking-tight text-white leading-[1.1] group-hover:text-accent transition-colors duration-300">
-                            {caseData.front_title}
+                        <h3 className="text-h2 font-bold tracking-tight text-ink-primary leading-[1.1] group-hover:text-accent transition-colors duration-300">
+                            {displayData.front_title}
                         </h3>
 
                         {/* Brief description for immediate scanning */}
-                        <p className="text-white/60 text-body-sm line-clamp-3 max-w-[95%] leading-relaxed group-hover:text-white/80 transition-colors duration-500">
-                            {caseData.back_text}
+                        <p className="text-ink-secondary text-body-sm line-clamp-3 max-w-[95%] leading-relaxed group-hover:text-ink-primary transition-colors duration-500">
+                            {displayData.back_text}
                         </p>
                     </div>
 
                     {/* Tags - Grouped with description for Gestalt */}
                     <div className="flex flex-wrap gap-2 pt-2">
-                        {caseData.chips.map((chip) => (
-                            <span key={chip} className="tag-chip px-2 py-0.5 border-white/5 bg-white/5 text-white/30 group-hover:text-white transition-all duration-500">
+                        {displayData.chips.map((chip) => (
+                            <span key={chip} className="tag-chip px-2 py-0.5 border-ink-tertiary/10 bg-ink-tertiary/5 text-ink-tertiary group-hover:text-ink-primary transition-all duration-500">
                                 {chip}
                             </span>
                         ))}
@@ -148,7 +132,7 @@ function ProjectCard({ project, t }: { project: Project, t: any }) {
 
                     {/* Standardized CTA */}
                     <div className="mt-auto pt-8">
-                        <div className="cta-link text-white/80 group-hover:text-accent group-hover:border-accent transition-all duration-300">
+                        <div className="cta-link text-ink-secondary group-hover:text-accent group-hover:border-accent transition-all duration-300">
                             {t("read_more")}
                             <ArrowUpRight className="w-4 h-4" />
                         </div>

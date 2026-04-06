@@ -1,8 +1,10 @@
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { SectionWrap } from "@/components/SectionWrap";
 import Link from "next/link";
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
+import { NavigationList } from "@/components/NavigationList";
 
 export default async function HowIWorkPage({
     params
@@ -20,7 +22,7 @@ export default async function HowIWorkPage({
             <Header />
 
             {/* Hero Editorial */}
-            <section className="pt-12 pb-24 px-6 md:px-12 max-w-[1920px] mx-auto">
+            <SectionWrap className="pt-12 pb-24">
                 <div className="max-w-5xl space-y-12">
                     <h1 className="text-5xl md:text-[7vw] leading-[0.9] font-semibold tracking-tighter text-ink-primary">
                         {t("hero.title")}
@@ -29,10 +31,10 @@ export default async function HowIWorkPage({
                         {t("hero.subtitle")}
                     </p>
                 </div>
-            </section>
+            </SectionWrap>
 
             {/* Operating Principle */}
-            <section className="py-24 px-6 md:px-12 max-w-[1920px] mx-auto border-t border-border bg-surface-elevated/30">
+            <SectionWrap className="py-24 border-t border-border bg-surface-elevated/30">
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
                     <div className="md:col-span-4">
                         <span className="font-mono text-[10px] text-ink-tertiary uppercase tracking-widest">{t("principle.title")}</span>
@@ -43,10 +45,10 @@ export default async function HowIWorkPage({
                         </h2>
                     </div>
                 </div>
-            </section>
+            </SectionWrap>
 
             {/* Process Stepper */}
-            <section className="py-32 px-6 md:px-12 max-w-[1920px] mx-auto">
+            <SectionWrap className="py-32">
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
                     <div className="md:col-span-4">
                         <h2 className="font-mono text-xs text-ink-tertiary uppercase tracking-[0.2em] sticky top-12">
@@ -78,10 +80,10 @@ export default async function HowIWorkPage({
                         ))}
                     </div>
                 </div>
-            </section>
+            </SectionWrap>
 
             {/* Final Callout */}
-            <section className="py-24 px-6 md:px-12 max-w-[1920px] mx-auto border-t border-border">
+            <SectionWrap className="py-24 border-t border-border">
                 <div className="bg-ink-primary text-canvas p-12 md:p-24 flex flex-col items-center text-center space-y-8">
                     <h3 className="text-3xl md:text-5xl font-semibold tracking-tight max-w-3xl">
                         {t("cta.title")}
@@ -90,8 +92,9 @@ export default async function HowIWorkPage({
                         {t("cta.button")}
                     </Link>
                 </div>
-            </section>
+            </SectionWrap>
 
+            <NavigationList locale={locale} />
             <Footer />
         </main>
     );

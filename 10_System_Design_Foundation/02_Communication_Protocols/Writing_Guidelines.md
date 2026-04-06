@@ -28,3 +28,12 @@ Dificilmente um projeto é mérito de um só. Sempre destacamos o contexto e a c
 ### 3. Authentic Signal (A Verdade Nuamente Dita)
 Preferimos a clareza à persuasão barata. Se algo é complexo, dizemos que é complexo. Se algo é simples, não complicamos.
 
+---
+
+## 4. Narrative Tactics (From the UX Writer)
+- **Show, Don't Tell:** Em vez de dizer "sou criativo", mostre como resolveu um problema.
+- **Substituir o "Eu":** Use "Nós construímos" sempre que houver colaboração.
+- **Sem Adjetivos Vazios:** Corte "incrível", "impecável". Use verbos e fatos.
+- **Histórias de Valor:** Transforme "features" em "como isso ajudou o negócio".
+
+

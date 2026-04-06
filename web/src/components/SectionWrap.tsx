@@ -26,57 +26,42 @@ export function SectionWrap({
 
     useEffect(() => {
         const observerOptions = {
-            rootMargin: "-20% 0% -20% 0%",
-            threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.8],
+            rootMargin: "0px",
+            threshold: 0.1,
         };
 
-        const themeObserver = new IntersectionObserver((entries) => {
-            // Sort to find the most "visible" section in this notification batch
-            const sortedEntries = [...entries].sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-            const mostVisible = sortedEntries[0];
-
-            if (mostVisible.isIntersecting && mostVisible.intersectionRatio > 0.1) {
-                if (variant === "dark") {
-                    document.body.classList.add("section-dark");
-                    document.body.classList.remove("bg-canvas");
-                } else {
-                    document.body.classList.remove("section-dark");
-                    document.body.classList.add("bg-canvas");
-                }
-            }
-
-            // Animate only if intersecting
+        const visibilityObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) setIsVisible(true);
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                }
             });
         }, observerOptions);
 
         if (sectionRef.current) {
-            themeObserver.observe(sectionRef.current);
+            visibilityObserver.observe(sectionRef.current);
         }
 
         return () => {
-            themeObserver.disconnect();
-            // Reset body classes when navigating away or unmounting
-            // Note: This might cause a flash if the next page also uses SectionWrap, 
-            // but it's safer than leaking the state.
-            document.body.classList.remove("section-dark");
-            document.body.classList.add("bg-canvas");
+            visibilityObserver.disconnect();
         };
-    }, [variant]);
+    }, []);
 
     return (
         <section
             id={id}
             ref={sectionRef}
+            data-theme={variant}
             className={cn(
-                "py-24 px-6 md:px-12 transition-all duration-500 ease-in-out scroll-snap-start",
-                variant === "dark" ? "section-dark" : "bg-canvas text-ink-primary",
+                "transition-all duration-300 ease-in-out relative",
+                variant === "dark"
+                    ? "bg-[#0D0D0D] text-[#F9F9F7] section-dark rounded-[2.5rem] md:rounded-[3rem] shadow-[0_0_40px_rgba(0,0,0,0.15)] border-t border-b border-white/5 z-20 -my-6 md:-my-12"
+                    : "bg-[#F9F9F7] text-[#1A1A1A] z-10",
                 className
             )}
         >
             <div className={cn(
-                "max-w-[1920px] mx-auto reveal-observer",
+                "max-w-[var(--layout-max-width)] mx-auto px-[var(--layout-padding-x-mobile)] md:px-[var(--layout-padding-x-desktop)] reveal-observer",
                 isVisible && "is-visible"
             )}>
                 {children}

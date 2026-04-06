@@ -10,7 +10,7 @@ export function ContactSection() {
     const t = useTranslations("HomePage.contact");
 
     return (
-        <SectionWrap id="contact" variant="dark" className="border-t border-border/10 overflow-hidden relative">
+        <SectionWrap id="contact" variant="dark" className="border-t border-border/10 overflow-hidden relative !rounded-b-none !mb-0 !border-b-0">
             {/* Ambient Background Movement */}
             <div className="absolute inset-0 pointer-events-none overflow-hidden">
                 <motion.div
@@ -44,7 +44,7 @@ export function ContactSection() {
                             className="section-title -ml-[0.03em]"
                         >
                             {t("title_main")} <br className="md:hidden" />
-                            <span className="hero-title-accent block mt-2 opacity-60">{t("title_accent")}</span>
+                            <span className="hero-title-accent block mt-2 text-ink-tertiary">{t("title_accent")}</span>
                         </motion.h2>
                     </div>
 
@@ -66,12 +66,12 @@ export function ContactSection() {
                         transition={{ duration: 0.8, delay: 0.3 }}
                         className="space-y-4 pt-4"
                     >
-                        <span className="block text-label-caps text-ink-tertiary/60">{t("chat_topics_label")}</span>
+                        <span className="block text-label-caps text-ink-tertiary">{t("chat_topics_label")}</span>
                         <div className="flex flex-wrap gap-3">
                             {(t.raw("chat_topics") as string[]).map(topic => (
                                 <span
                                     key={topic}
-                                    className="tag-chip !bg-white/5 !border-white/10 !text-ink-secondary hover:!bg-accent/10 hover:!text-accent hover:!border-accent/30 transition-all cursor-default"
+                                    className="tag-chip !bg-ink-tertiary/5 !border-ink-tertiary/10 !text-ink-secondary hover:!bg-accent/10 hover:!text-accent hover:!border-accent/30 transition-all cursor-default"
                                 >
                                     {topic}
                                 </span>
@@ -90,7 +90,7 @@ export function ContactSection() {
                         />
 
                         <div className="space-y-8">
-                            <span className="block text-label-caps text-ink-tertiary/60">{t("social_label")}</span>
+                            <span className="block text-label-caps text-ink-tertiary">{t("social_label")}</span>
                             <div className="flex flex-col gap-8">
                                 <motion.a
                                     href={`mailto:${t("email")}`}

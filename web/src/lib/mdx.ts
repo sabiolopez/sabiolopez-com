@@ -35,6 +35,7 @@ export async function getAllArticles(locale: string): Promise<ArticleMetadata[]>
                 slug: file.replace('.mdx', ''),
             } as ArticleMetadata;
         })
+        .filter((article) => article.status === 'published')
         .sort((a, b) => (new Date(b.date).getTime() - new Date(a.date).getTime()));
 }
 

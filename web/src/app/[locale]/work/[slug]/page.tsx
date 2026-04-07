@@ -38,21 +38,28 @@ import { EditorialSection } from '@/components/EditorialSection';
 import { ProcessImagesCarousel } from '@/components/ProcessImagesCarousel';
 import * as Icons from 'lucide-react';
 
-const components = {
-    PixelRevealImage,
-    ChallengeCard,
-    ChallengeGrid,
-    ArchitectureDiagram,
-    ProcessStep,
-    ProcessGrid,
-    ResultsSection,
-    BlueprintDevice,
-    LearningsSection,
-    SectionWrap,
-    ProcessSection,
-    EditorialSection,
-    ProcessImagesCarousel,
+const components: any = {
+    PixelRevealImage: (props: any) => <PixelRevealImage {...props} />,
+    ChallengeCard: (props: any) => <ChallengeCard {...props} />,
+    ChallengeGrid: (props: any) => <ChallengeGrid {...props} />,
+    ArchitectureDiagram: (props: any) => <ArchitectureDiagram {...props} />,
+    ProcessStep: (props: any) => <ProcessStep {...props} />,
+    ProcessGrid: (props: any) => <ProcessGrid {...props} />,
+    ResultsSection: (props: any) => {
+        console.log('[MDX] Rendering ResultsSection with props:', Object.keys(props));
+        return <ResultsSection {...props} />;
+    },
+    BlueprintDevice: (props: any) => <BlueprintDevice {...props} />,
+    LearningsSection: (props: any) => <LearningsSection {...props} />,
+    SectionWrap: (props: any) => <SectionWrap {...props} />,
+    ProcessSection: (props: any) => <ProcessSection {...props} />,
+    EditorialSection: (props: any) => <EditorialSection {...props} />,
+    ProcessImagesCarousel: (props: any) => {
+        console.log('[MDX] Rendering ProcessImagesCarousel with props:', Object.keys(props));
+        return <ProcessImagesCarousel {...props} />;
+    },
 };
+
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
     const { slug, locale } = await params;
@@ -65,6 +72,14 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     }
 
     const { metadata, content } = project;
+
+    // Inject slug and locale into specific components for robust data fallback
+    const enrichedComponents = {
+        ...components,
+        ResultsSection: (props: any) => <ResultsSection {...props} projectSlug={slug} locale={locale} />,
+        LearningsSection: (props: any) => <LearningsSection {...props} projectSlug={slug} locale={locale} />,
+        ProcessImagesCarousel: (props: any) => <ProcessImagesCarousel {...props} projectSlug={slug} locale={locale} />,
+    };
 
     return (
         <CaseStudyLayout
@@ -102,8 +117,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         >
             <MDXRemote
                 source={content}
-                components={components}
+                components={enrichedComponents}
             />
         </CaseStudyLayout>
     );
 }
+

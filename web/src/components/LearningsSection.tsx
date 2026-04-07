@@ -1,34 +1,6 @@
-"use client";
-
 import React from "react";
-import { motion } from "framer-motion";
-
-interface LearningItemProps {
-    title: string;
-    description: string;
-}
-
-function LearningItem({ title, description }: LearningItemProps) {
-    return (
-        <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="group space-y-4 border-l border-border pl-8 py-2 md:py-0 hover:border-accent transition-colors duration-500"
-        >
-            <div className="space-y-2">
-                <h3 className="text-xl font-semibold text-ink-primary tracking-tight group-hover:text-accent transition-colors">
-                    {title}
-                </h3>
-            </div>
-            <p className="text-base leading-relaxed text-ink-secondary font-light">
-                {description}
-            </p>
-        </motion.div>
-    );
-}
-
 import { SectionWrap } from "./SectionWrap";
+import { CASE_STUDIES_DATA } from "@/data/case-studies-data";
 
 interface Learning {
     title: string;
@@ -38,41 +10,76 @@ interface Learning {
 interface LearningsSectionProps {
     title?: string;
     learnings?: Learning[];
+    projectSlug?: string;
+    locale?: string;
 }
 
-const DEFAULT_LEARNINGS: Learning[] = [
-    {
-        title: "Gestão de stakeholders mudou minha forma de trabalhar",
-        description: "Esse foi o principal aprendizado do projeto. Pela primeira vez, precisei entender com clareza quem acionar, quando envolver cada pessoa e qual nível de detalhe era necessário em cada conversa. Aprendi a ler roadmaps, mapear dependências, centralizar informações e manter uma comunicação clara para que todos tivessem acesso ao mesmo contexto — algo essencial em um projeto com muitos países, agendas diferentes e pouco tempo para decidir."
-    },
-    {
-        title: "Growth começa com organização, não com otimização",
-        description: "Eu entrei nesse projeto achando que growth estaria mais ligado a experimentos e resultados rápidos, mas aprendi que, em escala, o trabalho começa antes. Organizar arquitetura, conteúdo, eventos, taxonomia e métricas — e participar da implantação do Amplitude com o time — me mostrou que sem uma base comum não existe aprendizado coletivo nem evolução consistente."
-    },
-    {
-        title: "Um projeto que marcou muitas “primeiras vezes”",
-        description: "Foi meu primeiro projeto em escala global, minha primeira experiência internacional, meu primeiro trabalho em inglês e meu primeiro contato direto com growth. Tudo isso aconteceu ao mesmo tempo. Esse contexto me forçou a ser mais sintético, mais assertivo e mais claro, e acelerar minha evolução profissional de uma forma que poucos projetos conseguem fazer."
-    }
-];
+function LearningItem({ title, description, index }: Learning & { index: number }) {
+    return (
+        <div
+            className="group space-y-4 border-l border-border pl-8 py-2 md:py-0 hover:border-accent transition-colors duration-500"
+            style={{
+                animation: `fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both`,
+                animationDelay: `${index * 100}ms`,
+            }}
+        >
+            <div className="space-y-2">
+                <h3 className="text-xl font-semibold text-ink-primary tracking-tight group-hover:text-accent transition-colors">
+                    {title}
+                </h3>
+            </div>
+            <p className="text-base leading-relaxed text-ink-secondary font-light">
+                {description}
+            </p>
+        </div>
+    );
+}
 
-export function LearningsSection({ title = "O que esse projeto me ensinou", learnings = DEFAULT_LEARNINGS }: LearningsSectionProps) {
+/**
+ * Learnings Section
+ * Supports robust fallback from CASE_STUDIES_DATA if MDX props are missing.
+ */
+export function LearningsSection({
+    title,
+    learnings = [],
+    projectSlug,
+    locale = "pt"
+}: LearningsSectionProps) {
+
+    // Determine data source: MDX props or centralized fallback
+    let displayLearnings = learnings;
+    let displayTitle = title;
+
+    if ((!displayLearnings || displayLearnings.length === 0) && projectSlug) {
+        const fallbackData = CASE_STUDIES_DATA[projectSlug]?.[locale as 'pt' | 'en']?.learnings;
+        if (fallbackData && fallbackData.items.length > 0) {
+            displayLearnings = fallbackData.items;
+            if (!displayTitle) displayTitle = fallbackData.title;
+        }
+    }
+
+    // Default title if still missing
+    if (!displayTitle) displayTitle = "O que esse projeto me ensinou";
+
+    if (!displayLearnings || displayLearnings.length === 0) return null;
+
     return (
         <SectionWrap variant="light" className="relative py-24 md:py-32 overflow-hidden">
             <div className="relative max-w-7xl mx-auto px-6">
                 <div className="space-y-16">
 
-                    {/* Header - Simple and aligned with MDX standards */}
+                    {/* Header */}
                     <div className="space-y-4">
                         <div className="h-px w-16 bg-accent" />
                         <h2 className="text-3xl md:text-5xl font-bold tracking-tighter text-ink-primary">
-                            {title}
+                            {displayTitle}
                         </h2>
                     </div>
 
                     {/* Learnings List */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-                        {learnings.map((item, index) => (
-                            <LearningItem key={index} {...item} />
+                        {displayLearnings.map((item, index) => (
+                            <LearningItem key={index} {...item} index={index} />
                         ))}
                     </div>
                 </div>

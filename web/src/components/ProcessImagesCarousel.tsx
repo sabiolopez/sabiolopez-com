@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { CASE_STUDIES_DATA } from "@/data/case-studies-data";
 
 export interface ProcessImage {
     src: string;
@@ -11,39 +12,67 @@ export interface ProcessImage {
     caption?: string;
 }
 
-interface ProcessImagesCarouselProps {
-    images: ProcessImage[];
+export interface ProcessImagesCarouselProps {
+    images?: ProcessImage[];
     title?: string;
-    autoPlayDelay?: number; // ms, default 4000
+    autoPlayDelay?: number;
+    projectSlug?: string;
+    locale?: string;
 }
 
+/**
+ * Project Assets Carousel
+ * Displays a slider of project process images or assets.
+ * Supports robust fallback from CASE_STUDIES_DATA if MDX props fail to serialize.
+ */
 export function ProcessImagesCarousel({
-    images,
-    title = "Processo de Design — Imagens",
+    images = [],
+    title,
     autoPlayDelay = 4000,
+    projectSlug,
+    locale = "pt"
 }: ProcessImagesCarouselProps) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [direction, setDirection] = useState<1 | -1>(1);
     const [isPaused, setIsPaused] = useState(false);
 
-    if (!images || images.length === 0) return null;
+    // Determine data source: MDX props or centralized fallback
+    let displayImages = images;
+    let displayTitle = title;
+
+    if ((!displayImages || displayImages.length === 0) && projectSlug) {
+        const fallbackData = CASE_STUDIES_DATA[projectSlug]?.[locale as 'pt' | 'en']?.carousel;
+        if (fallbackData && fallbackData.images.length > 0) {
+            displayImages = fallbackData.images;
+            if (!displayTitle) displayTitle = fallbackData.title;
+        }
+    }
+
+    // Default title if still missing
+    if (!displayTitle) displayTitle = "Processo de Design — Imagens";
 
     const handleNext = useCallback(() => {
+        if (!displayImages || displayImages.length === 0) return;
         setDirection(1);
-        setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, [images.length]);
+        setCurrentIndex((prev) => (prev + 1) % displayImages.length);
+    }, [displayImages]);
 
     const handlePrev = useCallback(() => {
+        if (!displayImages || displayImages.length === 0) return;
         setDirection(-1);
-        setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
-    }, [images.length]);
+        setCurrentIndex((prev) => (prev - 1 + displayImages.length) % displayImages.length);
+    }, [displayImages]);
 
     // Auto-play
     useEffect(() => {
-        if (isPaused || images.length <= 1) return;
+        if (isPaused || !displayImages || displayImages.length <= 1) return;
         const timer = setInterval(handleNext, autoPlayDelay);
         return () => clearInterval(timer);
-    }, [isPaused, images.length, autoPlayDelay, handleNext]);
+    }, [isPaused, displayImages, autoPlayDelay, handleNext]);
+
+    if (!displayImages || displayImages.length === 0) {
+        return null;
+    }
 
     const slideVariants = {
         enter: (dir: number) => ({ x: dir > 0 ? 40 : -40, opacity: 0 }),
@@ -60,7 +89,7 @@ export function ProcessImagesCarousel({
                     <div className="flex items-center gap-4">
                         <div className="h-px w-8 bg-accent flex-shrink-0" />
                         <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-ink-tertiary">
-                            {title}
+                            {displayTitle}
                         </span>
                     </div>
 
@@ -87,8 +116,8 @@ export function ProcessImagesCarousel({
                                     className="absolute inset-0"
                                 >
                                     <Image
-                                        src={images[currentIndex].src}
-                                        alt={images[currentIndex].alt}
+                                        src={displayImages[currentIndex].src}
+                                        alt={displayImages[currentIndex].alt}
                                         fill
                                         quality={100}
                                         className="object-contain"
@@ -98,7 +127,7 @@ export function ProcessImagesCarousel({
                             </AnimatePresence>
 
                             {/* Navigation Buttons */}
-                            {images.length > 1 && (
+                            {displayImages.length > 1 && (
                                 <>
                                     <button
                                         onClick={handlePrev}
@@ -126,10 +155,10 @@ export function ProcessImagesCarousel({
                             )}
 
                             {/* Counter — top right */}
-                            {images.length > 1 && (
+                            {displayImages.length > 1 && (
                                 <div className="absolute top-2.5 right-2.5 z-10 px-2 py-0.5 bg-white/90 border border-border backdrop-blur-sm">
                                     <span className="font-mono text-[10px] text-ink-tertiary tracking-widest">
-                                        {String(currentIndex + 1).padStart(2, "0")} / {String(images.length).padStart(2, "0")}
+                                        {String(currentIndex + 1).padStart(2, "0")} / {String(displayImages.length).padStart(2, "0")}
                                     </span>
                                 </div>
                             )}
@@ -139,7 +168,7 @@ export function ProcessImagesCarousel({
                         <div className="mt-3 flex items-center justify-between gap-4">
                             {/* Caption */}
                             <AnimatePresence mode="wait">
-                                {images[currentIndex].caption ? (
+                                {displayImages[currentIndex].caption ? (
                                     <motion.span
                                         key={`caption-${currentIndex}`}
                                         initial={{ opacity: 0, y: 4 }}
@@ -148,7 +177,7 @@ export function ProcessImagesCarousel({
                                         transition={{ duration: 0.3 }}
                                         className="font-mono text-[10px] uppercase tracking-[0.25em] text-ink-tertiary"
                                     >
-                                        {images[currentIndex].caption}
+                                        {displayImages[currentIndex].caption}
                                     </motion.span>
                                 ) : (
                                     <span />
@@ -156,9 +185,9 @@ export function ProcessImagesCarousel({
                             </AnimatePresence>
 
                             {/* Progress indicators */}
-                            {images.length > 1 && (
+                            {displayImages.length > 1 && (
                                 <div className="flex items-center gap-1.5 flex-shrink-0">
-                                    {images.map((_, index) => (
+                                    {displayImages.map((_, index) => (
                                         <button
                                             key={index}
                                             onClick={() => {

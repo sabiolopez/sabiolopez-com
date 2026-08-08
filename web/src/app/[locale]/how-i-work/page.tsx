@@ -3,7 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { SectionWrap } from "@/components/SectionWrap";
 import Link from "next/link";
-import { ArrowLeft, CheckCircle2 } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { NavigationList } from "@/components/NavigationList";
 
 export default async function HowIWorkPage({
@@ -15,7 +15,6 @@ export default async function HowIWorkPage({
     setRequestLocale(locale);
 
     const t = await getTranslations("HowIWork");
-    const common = await getTranslations("HomePage");
 
     return (
         <main className="bg-canvas min-h-screen font-sans selection:bg-highlight selection:text-canvas pt-20">

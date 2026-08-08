@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 interface BlueprintDeviceProps {
     src: string;
@@ -74,12 +75,14 @@ export function BlueprintDevice({ src, alt = "Interface Preview" }: BlueprintDev
 
                                 {/* Content - Using updated high-res image and crisp rendering */}
                                 <div className="w-full relative min-h-full">
-                                    <img
+                                    <Image
                                         src={src}
                                         alt={alt}
+                                        width={1200}
+                                        height={900}
                                         className="w-full h-auto object-top"
                                         style={{
-                                            imageRendering: 'auto', // Now using high-res, standard auto rendering is best
+                                            imageRendering: 'auto',
                                             WebkitFontSmoothing: 'antialiased',
                                             transform: 'translateZ(0)',
                                             backfaceVisibility: 'hidden'

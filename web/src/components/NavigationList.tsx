@@ -87,7 +87,7 @@ export async function NavigationList({ locale }: NavigationListProps) {
                 </div>
 
                 <div className="space-y-6">
-                    {mergedItems.map((item, i) => (
+                    {mergedItems.map((item) => (
                         <Link
                             key={`${item.type}-${item.id}`}
                             href={item.href}

@@ -118,7 +118,7 @@ export default async function AboutPage({
                         <div className="md:col-span-4 space-y-8">
                             <h3 className="text-label-caps text-ink-tertiary">FORMAÇÃO ACADÊMICA</h3>
                             <div className="space-y-8">
-                                {(t.raw("education.degrees") as any[]).map((item, i) => (
+                                {(t.raw("education.degrees") as { degree: string; institution: string }[]).map((item, i) => (
                                     <div key={i} className="group">
                                         <p className="text-lg font-medium text-ink-primary group-hover:text-accent transition-colors">
                                             {item.degree}
@@ -135,7 +135,7 @@ export default async function AboutPage({
                         <div className="md:col-span-8 space-y-8">
                             <h3 className="text-label-caps text-ink-tertiary">CURSOS & ESPECIALIZAÇÕES</h3>
                             <div className="space-y-6">
-                                {(t.raw("education.courses") as any[]).map((course, i) => (
+                                {(t.raw("education.courses") as { pilar: string; course: string; institution: string; focus: string }[]).map((course, i) => (
                                     <div key={i} className="grid grid-cols-1 lg:grid-cols-12 gap-4 pb-6 border-b border-border/50 last:border-0 group">
                                         <div className="lg:col-span-3">
                                             <span className="inline-block px-2 py-0.5 bg-surface-elevated border border-border text-[10px] font-mono text-ink-secondary uppercase tracking-tighter">

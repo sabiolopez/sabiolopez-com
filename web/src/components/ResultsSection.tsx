@@ -54,7 +54,6 @@ const cols: Record<number, string> = {
 export function ResultsSection({
     title,
     results = [],
-    variant = "light",
     projectSlug,
     locale = "pt"
 }: ResultsSectionProps) {

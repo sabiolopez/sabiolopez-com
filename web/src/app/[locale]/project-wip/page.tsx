@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
-import { ArrowLeft, Workflow, ExternalLink } from "lucide-react";
+import { ArrowLeft, Workflow } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function ProjectWIP() {

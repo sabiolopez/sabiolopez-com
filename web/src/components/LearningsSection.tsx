@@ -59,7 +59,9 @@ export function LearningsSection({
     }
 
     // Default title if still missing
-    if (!displayTitle) displayTitle = "O que esse projeto me ensinou";
+    if (!displayTitle) {
+        displayTitle = locale === "en" ? "What this project taught me" : "O que esse projeto me ensinou";
+    }
 
     if (!displayLearnings || displayLearnings.length === 0) return null;
 

@@ -13,7 +13,7 @@ interface ChallengeCardProps {
 }
 
 export function ChallengeCard({ title, description, icon, label }: ChallengeCardProps) {
-    const Icon = typeof icon === 'string' ? (Icons as any)[icon] || Icons.Target : icon;
+    const Icon = typeof icon === 'string' ? (Icons as unknown as Record<string, LucideIcon>)[icon] || Icons.Target : icon;
 
     return (
         <motion.div

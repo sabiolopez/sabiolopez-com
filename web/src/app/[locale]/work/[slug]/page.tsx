@@ -1,9 +1,11 @@
+import React from 'react';
 import { setRequestLocale } from 'next-intl/server';
 import { getProjectBySlug } from '@/lib/projects';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { notFound } from 'next/navigation';
 import { CaseStudyLayout } from '@/components/CaseStudyLayout';
 import { Metadata } from 'next';
+
 
 interface ProjectPageProps {
     params: Promise<{
@@ -36,24 +38,37 @@ import { SectionWrap } from '@/components/SectionWrap';
 import { ProcessSection } from '@/components/ProcessSection';
 import { EditorialSection } from '@/components/EditorialSection';
 import { ProcessImagesCarousel } from '@/components/ProcessImagesCarousel';
-import * as Icons from 'lucide-react';
 
-const components: any = {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const components: Record<string, (props: any) => React.JSX.Element> = {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     PixelRevealImage: (props: any) => <PixelRevealImage {...props} />,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     ChallengeCard: (props: any) => <ChallengeCard {...props} />,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     ChallengeGrid: (props: any) => <ChallengeGrid {...props} />,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     ArchitectureDiagram: (props: any) => <ArchitectureDiagram {...props} />,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     ProcessStep: (props: any) => <ProcessStep {...props} />,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     ProcessGrid: (props: any) => <ProcessGrid {...props} />,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     ResultsSection: (props: any) => {
         console.log('[MDX] Rendering ResultsSection with props:', Object.keys(props));
         return <ResultsSection {...props} />;
     },
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     BlueprintDevice: (props: any) => <BlueprintDevice {...props} />,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     LearningsSection: (props: any) => <LearningsSection {...props} />,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     SectionWrap: (props: any) => <SectionWrap {...props} />,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     ProcessSection: (props: any) => <ProcessSection {...props} />,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     EditorialSection: (props: any) => <EditorialSection {...props} />,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     ProcessImagesCarousel: (props: any) => {
         console.log('[MDX] Rendering ProcessImagesCarousel with props:', Object.keys(props));
         return <ProcessImagesCarousel {...props} />;
@@ -76,8 +91,11 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     // Inject slug and locale into specific components for robust data fallback
     const enrichedComponents = {
         ...components,
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         ResultsSection: (props: any) => <ResultsSection {...props} projectSlug={slug} locale={locale} />,
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         LearningsSection: (props: any) => <LearningsSection {...props} projectSlug={slug} locale={locale} />,
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         ProcessImagesCarousel: (props: any) => <ProcessImagesCarousel {...props} projectSlug={slug} locale={locale} />,
     };
 

@@ -8,7 +8,6 @@ import { useTranslations } from "next-intl";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { Carousel } from "./Carousel";
 
 interface CaseStudyLayoutProps {
@@ -17,7 +16,7 @@ interface CaseStudyLayoutProps {
     company: string;
     role: string;
     year?: string; // Optional - can use period instead
-    tags: string[];
+    tags?: string[];
     contentType?: "project" | "article" | "side_project";
     // New flexible metadata
     segment?: string; // e.g., "B2B2C - Benefícios corporativos"
@@ -51,7 +50,6 @@ export function CaseStudyLayout({
     company,
     role,
     year,
-    tags,
     contentType = "project",
     segment,
     journey,

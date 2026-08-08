@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback, useRef, useMemo } from "react";
+import { useState, useEffect, useRef, useMemo } from "react";
 import { useTranslations } from "next-intl";
 import { SectionWrap } from "./SectionWrap";
 import { motion, AnimatePresence, useInView } from "framer-motion";
@@ -49,8 +49,7 @@ export function ExpertiseTabs() {
     const t = useTranslations("HomePage.expertise");
     const [activeTab, setActiveTab] = useState<CategoryKey>("saas_b2b");
     const [isPaused, setIsPaused] = useState(false);
-    // eslint-disable-next-line react-hooks/purity
-    const lastInteractionRef = useRef<number>(Date.now());
+    const lastInteractionRef = useRef<number>(0);
     const containerRef = useRef<HTMLDivElement>(null);
     const isInView = useInView(containerRef, { amount: 0.3 });
     const [hasBeenViewed, setHasBeenViewed] = useState(false);

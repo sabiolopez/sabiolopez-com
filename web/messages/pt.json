@@ -141,6 +141,18 @@
       "competencies_label": "Competências Centrais",
       "read_more": "Saiba mais",
       "cases": {
+        "case07": {
+          "tag": "Ticket Edenred",
+          "front_title": "Ativação B2B a partir do primeiro pedido",
+          "back_text": "Reorganização do onboarding do Portal Ticket para tornar os caminhos de ativação mais claros e facilitar a realização do primeiro pedido.",
+          "chips": [
+            "Onboarding",
+            "Ativação B2B",
+            "Product Growth",
+            "Self-service",
+            "SaaS B2B"
+          ]
+        },
         "case01": {
           "tag": "Ticket Edenred",
           "front_title": "Personalização da jornada de compra B2B",

@@ -38,6 +38,7 @@ import { SectionWrap } from '@/components/SectionWrap';
 import { ProcessSection } from '@/components/ProcessSection';
 import { EditorialSection } from '@/components/EditorialSection';
 import { ProcessImagesCarousel } from '@/components/ProcessImagesCarousel';
+import { ImageCompareSlider } from '@/components/ImageCompareSlider';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const components: Record<string, (props: any) => React.JSX.Element> = {
@@ -73,6 +74,8 @@ const components: Record<string, (props: any) => React.JSX.Element> = {
         console.log('[MDX] Rendering ProcessImagesCarousel with props:', Object.keys(props));
         return <ProcessImagesCarousel {...props} />;
     },
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    ImageCompareSlider: (props: any) => <ImageCompareSlider {...props} />,
 };
 
 

@@ -14,6 +14,62 @@ export interface ProjectContent {
 }
 
 export const CASE_STUDIES_DATA: Record<string, { pt: ProjectContent; en: ProjectContent }> = {
+    ticket_activation: {
+        pt: {
+            results: {
+                title: "Resultados observados",
+                items: [
+                    { value: "20,5%", label: "Conversão · primeiro acesso", description: "Pelo novo módulo, frente a 3,9% pelo acesso tradicional de 'Novo pedido'." },
+                    { value: "~12 min", label: "Tempo · primeiro acesso", description: "Até a conclusão pelo novo caminho, frente a aproximadamente 25 minutos pelo tradicional." },
+                    { value: "~17%", label: "Conversão · recorrentes", description: "Pelo novo módulo, frente a 2,9% pelo acesso tradicional." },
+                    { value: "~13 min", label: "Tempo · recorrentes", description: "Até a conclusão pelo novo caminho, frente a aproximadamente 23 minutos pelo tradicional." }
+                ]
+            },
+            learnings: {
+                title: "O que esse projeto me ensinou",
+                items: [
+                    { title: "Ativação B2B envolve preparação", description: "O primeiro valor pode depender de ações operacionais e retornos ao produto. A experiência precisa apoiar esse intervalo e tornar os próximos caminhos compreensíveis." },
+                    { title: "Arquitetura também atua sobre crescimento", description: "Tornar funcionalidades existentes mais visíveis e rever pré-requisitos pode facilitar a progressão. Essas decisões foram centrais para o trabalho de ativação." },
+                    { title: "Medir também exige interpretar", description: "Comparar perfis e caminhos ajudou a avaliar a experiência. Reconhecer a escolha dos usuários foi igualmente importante para compreender os limites dos resultados." }
+                ]
+            },
+            carousel: {
+                title: "Processo de Design — Imagens",
+                images: [
+                    { src: "/assets/projects/ticketcase_2/Discovery.png", alt: "Fase de Discovery e Mapeamento de Comportamento", caption: "Discovery" },
+                    { src: "/assets/projects/ticketcase_2/Design.png", alt: "Arquitetura e Design do Onboarding B2B", caption: "Design" },
+                    { src: "/assets/projects/ticketcase_2/dados.png", alt: "Análise de Dados e Métricas de Conversão", caption: "Análise de Resultados" }
+                ]
+            }
+        },
+        en: {
+            results: {
+                title: "Observed Results",
+                items: [
+                    { value: "20.5%", label: "First Access Conversion", description: "Via the new module, compared to 3.9% via the traditional 'New Order' flow." },
+                    { value: "~12 min", label: "First Access Time", description: "Time to completion via the new path, compared to ~25 minutes via traditional flow." },
+                    { value: "~17%", label: "Recurring Conversion", description: "Via the new module, compared to 2.9% via traditional access." },
+                    { value: "~13 min", label: "Recurring Time", description: "Time to completion via the new path, compared to ~23 minutes via traditional flow." }
+                ]
+            },
+            learnings: {
+                title: "What This Project Taught Me",
+                items: [
+                    { title: "B2B Activation Involves Preparation", description: "First value delivery often depends on operational steps and returning to the product. The user experience must support this interval and clarify next steps." },
+                    { title: "Architecture Directly Drives Growth", description: "Making existing features visible and removing artificial setup prerequisites unlocks user progression. These decisions were core to activation success." },
+                    { title: "Measurement Requires Interpretation", description: "Comparing profiles and paths enriched experience evaluation. Recognizing user choice was key to understanding the context of the quantitative results." }
+                ]
+            },
+            carousel: {
+                title: "Design Process — Images",
+                images: [
+                    { src: "/assets/projects/ticketcase_2/Discovery.png", alt: "Discovery Phase and Behavior Mapping", caption: "Discovery" },
+                    { src: "/assets/projects/ticketcase_2/Design.png", alt: "B2B Onboarding Design & Architecture", caption: "Design" },
+                    { src: "/assets/projects/ticketcase_2/dados.png", alt: "Data Analysis & Conversion Metrics", caption: "Results Analysis" }
+                ]
+            }
+        }
+    },
     edenred: {
         pt: {
             results: {

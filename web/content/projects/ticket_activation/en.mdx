@@ -1,0 +1,156 @@
+---
+id: "case07"
+title: "B2B Activation from the First Order"
+tag: "Ticket Edenred"
+date: "2026"
+order: 1
+description: "Reorganizing Ticket Portal onboarding to make activation paths clearer and facilitate placing the first order."
+context: |
+  In the Ticket Portal, the first order marks the activation of a new contract. Until reaching that point, clients may need to register employees, upload files, or configure products. This preparation involves different paths and returns to the portal that were not always clear in the user experience.
+
+  In partnership with the PO, I participated in discovery and led the design process to make these paths more visible and reduce friction up to the first order. I also built dashboards and performed data analysis. The proposal reorganized the home page to guide the client's operations, giving direct access to existing features and tracking behavior by profile and entry path.
+chips: ["Onboarding", "B2B Activation", "Product Growth", "Self-service", "B2B SaaS"]
+cover: "/assets/projects/ticketcase_2/cover.png"
+status: "published"
+segment: "B2B · Corporate Benefits"
+journey: "Onboarding · Activation"
+role: "Senior Product Designer · Growth"
+period: "Q2 2026"
+featured: true
+problemSection:
+  title: "Unclear Activation Paths"
+  description: "The funnel revealed drop-offs between contract signing and the first order. Dispersed actions and mandatory steps hindered progress across different activation paths."
+  problems:
+    - title: "Dispersed Actions"
+      description: "Employee registration, file uploads, and manual ordering required discovery in different areas of the portal."
+    - title: "Mandatory Step"
+      description: "Product configuration blocked manual order initiation, even when the client wanted to start directly with ordering."
+    - title: "Multi-stage Journey"
+      description: "Placing the first order could take around a month, involving operational prep and multiple portal sessions."
+darkSection:
+  solutionTitle: "A Home Page That Guides Activation"
+  solutionDescription: |
+    We reorganized the home page to highlight contracted products and activation actions right at portal entry. The new module provided direct access to existing paths. For manual orders, initial product configuration was no longer a prerequisite.
+  strategyTitle: "Project Guidelines"
+  strategies:
+    - title: "Product as Context"
+      description: "Use contracted products as the starting point to orient client actions."
+    - title: "Higher Visibility Actions"
+      description: "Bring employee registration, user management, and file uploads closer to portal entry."
+    - title: "Flexible Sequence"
+      description: "Allow manual order initiation without requiring upfront product setup."
+    - title: "Measurement by Path"
+      description: "Differentiate first-time access and recurring users to monitor conversion and completion time."
+  carouselImages:
+    - "/assets/projects/ticketcase_2/cover.png"
+---
+
+<ProcessSection title="Design Process">
+  <ProcessGrid>
+    <ProcessStep 
+      number="01"
+      title="Activation Funnel Analysis"
+      description="Participated in analyzing contract progression up to the first order, investigating where clients stopped advancing in activation."
+    />
+    <ProcessStep 
+      number="02"
+      title="Behavioral Investigation"
+      description="In partnership with the PO, combined funnel data, CES, NPS, support logs, CX insights, and qualitative interviews to understand client friction points."
+    />
+    <ProcessStep 
+      number="03"
+      title="Onboarding Reframing"
+      description="Evidence guided an experience clarifying different prep and ordering paths while respecting non-linear portal returns."
+    />
+    <ProcessStep 
+      number="04"
+      title="Architecture & Prototyping"
+      description="Led the design of the new home page, connecting products and activation actions while removing mandatory setup for manual orders."
+    />
+    <ProcessStep 
+      number="05"
+      title="Client & Squad Validation"
+      description="Tested the solution with five clients and validated alignment across squads responsible for involved features."
+    />
+    <ProcessStep 
+      number="06"
+      title="Production Monitoring"
+      description="Analyzed conversion rates and completion times across profiles and entry paths, comparing the new module against legacy flows."
+    />
+  </ProcessGrid>
+</ProcessSection>
+
+<ProcessImagesCarousel
+  title="Design Process — Images"
+  images={[
+    { src: "/assets/projects/ticketcase_2/Discovery.png", alt: "Discovery Phase and Behavior Mapping", caption: "Discovery" },
+    { src: "/assets/projects/ticketcase_2/Design.png", alt: "B2B Onboarding Design & Architecture", caption: "Design" },
+    { src: "/assets/projects/ticketcase_2/dados.png", alt: "Data Analysis & Conversion Metrics", caption: "Results Analysis" },
+  ]}
+/>
+
+<ImageCompareSlider
+  title="Home Evolution — Before & After"
+  beforeImageSrc="/assets/projects/ticketcase_2/home_antes.png"
+  beforeAlt="Initial portal home page"
+  beforeLabel="Before"
+  afterImageSrc="/assets/projects/ticketcase_2/home_depois.png"
+  afterAlt="New activation-guided home page"
+  afterLabel="After"
+/>
+
+<ImageCompareSlider
+  title="Flow Evolution — Before & After"
+  beforeImageSrc="/assets/projects/ticketcase_2/fluxo_antes.jpg"
+  beforeAlt="Initial activation flow"
+  beforeLabel="Before"
+  afterImageSrc="/assets/projects/ticketcase_2/fluxo_depois.jpg"
+  afterAlt="New reorganized flow"
+  afterLabel="After"
+/>
+
+<ResultsSection 
+  variant="light"
+  title="Observed Results"
+  results={[
+    { 
+      value: "20.5%", 
+      label: "First Access Conversion", 
+      description: "Via the new module, compared to 3.9% via the traditional 'New Order' flow." 
+    },
+    { 
+      value: "~12 min", 
+      label: "First Access Time", 
+      description: "Time to completion via the new path, compared to ~25 minutes via traditional flow." 
+    },
+    { 
+      value: "~17%", 
+      label: "Recurring Conversion", 
+      description: "Via the new module, compared to 2.9% via traditional access." 
+    },
+    { 
+      value: "~13 min", 
+      label: "Recurring Time", 
+      description: "Time to completion via the new path, compared to ~23 minutes via traditional flow." 
+    }
+  ]}
+/>
+
+<LearningsSection 
+  variant="light"
+  title="What This Project Taught Me"
+  learnings={[
+    { 
+      title: "B2B Activation Involves Preparation", 
+      description: "First value delivery often depends on operational steps and returning to the product. The user experience must support this interval and clarify next steps." 
+    },
+    { 
+      title: "Architecture Directly Drives Growth", 
+      description: "Making existing features visible and removing artificial setup prerequisites unlocks user progression. These decisions were core to activation success." 
+    },
+    { 
+      title: "Measurement Requires Interpretation", 
+      description: "Comparing profiles and paths enriched experience evaluation. Recognizing user choice was key to understanding the context of the quantitative results." 
+    }
+  ]}
+/>

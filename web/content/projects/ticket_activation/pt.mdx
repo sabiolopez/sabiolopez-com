@@ -1,0 +1,156 @@
+---
+id: "case07"
+title: "Ativação B2B a partir do primeiro pedido"
+tag: "Ticket Edenred"
+date: "2026"
+order: 1
+description: "Reorganização do onboarding do Portal Ticket para tornar os caminhos de ativação mais claros e facilitar a realização do primeiro pedido."
+context: |
+  No Portal Ticket, o primeiro pedido marca a ativação de um novo contrato. Até chegar a esse momento, os clientes podem precisar cadastrar colaboradores, enviar arquivos ou configurar produtos. Essa preparação envolve diferentes caminhos e retornos ao portal, que nem sempre estavam claros na experiência.
+
+  Em parceria com a PO, participei do discovery e liderei o processo de design para tornar esses caminhos mais visíveis e reduzir barreiras até o pedido. Também atuei na criação de dashboards e na análise de dados. A proposta reorganizou a home para orientar a operação do cliente, dando acesso direto a funcionalidades existentes e permitindo acompanhar o comportamento por perfil e caminho de entrada.
+chips: ["Onboarding", "Ativação B2B", "Product Growth", "Self-service", "SaaS B2B"]
+cover: "/assets/projects/ticketcase_2/cover.png"
+status: "published"
+segment: "B2B · Benefícios corporativos"
+journey: "Onboarding · Ativação"
+role: "Senior Product Designer · Growth"
+period: "Q2 2026"
+featured: true
+problemSection:
+  title: "Caminhos de ativação pouco claros"
+  description: "O funil revelou perdas entre contratação e primeiro pedido. Ações dispersas e etapas obrigatórias dificultavam o avanço pelos diferentes caminhos de ativação."
+  problems:
+    - title: "Ações dispersas"
+      description: "Cadastro de colaboradores, envio de arquivos e pedido manual exigiam descoberta em diferentes áreas do portal."
+    - title: "Etapa obrigatória"
+      description: "A configuração do produto bloqueava o início do pedido manual, mesmo quando o cliente queria começar por ele."
+    - title: "Jornada com retornos"
+      description: "O primeiro pedido podia levar cerca de um mês, envolvendo preparação operacional e diferentes acessos ao portal."
+darkSection:
+  solutionTitle: "Uma home que orienta a ativação"
+  solutionDescription: |
+    Reorganizamos a home para destacar produtos contratados e ações de ativação logo na entrada do portal. O novo módulo ofereceu acesso direto aos caminhos existentes. No pedido manual, a configuração deixou de ser um pré-requisito.
+  strategyTitle: "Diretrizes do Projeto"
+  strategies:
+    - title: "Produto como contexto"
+      description: "Usar os produtos contratados como ponto de partida para orientar as ações do cliente."
+    - title: "Ações mais visíveis"
+      description: "Aproximar cadastro de colaboradores, gestão de usuários e envio de arquivos da entrada do portal."
+    - title: "Sequência flexível"
+      description: "Permitir iniciar o pedido manual sem exigir a configuração antecipada do produto."
+    - title: "Mensuração por caminho"
+      description: "Diferenciar primeiro acesso e recorrência para acompanhar conversão e tempo de conclusão."
+  carouselImages:
+    - "/assets/projects/ticketcase_2/cover.png"
+---
+
+<ProcessSection title="Processo de Design">
+  <ProcessGrid>
+    <ProcessStep 
+      number="01"
+      title="Leitura do funil de ativação"
+      description="Participei da análise da progressão por contrato até o primeiro pedido, investigando onde os clientes deixavam de avançar na ativação."
+    />
+    <ProcessStep 
+      number="02"
+      title="Investigação do comportamento"
+      description="Em parceria com a PO, combinamos dados do funil, CES, NPS, atendimento, CX e pesquisa qualitativa para entender as dificuldades dos clientes."
+    />
+    <ProcessStep 
+      number="03"
+      title="Reenquadramento do onboarding"
+      description="As evidências orientaram uma experiência que esclarecesse os diferentes caminhos de preparação e pedido, respeitando os retornos ao portal."
+    />
+    <ProcessStep 
+      number="04"
+      title="Arquitetura e prototipação"
+      description="Liderei o design da nova home, aproximando produtos e ações de ativação e revendo a obrigatoriedade da configuração no pedido manual."
+    />
+    <ProcessStep 
+      number="05"
+      title="Validação com clientes e squads"
+      description="Testamos a proposta com cinco clientes e validamos os direcionamentos com as squads responsáveis pelas funcionalidades envolvidas."
+    />
+    <ProcessStep 
+      number="06"
+      title="Acompanhamento em produção"
+      description="Analisei conversão e tempo de conclusão por perfil e caminho de entrada, comparando o novo módulo aos acessos tradicionais."
+    />
+  </ProcessGrid>
+</ProcessSection>
+
+<ProcessImagesCarousel
+  title="Processo de Design — Imagens"
+  images={[
+    { src: "/assets/projects/ticketcase_2/Discovery.png", alt: "Fase de Discovery e Mapeamento de Comportamento", caption: "Discovery" },
+    { src: "/assets/projects/ticketcase_2/Design.png", alt: "Arquitetura e Design do Onboarding B2B", caption: "Design" },
+    { src: "/assets/projects/ticketcase_2/dados.png", alt: "Análise de Dados e Métricas de Conversão", caption: "Análise de Resultados" },
+  ]}
+/>
+
+<ImageCompareSlider
+  title="Evolução da Home — Antes & Depois"
+  beforeImageSrc="/assets/projects/ticketcase_2/home_antes.png"
+  beforeAlt="Home inicial do portal"
+  beforeLabel="Antes"
+  afterImageSrc="/assets/projects/ticketcase_2/home_depois.png"
+  afterAlt="Nova home orientada à ativação"
+  afterLabel="Depois"
+/>
+
+<ImageCompareSlider
+  title="Evolução do Fluxo — Antes & Depois"
+  beforeImageSrc="/assets/projects/ticketcase_2/fluxo_antes.jpg"
+  beforeAlt="Fluxo inicial de ativação"
+  beforeLabel="Antes"
+  afterImageSrc="/assets/projects/ticketcase_2/fluxo_depois.jpg"
+  afterAlt="Novo fluxo reorganizado"
+  afterLabel="Depois"
+/>
+
+<ResultsSection 
+  variant="light"
+  title="Resultados observados"
+  results={[
+    { 
+      value: "20,5%", 
+      label: "Conversão · primeiro acesso", 
+      description: "Pelo novo módulo, frente a 3,9% pelo acesso tradicional de 'Novo pedido'." 
+    },
+    { 
+      value: "~12 min", 
+      label: "Tempo · primeiro acesso", 
+      description: "Até a conclusão pelo novo caminho, frente a aproximadamente 25 minutos pelo tradicional." 
+    },
+    { 
+      value: "~17%", 
+      label: "Conversão · recorrentes", 
+      description: "Pelo novo módulo, frente a 2,9% pelo acesso tradicional." 
+    },
+    { 
+      value: "~13 min", 
+      label: "Tempo · recorrentes", 
+      description: "Até a conclusão pelo novo caminho, frente a aproximadamente 23 minutos pelo tradicional." 
+    }
+  ]}
+/>
+
+<LearningsSection 
+  variant="light"
+  title="O que esse projeto me ensinou"
+  learnings={[
+    { 
+      title: "Ativação B2B envolve preparação", 
+      description: "O primeiro valor pode depender de ações operacionais e retornos ao produto. A experiência precisa apoiar esse intervalo e tornar os próximos caminhos compreensíveis." 
+    },
+    { 
+      title: "Arquitetura também atua sobre crescimento", 
+      description: "Tornar funcionalidades existentes mais visíveis e rever pré-requisitos pode facilitar a progressão. Essas decisões foram centrais para o trabalho de ativação." 
+    },
+    { 
+      title: "Medir também exige interpretar", 
+      description: "Comparar perfis e caminhos ajudou a avaliar a experiência. Reconhecer a escolha dos usuários foi igualmente importante para compreender os limites dos resultados." 
+    }
+  ]}
+/>

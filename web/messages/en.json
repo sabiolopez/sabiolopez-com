@@ -141,6 +141,18 @@
             "competencies_label": "Core Competencies",
             "read_more": "Learn More",
             "cases": {
+                "case07": {
+                    "tag": "Ticket Edenred",
+                    "front_title": "B2B Activation from the First Order",
+                    "back_text": "Reorganizing Ticket Portal onboarding to make activation paths clearer and facilitate placing the first order.",
+                    "chips": [
+                        "Onboarding",
+                        "B2B Activation",
+                        "Product Growth",
+                        "Self-service",
+                        "B2B SaaS"
+                    ]
+                },
                 "case01": {
                     "tag": "Ticket Edenred",
                     "front_title": "B2B Buying Journey Personalization",

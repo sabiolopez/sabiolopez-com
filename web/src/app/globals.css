@@ -296,3 +296,45 @@ html {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Stack marquee */
+@keyframes stack-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.stack-marquee {
+  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+}
+
+.stack-marquee-track {
+  animation: stack-marquee 60s linear infinite;
+}
+
+.stack-marquee:hover .stack-marquee-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stack-marquee-track {
+    animation: none;
+    width: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 2rem;
+  }
+
+  .stack-marquee-set[aria-hidden="true"] {
+    display: none;
+  }
+
+  .stack-marquee {
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+}

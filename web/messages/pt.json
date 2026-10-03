@@ -19,72 +19,30 @@
     },
     "expertise": {
       "title": "Domínio Técnico & Prática",
-      "label": "Especialidades",
       "categories": {
         "saas_b2b": {
           "tab_name": "SaaS B2B",
           "years": "+20",
-          "label": "CONTEXTO DE NEGÓCIO",
-          "title": "Estratégia SaaS B2B",
-          "description": "Profundo entendimento de ecossistemas complexos. Do mapeamento de jornadas de compra não lineares e Job-to-be-Done (JTBD) à segmentação granular e personalização baseada em personas.",
-          "processes": [
-            "mapeamento de jornadas e fluxos críticos",
-            "segmentação por perfil e intenção",
-            "arquitetura de informação para plataformas",
-            "decisões orientadas por restrições e operação",
-            "alinhamento entre produto, dados e atendimento"
-          ],
-          "stack": "Amplitude · GA · Datadog · Miro · Jira"
+          "label": "CONTEXTO DE NEGÓCIO"
         },
         "product_design": {
           "tab_name": "Product Design",
           "years": "+15",
-          "label": "CONTEXTO DE PRODUTO",
-          "title": "Product Design",
-          "description": "Foco na construção da experiência e do sistema. Atuação desde o discovery e pesquisa de usuários até a materialização em interfaces de alta fidelidade e sistemas de design escaláveis.",
-          "processes": [
-            "User Research e Pesquisa de Usuários",
-            "Ideação e Fluxos de Experiência",
-            "Design Systems e UI Foundations",
-            "Prototipagem de Baixa e Alta Fidelidade",
-            "Testes de Usabilidade e Acessibilidade"
-          ],
-          "stack": "Figma · Framer · Maze · Dovetail"
+          "label": "CONTEXTO DE PRODUTO"
         },
         "product_growth": {
           "tab_name": "Product Growth",
           "years": "+5",
-          "label": "CONTEXTO DE PERFORMANCE",
-          "title": "Product Growth",
-          "description": "Design orientado a hipóteses e resultados de negócio. Foco em validar alavancas de crescimento através de experimentação contínua, leitura de dados e otimização de jornadas críticas.",
-          "processes": [
-            "Análise de funil e comportamento",
-            "Desenho de experimentos e Testes A/B",
-            "Otimização de Onboarding e Ativação",
-            "Estratégias de retenção e monetização",
-            "Conexão entre design, dados e negócio"
-          ],
-          "stack": "Amplitude · GA · Hotjar · Optimizely"
+          "label": "CONTEXTO DE PERFORMANCE"
         },
         "ai_design": {
-          "tab_name": "Implementação de IA",
+          "tab_name": "AI for Product Design",
           "years": "2",
-          "label": "CONTEXTO ESTRATÉGICO",
-          "title": "Implementação de IA",
-          "description": "Eu não apenas falo sobre IA; eu a implemento. Utilizando Large Language Models (LLMs) e agentes customizados para acelerar o discovery, automatizar sínteses e prototipar funcionalidades inteligentes.",
-          "processes": [
-            "prototipação com IA",
-            "estruturação de prompts e agentes",
-            "apoio a discovery e síntese",
-            "automação de fluxos de design"
-          ],
-          "stack": "ChatGPT · Claude · Perplexity · GitHub · Webflow · Windsurf"
+          "label": "CONTEXTO ESTRATÉGICO"
         }
       },
       "ui": {
-        "processes_label": "Processos & Aplicações",
-        "years_label": "anos",
-        "expertise_label": "ESPECIALIDADE"
+        "years_label": "anos"
       }
     },
     "acting_areas": {
@@ -143,7 +101,7 @@
       "cases": {
         "case07": {
           "tag": "Ticket Edenred",
-          "front_title": "Ativação B2B a partir do primeiro pedido",
+          "front_title": "Estratégia de onboarding integrado à experiência",
           "back_text": "Reorganização do onboarding do Portal Ticket para tornar os caminhos de ativação mais claros e facilitar a realização do primeiro pedido.",
           "chips": [
             "Onboarding",
@@ -259,6 +217,16 @@
       "email": "sabio@sabiolopez.com",
       "linkedin_url": "https://linkedin.com/in/sabiolopez",
       "rights": "© 2026 Sabio Lopez — Portfolio"
+    },
+    "stack": {
+      "title": "Stack & Ferramentas",
+      "groups": {
+        "discovery": "Discovery",
+        "design": "Design",
+        "analytics": "Analytics & Growth",
+        "ai_dev": "IA & Dev",
+        "ops": "Operação & Integrações"
+      }
     }
   },
   "HowIWork": {

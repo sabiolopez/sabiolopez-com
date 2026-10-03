@@ -3,7 +3,8 @@ import type { Metadata } from 'next';
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { WorkGrid } from "@/components/WorkGrid";
-import { ExpertiseTabs } from "@/components/ExpertiseTabs";
+import { ExperienceHighlights } from "@/components/ExperienceHighlights";
+import { StackMarquee } from "@/components/StackMarquee";
 import { ActingAreas } from "@/components/ActingAreas";
 import { ContactSection } from "@/components/ContactSection";
 import { NavigationList } from "@/components/NavigationList";
@@ -32,7 +33,8 @@ export default async function Home({
       <Header />
       <Hero />
       <WorkGrid projects={featuredProjects} />
-      <ExpertiseTabs />
+      <ExperienceHighlights />
+      <StackMarquee />
       <ActingAreas />
       <ContactSection />
       <NavigationList locale={locale} />

@@ -19,72 +19,30 @@
         },
         "expertise": {
             "title": "Technical Mastery & Practice",
-            "label": "Specialties",
             "categories": {
                 "saas_b2b": {
                     "tab_name": "SaaS B2B",
                     "years": "+20",
-                    "label": "BUSINESS CONTEXT",
-                    "title": "SaaS B2B Strategy",
-                    "description": "Deep understanding of complex ecosystems. From mapping non-linear buyer journeys and Job-to-be-Done (JTBD) to granular segmentation and persona-based personalization.",
-                    "processes": [
-                        "mapping of journeys and critical flows",
-                        "segmentation by profile and intent",
-                        "information architecture for platforms",
-                        "decisions driven by constraints and operation",
-                        "alignment between product, data, and service"
-                    ],
-                    "stack": "Amplitude · GA · Datadog · Miro · Jira"
+                    "label": "BUSINESS CONTEXT"
                 },
                 "product_design": {
                     "tab_name": "Product Design",
                     "years": "+15",
-                    "label": "PRODUCT CONTEXT",
-                    "title": "Product Design",
-                    "description": "Focus on building the experience and the system. Acting from discovery and user research to materialization into high-fidelity interfaces and scalable design systems.",
-                    "processes": [
-                        "User Research and Discovery",
-                        "Ideation and Experience Flows",
-                        "Design Systems and UI Foundations",
-                        "Low and High-Fidelity Prototyping",
-                        "Usability and Accessibility Testing"
-                    ],
-                    "stack": "Figma · Framer · Maze · Dovetail"
+                    "label": "PRODUCT CONTEXT"
                 },
                 "product_growth": {
                     "tab_name": "Product Growth",
                     "years": "+5",
-                    "label": "PERFORMANCE CONTEXT",
-                    "title": "Product Growth",
-                    "description": "Hypothesis-driven design and business results. Focus on validating growth levers through continuous experimentation, data analysis, and optimization of critical journeys.",
-                    "processes": [
-                        "Funnel and Behavior Analysis",
-                        "Experiment Design and A/B Testing",
-                        "Onboarding and Activation Optimization",
-                        "Retention and Monetization Strategies",
-                        "Bridging Design, Data, and Business"
-                    ],
-                    "stack": "Amplitude · GA · Hotjar · Optimizely"
+                    "label": "PERFORMANCE CONTEXT"
                 },
                 "ai_design": {
-                    "tab_name": "AI Implementation",
+                    "tab_name": "AI for Product Design",
                     "years": "2",
-                    "label": "STRATEGIC CONTEXT",
-                    "title": "AI Implementation",
-                    "description": "I don't just talk about AI; I implement it. Using Large Language Models (LLMs) and custom agents to accelerate discovery, automate synthesis, and prototype intelligent product features.",
-                    "processes": [
-                        "prototyping with AI",
-                        "structuring of prompts and agents",
-                        "support for discovery and synthesis",
-                        "automation of design flows"
-                    ],
-                    "stack": "ChatGPT · Claude · Perplexity · GitHub · Webflow · Windsurf"
+                    "label": "STRATEGIC CONTEXT"
                 }
             },
             "ui": {
-                "processes_label": "Processes & Applications",
-                "years_label": "years",
-                "expertise_label": "EXPERTISE"
+                "years_label": "years"
             }
         },
         "acting_areas": {
@@ -143,7 +101,7 @@
             "cases": {
                 "case07": {
                     "tag": "Ticket Edenred",
-                    "front_title": "B2B Activation from the First Order",
+                    "front_title": "Onboarding Strategy Integrated into the Experience",
                     "back_text": "Reorganizing Ticket Portal onboarding to make activation paths clearer and facilitate placing the first order.",
                     "chips": [
                         "Onboarding",
@@ -259,6 +217,16 @@
             "email": "sabio@sabiolopez.com",
             "linkedin_url": "https://linkedin.com/in/sabiolopez",
             "rights": "© 2026 Sabio Lopez — Portfolio"
+        },
+        "stack": {
+            "title": "Stack & Tools",
+            "groups": {
+                "discovery": "Discovery",
+                "design": "Design",
+                "analytics": "Analytics & Growth",
+                "ai_dev": "AI & Dev",
+                "ops": "Ops & Integrations"
+            }
         }
     },
     "HowIWork": {

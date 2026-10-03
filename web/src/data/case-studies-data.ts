@@ -19,10 +19,10 @@ export const CASE_STUDIES_DATA: Record<string, { pt: ProjectContent; en: Project
             results: {
                 title: "Resultados observados",
                 items: [
-                    { value: "20,5%", label: "Conversão · primeiro acesso", description: "Pelo novo módulo, frente a 3,9% pelo acesso tradicional de 'Novo pedido'." },
-                    { value: "~12 min", label: "Tempo · primeiro acesso", description: "Até a conclusão pelo novo caminho, frente a aproximadamente 25 minutos pelo tradicional." },
-                    { value: "~17%", label: "Conversão · recorrentes", description: "Pelo novo módulo, frente a 2,9% pelo acesso tradicional." },
-                    { value: "~13 min", label: "Tempo · recorrentes", description: "Até a conclusão pelo novo caminho, frente a aproximadamente 23 minutos pelo tradicional." }
+                    { value: "+16,6 p.p.", label: "Conversão · primeiro acesso", description: "De 3,9% para 20,5% nos pedidos iniciados pelo novo módulo." },
+                    { value: "−50%", label: "Tempo · primeiro acesso", description: "De 25m06 para 12m26 até a conclusão do pedido." },
+                    { value: "+14,1 p.p.", label: "Conversão · recorrentes", description: "De 2,9% para 17% nos pedidos iniciados pelo novo módulo." },
+                    { value: "−41%", label: "Tempo · recorrentes", description: "De 22m44 para 13m22 até a conclusão do pedido." }
                 ]
             },
             learnings: {
@@ -46,10 +46,10 @@ export const CASE_STUDIES_DATA: Record<string, { pt: ProjectContent; en: Project
             results: {
                 title: "Observed Results",
                 items: [
-                    { value: "20.5%", label: "First Access Conversion", description: "Via the new module, compared to 3.9% via the traditional 'New Order' flow." },
-                    { value: "~12 min", label: "First Access Time", description: "Time to completion via the new path, compared to ~25 minutes via traditional flow." },
-                    { value: "~17%", label: "Recurring Conversion", description: "Via the new module, compared to 2.9% via traditional access." },
-                    { value: "~13 min", label: "Recurring Time", description: "Time to completion via the new path, compared to ~23 minutes via traditional flow." }
+                    { value: "+16.6 p.p.", label: "First Access Conversion", description: "From 3.9% to 20.5% for orders initiated via the new module." },
+                    { value: "−50%", label: "First Access Time", description: "From 25m06s to 12m26s to complete the order." },
+                    { value: "+14.1 p.p.", label: "Recurring Conversion", description: "From 2.9% to 17% for orders initiated via the new module." },
+                    { value: "−41%", label: "Recurring Time", description: "From 22m44s to 13m22s to complete the order." }
                 ]
             },
             learnings: {

@@ -18,6 +18,14 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Sabio Lopez | Product & Growth Design for SaaS B2B",
   description: "20 years of experience helping SaaS companies bridge the gap between interface design, product strategy, and AI-driven growth.",
+  icons: {
+    icon: [
+      { url: '/favicon_32.svg', sizes: '32x32', type: 'image/svg+xml' },
+      { url: '/favicon_16.svg', sizes: '16x16', type: 'image/svg+xml' },
+    ],
+    shortcut: '/favicon_32.svg',
+    apple: '/favicon_32.svg',
+  },
 };
 
 export default async function RootLayout({

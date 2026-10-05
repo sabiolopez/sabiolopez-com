@@ -6,6 +6,7 @@ import { WorkGrid } from "@/components/WorkGrid";
 import { ExperienceHighlights } from "@/components/ExperienceHighlights";
 import { StackMarquee } from "@/components/StackMarquee";
 import { ActingAreas } from "@/components/ActingAreas";
+import { SmallBusinessSection } from "@/components/SmallBusinessSection";
 import { ContactSection } from "@/components/ContactSection";
 import { NavigationList } from "@/components/NavigationList";
 import { Footer } from "@/components/Footer";
@@ -36,6 +37,7 @@ export default async function Home({
       <ExperienceHighlights />
       <StackMarquee />
       <ActingAreas />
+      <SmallBusinessSection />
       <ContactSection />
       <NavigationList locale={locale} />
       <Footer />

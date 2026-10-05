@@ -9,6 +9,28 @@
             "contact": "Contact"
         }
     },
+    "ContactForm": {
+        "overline": "Let's talk",
+        "title": "Tell me about your project.",
+        "subtitle": "Tell me what your business needs. I'll take care of the design and build of your site.",
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone (optional)",
+        "message": "What do you need?",
+        "message_placeholder": "Tell me about your business and what you'd like to create.",
+        "submit": "Send message",
+        "submitting": "Sending…",
+        "privacy": "Your data will only be used to reply to your message.",
+        "success_title": "Message sent.",
+        "success_body": "Thanks for reaching out! I'll read your message and reply by email within 2 business days.",
+        "success_close": "Close",
+        "error_generic": "Couldn't send right now. Please try again or write to sabiolopez@gmail.com.",
+        "err_name": "Please enter your name.",
+        "err_email": "Enter a valid email.",
+        "err_phone": "Invalid phone.",
+        "err_message": "Tell me a bit more (min. 10 characters).",
+        "close": "Close form"
+    },
     "HomePage": {
         "hero": {
             "title1": "Product &",
@@ -188,6 +210,13 @@
             "status": "[ STATUS: CURATING_ARCHIVE ]",
             "wip_suffix": "2024 — WIP",
             "note": "I finally took some time off from debugging other people's products to fix my own. The gallery is currently being restored. I'm archiving legacy work to make room for new \"Product-Led\" cases and AI workflow insights."
+        },
+        "smallBusiness": {
+            "overline": "I can also help with your website",
+            "title_line1": "Landing pages and websites",
+            "title_line2": "for small businesses.",
+            "description": "From design to a published site: a simple way to present your business, promote a service and get inbound leads.",
+            "cta": "Tell me about your project"
         },
         "contact": {
             "title_main": "Get in",

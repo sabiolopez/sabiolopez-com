@@ -9,6 +9,28 @@
       "contact": "Contato"
     }
   },
+  "ContactForm": {
+    "overline": "Vamos conversar",
+    "title": "Conte sobre seu projeto.",
+    "subtitle": "Me conte o que seu negócio precisa. Eu cuido do design e da construção do seu site.",
+    "name": "Nome",
+    "email": "E-mail",
+    "phone": "Telefone (opcional)",
+    "message": "O que você deseja?",
+    "message_placeholder": "Conte sobre seu negócio e o que gostaria de criar.",
+    "submit": "Enviar mensagem",
+    "submitting": "Enviando…",
+    "privacy": "Seus dados serão usados apenas para responder ao seu contato.",
+    "success_title": "Mensagem enviada.",
+    "success_body": "Obrigado pelo contato! Li o que você escreveu e respondo por e-mail em até 2 dias úteis.",
+    "success_close": "Fechar",
+    "error_generic": "Não foi possível enviar agora. Tente novamente ou escreva para sabiolopez@gmail.com.",
+    "err_name": "Informe seu nome.",
+    "err_email": "Informe um e-mail válido.",
+    "err_phone": "Telefone inválido.",
+    "err_message": "Conte um pouco mais (mín. 10 caracteres).",
+    "close": "Fechar formulário"
+  },
   "HomePage": {
     "hero": {
       "title1": "Product &",
@@ -188,6 +210,13 @@
       "status": "[ STATUS: CURATING_ARCHIVE ]",
       "wip_suffix": "2024 — Em andamento",
       "note": "Finalmente parei um pouco de debugar os produtos dos outros para arrumar o meu. A galeria está sendo restaurada. Estou arquivando trabalhos legados para abrir espaço para novos cases \"Product-Led\" e insights sobre workflows de IA."
+    },
+    "smallBusiness": {
+      "overline": "Também posso ajudar com seu site",
+      "title_line1": "Landing pages e sites",
+      "title_line2": "para pequenos negócios.",
+      "description": "Do design ao site publicado: uma solução simples para apresentar sua empresa, divulgar um serviço e receber contatos.",
+      "cta": "Conte sobre seu projeto"
     },
     "contact": {
       "title_main": "Entre em",

@@ -31,7 +31,7 @@ export function ActingAreas() {
     };
 
     return (
-        <SectionWrap variant="light" id="acting-areas" className="py-24 lg:py-40 border-t border-border/50">
+        <SectionWrap variant="light" id="acting-areas" className="py-24 lg:py-40">
             {/* Section Header */}
             <div className="mb-20 lg:mb-24 max-w-4xl">
                 <motion.span

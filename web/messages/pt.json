@@ -121,6 +121,17 @@
       "competencies_label": "Competências Centrais",
       "read_more": "Saiba mais",
       "cases": {
+        "case08": {
+          "tag": "Ticket Edenred",
+          "front_title": "Redesenho da arquitetura de relatórios",
+          "back_text": "Da migração dos relatórios do legado a uma arquitetura comum de consulta, personalização e exportação de informações.",
+          "chips": [
+            "Migração de plataforma",
+            "Arquitetura de informação",
+            "Relatórios",
+            "B2B"
+          ]
+        },
         "case07": {
           "tag": "Ticket Edenred",
           "front_title": "Estratégia de onboarding integrado à experiência",
@@ -434,6 +445,7 @@
   },
   "CaseStudy": {
     "back": "Voltar para Projetos",
+    "step_label": "Etapa",
     "client": "Empresa",
     "segment": "Segmento e Mercado",
     "journey": "Jornada",

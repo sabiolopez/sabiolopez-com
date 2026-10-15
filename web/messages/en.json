@@ -121,6 +121,17 @@
             "competencies_label": "Core Competencies",
             "read_more": "Learn More",
             "cases": {
+                "case08": {
+                    "tag": "Ticket Edenred",
+                    "front_title": "Redesigning the Reporting Architecture",
+                    "back_text": "From migrating legacy reports to a shared architecture for querying, customizing and exporting information.",
+                    "chips": [
+                        "Platform Migration",
+                        "Information Architecture",
+                        "Reporting",
+                        "B2B"
+                    ]
+                },
                 "case07": {
                     "tag": "Ticket Edenred",
                     "front_title": "Onboarding Strategy Integrated into the Experience",
@@ -434,6 +445,7 @@
     },
     "CaseStudy": {
         "back": "Back to Work",
+        "step_label": "Step",
         "client": "Company",
         "segment": "Segment & Market",
         "journey": "Journey",

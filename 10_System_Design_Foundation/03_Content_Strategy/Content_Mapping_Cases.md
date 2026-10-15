@@ -89,3 +89,36 @@
 ### 6. Resultados e aprendizados
 *   Estrutura de aquisição escalável globalmente.
 *   Aprendizado: O design modular é a única forma de sustentar o crescimento hiper-acelerado sem criar dívida técnica visual.
+
+---
+
+## Case 08: Ticket Edenred — Redesenho de relatórios do Portal Ticket (Migração & Arquitetura de Informação)
+
+> Slug: `ticket_reports` · id: `case08` · `order: 1` · Fonte: apresentação do projeto (prevalece sobre documentos anteriores).
+
+### 1. Contexto
+*   Migração do portal legado (TEP) para o Portal Ticket; relatórios era frente necessária para atender médias, grandes e Top Accounts.
+*   Escopo inicial: replicar 18 relatórios em 3 meses (ampliado para 6). Frente sem squad; design assumido por mim, em parceria com o GPM.
+
+### 2. Problema real
+*   Relatórios fragmentados, filtros/tabelas fixos, exportação como única saída e demandas de grandes contas atendidas manualmente por Operações.
+
+### 3. Hipóteses consideradas
+*   Replicar os 18 relatórios vs. reorganizar por domínio de informação (Pedidos e Documentos Fiscais, Beneficiários, Cartões, Reversões).
+*   Baixo uso de grandes contas = baixa necessidade? (refutada: demanda atendida fora do portal).
+
+### 4. Decisões tomadas
+*   Arquitetura unificada, filtros principais/avançados, personalização de colunas, exploração no portal e exportação reutilizável.
+
+### 5. Execução
+*   Análise de uso + arquivos personalizados (com LLM) + benchmark; protótipos (Figma Design/Make, Google Antigravity); teste com 5 clientes; piloto e rollout em ondas; dashboards de acompanhamento.
+
+### 6. Resultados e aprendizados
+*   Mais da metade da base habilitada (acesso, não uso/retenção).
+*   Aprendizado: uso do portal mostra só parte da necessidade; migrar exige rever arquitetura; ampliar a base exige orientação e visibilidade.
+
+### Política de anonimização (público)
+*   Não publicar: nomes de fornecedores terceiros (parceiro de desenvolvimento, ferramenta de monitoramento), tamanho absoluto da base, contagens por onda e data exata do rollout. Usar percentuais e valores arredondados.
+*   Notas públicas mantidas: leitura dos indicadores e limites da validação.
+
+> Nota: cases 04–07 ainda não estão detalhados neste documento.

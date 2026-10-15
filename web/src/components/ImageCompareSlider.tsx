@@ -2,6 +2,7 @@
 
 import { useState, useRef, useCallback, useEffect } from "react";
 import Image from "next/image";
+import { useLocale } from "next-intl";
 import { ChevronsLeftRight } from "lucide-react";
 
 export interface ImageCompareSliderProps {
@@ -44,6 +45,7 @@ export function ImageCompareSlider({
     afterImage,
     initialPosition = 50,
 }: ImageCompareSliderProps) {
+    const locale = useLocale();
     const [sliderPosition, setSliderPosition] = useState(initialPosition);
     const [isDragging, setIsDragging] = useState(false);
     const containerRef = useRef<HTMLDivElement>(null);
@@ -130,7 +132,7 @@ export function ImageCompareSlider({
                         aria-label={title}
                     >
                         {/* Base / Background Image ("Before") */}
-                        <div className="relative w-full aspect-[16/10] bg-neutral-100">
+                        <div className="relative w-full aspect-[16/9] bg-neutral-100">
                             <Image
                                 src={srcBefore}
                                 alt={altBefore}
@@ -150,7 +152,7 @@ export function ImageCompareSlider({
                         {/* Top / Overlay Image ("After") - Clipped */}
                         <div
                             className="absolute inset-0 z-20 overflow-hidden"
-                            style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
+                            style={{ clipPath: `inset(0 0 0 ${sliderPosition}%)` }}
                         >
                             <div className="relative w-full h-full bg-neutral-100">
                                 <Image
@@ -188,7 +190,7 @@ export function ImageCompareSlider({
                     {/* Mobile / Accessibility Hint */}
                     <div className="text-center">
                         <p className="font-mono text-[11px] text-ink-tertiary">
-                            Arraste para os lados para comparar os fluxos
+                            {locale === "en" ? "Drag sideways to compare the experiences" : "Arraste para os lados para comparar os fluxos"}
                         </p>
                     </div>
                 </div>

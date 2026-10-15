@@ -9,6 +9,7 @@ export interface ProjectMetadata {
     title: string;
     tag: string;
     date: string;
+    period?: string;
     description: string;
     context?: string;
     chips: string[];

@@ -12,6 +12,7 @@ export interface ResultsSectionProps {
     variant?: "light" | "dark";
     title?: string;
     results?: Metric[];
+    note?: string;
     projectSlug?: string;
     locale?: string;
 }
@@ -54,6 +55,7 @@ const cols: Record<number, string> = {
 export function ResultsSection({
     title,
     results = [],
+    note,
     projectSlug,
     locale = "pt"
 }: ResultsSectionProps) {
@@ -61,12 +63,14 @@ export function ResultsSection({
     // Determine data source: MDX props or centralized fallback
     let displayResults = results;
     let displayTitle = title;
+    let displayNote = note;
 
     if ((!displayResults || displayResults.length === 0) && projectSlug) {
         const fallbackData = CASE_STUDIES_DATA[projectSlug]?.[locale as 'pt' | 'en']?.results;
         if (fallbackData && fallbackData.items.length > 0) {
             displayResults = fallbackData.items;
             if (!displayTitle) displayTitle = fallbackData.title;
+            if (!displayNote) displayNote = fallbackData.note;
         }
     }
 
@@ -101,6 +105,12 @@ export function ResultsSection({
                             />
                         ))}
                     </div>
+
+                    {displayNote && (
+                        <p className="max-w-3xl text-xs md:text-sm text-ink-tertiary font-light leading-relaxed -mt-4 md:-mt-12">
+                            {displayNote}
+                        </p>
+                    )}
                 </div>
             </div>
         </SectionWrap>

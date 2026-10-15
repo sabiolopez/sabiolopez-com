@@ -1,0 +1,145 @@
+---
+id: "case08"
+title: "Redesigning the Reporting Architecture"
+tag: "Ticket Edenred"
+date: "2026"
+order: 1
+description: "From migrating legacy reports to a shared architecture for querying, customizing and exporting information."
+context: |
+  Ticket Edenred needed to migrate TEP, its legacy portal, to Ticket Portal, which served small businesses and needed to incorporate features used by mid-sized and large clients, including Top Accounts. Reporting, used by HR, Finance and Administrative teams, was essential to shutting down the old architecture.
+
+  The project began with a proposal to reproduce the 18 existing reports in three months. When the originally assigned designer left, I took on design leadership in an initiative with no squad and no engineering. With the GPM, I investigated the current experience and client needs to structure the new proposal, during the first and second quarters of 2026.
+chips: ["B2B", "Benefits Management", "Platform Migration", "Information Architecture"]
+cover: "/assets/projects/ticketcase_4/case_reports.png"
+status: "published"
+segment: "B2B · Benefits Management"
+journey: "Legacy Migration · Reporting"
+role: "Design leadership"
+period: "Q1 and Q2 2026"
+featured: true
+problemSection:
+  title: "Migrating reports without reproducing the legacy's limitations"
+  description: "The initial scope was to bring the 18 TEP reports to Ticket Portal as they were. Research revealed a fragmented experience, with fixed structures, little customization and heavy reliance on exports. It also revealed needs from large clients that Operations handled manually, outside the portal."
+  problems:
+    - title: "Fragmented reports"
+      description: "Each report had its own screen, filters and structure. Similar needs showed up in different experiences, with inconsistent organization and presentation."
+    - title: "Limited querying flexibility"
+      description: "Fixed tables and limited filters restricted the available views. Exporting to XLSX or PDF was the primary way to work with the data, and some results depended on asynchronous processing."
+    - title: "Needs outside self-service"
+      description: "Large Accounts and Top Accounts requested reports with specific fields, data breakdowns and formats. Operations extracted the data, adjusted spreadsheets and sent the files manually."
+darkSection:
+  solutionTitle: "A shared architecture for working with information"
+  solutionDescription: |
+    We reorganized the needs into four main groups: Orders and Tax Documents, Beneficiaries, Cards and Reversals. The proposal shared components and an interaction model across domains, while preserving each one's own data, filters and rules.
+
+    The experience combines search, filters, totals, column configuration, detail views and export. The shift was from choosing among fixed reports to querying and organizing information within the possibilities the product offers.
+  strategyTitle: "Project Guidelines"
+  strategies:
+    - title: "Domain-based organization"
+      description: "Bring similar needs together in a unified architecture, with components shared across Orders, Beneficiaries, Cards and Reversals."
+    - title: "Flexibility for different needs"
+      description: "Support different data views through primary and advanced filters, saved filters, and column selection, sorting and reordering."
+    - title: "Exploration within the portal"
+      description: "Offer totals, statuses, filtered summaries and access to details to support understanding of the information while querying."
+    - title: "Continuity beyond the portal"
+      description: "Preserve table and detail exports for workflows that continue in other tools, with reusable formats and patterns depending on the context."
+  carouselImages:
+    - "/assets/projects/ticketcase_4/case_reports.png"
+---
+
+<ProcessSection
+  title="Design Process"
+  description="We combined analysis of the existing experience, usage data, client needs and market research to reframe the scope. The proposal was prototyped, discussed with the teams involved and validated with clients before progressive rollout."
+>
+  <ProcessGrid>
+    <ProcessStep
+      number="01"
+      title="Understanding the legacy system and how it was used"
+      description="I analyzed the 18 reports, their structures and limitations. Data on access, usage frequency, time spent and repeat visits helped identify usage concentration, overlapping needs and differences between segments."
+    />
+    <ProcessStep
+      number="02"
+      title="Needs served outside the portal"
+      description="With business managers, Operations and support tickets, we investigated recurring demands. Analyzing dozens of custom files, supported by an LLM, helped recognize relevant groups, filters and fields."
+    />
+    <ProcessStep
+      number="03"
+      title="References and architecture definition"
+      description="Manual benchmarking and LLM research complemented internal findings. The identified needs guided a domain-based architecture with flexible filters, customization, exploration and export."
+    />
+    <ProcessStep
+      number="04"
+      title="Experience prototyping"
+      description="The work moved through wireframes in Figma Design and prototypes with Figma Make and Google Antigravity. Datasets and interactions close to real use made it possible to explore complexity beyond static screens."
+    />
+    <ProcessStep
+      number="05"
+      title="Alignment and validation"
+      description="The proposal was aligned with the tribe, engineering, data, leadership and management. Usability testing involved five clients: two large, two mid-sized and one small."
+    />
+    <ProcessStep
+      number="06"
+      title="Adoption support and monitoring"
+      description="We structured guidance for clients and internal teams, a feedback channel and a controlled pilot. Since instrumentation had not been planned, I used the monitoring tool's AI assistant to track the expansion, building queries and dashboards for behavior and performance."
+    />
+  </ProcessGrid>
+</ProcessSection>
+
+<ProcessImagePairs
+  title="Discovery process"
+  images={[
+    {"src": "/assets/projects/ticketcase_4/discovery_analiselegado.jpeg", "alt": "Analysis of legacy reports and experience", "label": "Legacy analysis"},
+    {"src": "/assets/projects/ticketcase_4/discovery_analisedemercado.jpeg", "alt": "Market analysis for the reporting architecture", "label": "Market analysis"},
+    {"src": "/assets/projects/ticketcase_4/discovery_benchmarking.jpeg", "alt": "Benchmarking of querying and reporting experiences", "label": "Benchmarking"},
+    {"src": "/assets/projects/ticketcase_4/Discovery_Alinhamentoevalidacoes.jpeg", "alt": "Alignment and validation of the reporting proposal", "label": "Alignment and validation"},
+  ]}
+/>
+
+<ImageCompareSlider
+  title="Legacy experience — New proposal"
+  beforeImageSrc="/assets/projects/ticketcase_4/tela_legado.png"
+  beforeAlt="Legacy TEP reports screen"
+  beforeLabel="Legacy"
+  afterImageSrc="/assets/projects/ticketcase_4/nova_proposta.png"
+  afterAlt="New reports proposal in Portal Ticket"
+  afterLabel="New proposal"
+/>
+
+<ProcessImagePairs
+  title="From wireframe to high fidelity"
+  wireframeLabel="Wireframe"
+  finalLabel="High fidelity"
+  pairs={[
+    {
+      title: "Orders and tax documents query",
+      caption: "From the structure of filters, summary cards and configurable table to the interface with visual identity and status.",
+      wireframeSrc: "/assets/projects/ticketcase_4/wireframe_1.png",
+      wireframeAlt: "Wireframe of the orders and tax documents query",
+      finalSrc: "/assets/projects/ticketcase_4/High_fidelity_1.png",
+      finalAlt: "High-fidelity design of the orders and tax documents query",
+    },
+    {
+      title: "Order detail side panel",
+      caption: "From the tabbed panel with summary, beneficiaries, fees and cancellations to the final detail view.",
+      wireframeSrc: "/assets/projects/ticketcase_4/wireframe_2.png",
+      wireframeAlt: "Wireframe of the order detail side panel",
+      finalSrc: "/assets/projects/ticketcase_4/High_fidelity_2.png",
+      finalAlt: "High-fidelity design of the order detail side panel",
+    },
+  ]}
+/>
+
+<ProcessImagePairs
+  title="Artifacts created with AI"
+  images={[
+    {"src": "/assets/projects/ticketcase_4/AI_analisepadroes.jpeg", "alt": "Pattern analysis", "label": "Pattern analysis"},
+    {"src": "/assets/projects/ticketcase_4/AI_prototipo_make.png", "alt": "AI prototyping", "label": "AI prototyping"},
+    {"src": "/assets/projects/ticketcase_4/AI_FAQ.png", "alt": "AI-assisted FAQ", "label": "AI-assisted FAQ"},
+    {"src": "/assets/projects/ticketcase_4/AI_analise_resultados.png", "alt": "Results analysis", "label": "Results analysis"},
+    {"src": "/assets/projects/ticketcase_4/AI_apresentaçao.png", "alt": "AI-assisted presentation", "label": "AI-assisted presentation"},
+  ]}
+/>
+
+<ResultsSection />
+
+<LearningsSection />

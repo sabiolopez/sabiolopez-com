@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 interface ProcessStepProps {
     number: string;
@@ -10,6 +11,7 @@ interface ProcessStepProps {
 }
 
 export function ProcessStep({ number, title, description }: ProcessStepProps) {
+    const t = useTranslations("CaseStudy");
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -19,7 +21,7 @@ export function ProcessStep({ number, title, description }: ProcessStepProps) {
         >
             <div className="space-y-2">
                 <span className="font-mono text-[10px] text-accent uppercase tracking-[0.3em] font-medium block">
-                    Etapa {number}
+                    {t("step_label")} {number}
                 </span>
                 <h4 className="text-xl font-semibold text-ink-primary tracking-tight group-hover:text-accent transition-colors">
                     {title}

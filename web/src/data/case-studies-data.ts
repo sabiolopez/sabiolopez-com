@@ -1,6 +1,7 @@
 export interface ProjectContent {
     results: {
         title?: string;
+        note?: string;
         items: { value: string; label: string; description: string }[];
     };
     learnings: {
@@ -14,6 +15,64 @@ export interface ProjectContent {
 }
 
 export const CASE_STUDIES_DATA: Record<string, { pt: ProjectContent; en: ProjectContent }> = {
+    ticket_reports: {
+        pt: {
+            results: {
+                title: "Resultados observados",
+                note: "Posição em 22/09/2026. Habilitação representa acesso liberado ao módulo; a migração completa e o uso efetivo não estão demonstrados por esse indicador.",
+                items: [
+                    { value: "52,46%", label: "Da base habilitada", description: "O módulo chegou a 41.303 clientes, com disponibilização progressiva após o piloto." },
+                    { value: "4 domínios", label: "Arquitetura compartilhada", description: "Pedidos e Documentos Fiscais, Beneficiários, Cartões e Reversões passaram a compartilhar um modelo de consulta, personalização e exportação." },
+                    { value: "303 clientes", label: "Piloto controlado", description: "A liberação inicial teve acompanhamento próximo de Produto, Operações e gerentes de negócio antes da expansão." }
+                ]
+            },
+            learnings: {
+                title: "O que esse projeto me ensinou",
+                items: [
+                    { title: "Migrar exige entender o que precisa continuar funcionando", description: "Ao investigar os 18 relatórios, aprendi a separar as necessidades dos clientes das estruturas do legado. Isso permitiu reorganizar a experiência por domínios, preservando tarefas importantes e ampliando as possibilidades de consulta." },
+                    { title: "Baixo uso pode esconder uma necessidade atendida fora do produto", description: "A menor utilização entre grandes clientes ganhou outro significado quando analisamos os arquivos produzidos por Operações. Aprendi a cruzar dados de navegação com demandas de atendimento para enxergar necessidades que o portal não registrava." },
+                    { title: "A mensuração precisa nascer junto com a solução", description: "A expansão revelou uma lacuna de instrumentação, que buscamos contornar com consultas e dashboards na ferramenta de monitoramento. Em projetos futuros, eu definiria desde o início os eventos e critérios para acompanhar uso, conclusão de tarefas e dificuldades na transição." }
+                ]
+            },
+            carousel: {
+                title: "Processo de Discovery",
+                images: [
+                    { src: "/assets/projects/ticketcase_4/discovery_analiselegado.jpeg", alt: "Análise dos relatórios e da experiência do legado", caption: "Análise do legado" },
+                    { src: "/assets/projects/ticketcase_4/discovery_analisedemercado.jpeg", alt: "Análise de mercado para a arquitetura de relatórios", caption: "Análise de mercado" },
+                    { src: "/assets/projects/ticketcase_4/discovery_benchmarking.jpeg", alt: "Benchmarking de experiências de consulta e relatórios", caption: "Benchmarking" },
+                    { src: "/assets/projects/ticketcase_4/Discovery_Alinhamentoevalidacoes.jpeg", alt: "Alinhamentos e validações da proposta de relatórios", caption: "Alinhamento e validações" }
+                ]
+            }
+        },
+        en: {
+            results: {
+                title: "Observed Results",
+                note: "As of September 22, 2026. Enablement means access granted to the module; full migration and actual usage are not demonstrated by this indicator.",
+                items: [
+                    { value: "52.46%", label: "Of the base enabled", description: "The module reached 41,303 clients, with progressive rollout after the pilot." },
+                    { value: "4 domains", label: "Shared architecture", description: "Orders and Tax Documents, Beneficiaries, Cards and Reversals now share one querying, customization and export model." },
+                    { value: "303 clients", label: "Controlled pilot", description: "Product, Operations and business managers closely monitored the initial release before the rollout expanded." }
+                ]
+            },
+            learnings: {
+                title: "What This Project Taught Me",
+                items: [
+                    { title: "Migration requires understanding what must keep working", description: "While investigating the 18 reports, I learned to separate client needs from legacy structures. This made it possible to reorganize the experience by domain, preserving important tasks while expanding querying possibilities." },
+                    { title: "Low usage can hide a need met outside the product", description: "Lower usage among large clients took on a different meaning once we analyzed the files produced by Operations. I learned to cross-reference navigation data with support requests to see needs the portal wasn't recording." },
+                    { title: "Measurement should be planned alongside the solution", description: "The expansion revealed an instrumentation gap, which we tried to work around with queries and dashboards in the monitoring tool. In future projects, I would define from the start the events and criteria to track usage, task completion and difficulties during the transition." }
+                ]
+            },
+            carousel: {
+                title: "Discovery process",
+                images: [
+                    { src: "/assets/projects/ticketcase_4/discovery_analiselegado.jpeg", alt: "Analysis of legacy reports and experience", caption: "Legacy analysis" },
+                    { src: "/assets/projects/ticketcase_4/discovery_analisedemercado.jpeg", alt: "Market analysis for the reporting architecture", caption: "Market analysis" },
+                    { src: "/assets/projects/ticketcase_4/discovery_benchmarking.jpeg", alt: "Benchmarking of querying and reporting experiences", caption: "Benchmarking" },
+                    { src: "/assets/projects/ticketcase_4/Discovery_Alinhamentoevalidacoes.jpeg", alt: "Alignment and validation of the reporting proposal", caption: "Alignment and validation" }
+                ]
+            }
+        }
+    },
     ticket_activation: {
         pt: {
             results: {

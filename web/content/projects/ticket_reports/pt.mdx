@@ -1,0 +1,145 @@
+---
+id: "case08"
+title: "Redesenho da arquitetura de relatórios"
+tag: "Ticket Edenred"
+date: "2026"
+order: 1
+description: "Da migração dos relatórios do legado a uma arquitetura comum de consulta, personalização e exportação de informações."
+context: |
+  A Ticket Edenred precisava migrar o TEP, portal legado, para o Portal Ticket, que atendia clientes de pequeno porte e precisava incorporar funcionalidades de empresas médias, grandes e Top Accounts. Os relatórios, usados por RH, Financeiro e Administrativo, eram essenciais para o desligamento da arquitetura antiga.
+
+  O projeto partiu da proposta de reproduzir os 18 relatórios existentes em três meses. Com a saída do designer previsto, assumi a liderança de design, em uma iniciativa sem squad e sem engenharia. Com o GPM, investiguei a experiência atual e as necessidades dos clientes para estruturar a nova proposta, entre o primeiro e o segundo trimestres de 2026.
+chips: ["B2B", "Gestão de benefícios", "Migração de plataforma", "Arquitetura de informação"]
+cover: "/assets/projects/ticketcase_4/case_reports.png"
+status: "published"
+segment: "B2B · Gestão de benefícios"
+journey: "Migração do legado · Relatórios"
+role: "Liderança de design"
+period: "Q1 e Q2 2026"
+featured: true
+problemSection:
+  title: "Migrar os relatórios sem reproduzir as limitações do legado"
+  description: "O escopo inicial previa levar os 18 relatórios do TEP para o Portal Ticket como estavam. A investigação mostrou uma experiência fragmentada, com estruturas fixas, pouca personalização e forte dependência de exportação. Também revelou necessidades de grandes clientes atendidas manualmente por Operações, fora do portal."
+  problems:
+    - title: "Relatórios fragmentados"
+      description: "Cada relatório tinha sua própria tela, filtros e estrutura. Necessidades semelhantes apareciam em experiências diferentes, com inconsistências de organização e apresentação."
+    - title: "Pouca flexibilidade de consulta"
+      description: "Tabelas fixas e filtros limitados restringiam os recortes disponíveis. A exportação em XLSX ou PDF era a principal saída, e alguns resultados dependiam de processamento assíncrono."
+    - title: "Necessidades fora do self-service"
+      description: "Grandes Contas e Top Accounts solicitavam relatórios com campos, recortes e formatos específicos. Operações extraía os dados, ajustava planilhas e enviava os arquivos manualmente."
+darkSection:
+  solutionTitle: "Uma arquitetura comum para trabalhar com a informação"
+  solutionDescription: |
+    Reorganizamos as necessidades em quatro grupos principais: Pedidos e Documentos Fiscais, Beneficiários, Cartões e Reversões. A proposta passou a compartilhar componentes e um modelo de interação entre os domínios, preservando seus dados, filtros e regras específicos.
+
+    A experiência combina busca, filtros, totalizadores, configuração de colunas, detalhamento e exportação. A mudança foi de escolher entre relatórios fixos para consultar e organizar as informações dentro das possibilidades oferecidas pelo produto.
+  strategyTitle: "Diretrizes do projeto"
+  strategies:
+    - title: "Organização por domínio"
+      description: "Reunir necessidades semelhantes em uma arquitetura unificada, com componentes compartilhados entre Pedidos, Beneficiários, Cartões e Reversões."
+    - title: "Flexibilidade para diferentes necessidades"
+      description: "Permitir recortes de consulta com filtros principais e avançados, salvamento de filtros e seleção, ordenação e reordenação de colunas."
+    - title: "Exploração dentro do portal"
+      description: "Oferecer totalizadores, status, resumos filtrados e acesso aos detalhes para apoiar a compreensão das informações durante a consulta."
+    - title: "Continuidade fora do portal"
+      description: "Preservar a exportação de tabelas e detalhes para os fluxos que continuam em outras ferramentas, com formatos e padrões reutilizáveis conforme o contexto."
+  carouselImages:
+    - "/assets/projects/ticketcase_4/case_reports.png"
+---
+
+<ProcessSection
+  title="Processo de design"
+  description="Combinamos análise da experiência existente, dados de utilização, demandas dos clientes e referências de mercado para reformular o escopo. A proposta foi prototipada, discutida com as áreas envolvidas e validada com clientes antes da disponibilização progressiva."
+>
+  <ProcessGrid>
+    <ProcessStep
+      number="01"
+      title="Entendimento do legado e do uso"
+      description="Analisei os 18 relatórios, suas estruturas e limitações. Os dados de acesso, frequência, tempo de uso e recorrência ajudaram a identificar concentração de uso, sobreposição de necessidades e diferenças entre segmentos."
+    />
+    <ProcessStep
+      number="02"
+      title="Necessidades atendidas fora do portal"
+      description="Com gerentes de negócio, Operações e chamados de suporte, investigamos demandas recorrentes. A análise de dezenas de arquivos personalizados, apoiada por LLM, ajudou a reconhecer grupos, filtros e campos relevantes."
+    />
+    <ProcessStep
+      number="03"
+      title="Referências e definição da arquitetura"
+      description="Benchmark manual e pesquisa com LLMs complementaram os achados internos. As necessidades identificadas orientaram uma arquitetura por domínios, com filtros flexíveis, personalização, exploração e exportação."
+    />
+    <ProcessStep
+      number="04"
+      title="Prototipação da experiência"
+      description="O trabalho passou por wireframes no Figma Design e protótipos com Figma Make e Google Antigravity. Bases de dados e interações próximas do uso real permitiram explorar a complexidade além de telas estáticas."
+    />
+    <ProcessStep
+      number="05"
+      title="Alinhamento e validação"
+      description="A proposta foi alinhada com a tribo, engenharia, dados, direção e gestão. O teste de usabilidade envolveu cinco clientes: dois grandes, dois médios e um de pequeno porte."
+    />
+    <ProcessStep
+      number="06"
+      title="Apoio à adoção e acompanhamento"
+      description="Estruturamos orientação para clientes e áreas internas, um canal de feedback e um piloto controlado. Como a instrumentação não havia sido prevista, usei o assistente de AI da ferramenta de monitoramento para criar consultas e dashboards de comportamento e performance e acompanhar a expansão."
+    />
+  </ProcessGrid>
+</ProcessSection>
+
+<ProcessImagePairs
+  title="Processo de Discovery"
+  images={[
+    {"src": "/assets/projects/ticketcase_4/discovery_analiselegado.jpeg", "alt": "Análise dos relatórios e da experiência do legado", "label": "Análise do legado"},
+    {"src": "/assets/projects/ticketcase_4/discovery_analisedemercado.jpeg", "alt": "Análise de mercado para a arquitetura de relatórios", "label": "Análise de mercado"},
+    {"src": "/assets/projects/ticketcase_4/discovery_benchmarking.jpeg", "alt": "Benchmarking de experiências de consulta e relatórios", "label": "Benchmarking"},
+    {"src": "/assets/projects/ticketcase_4/Discovery_Alinhamentoevalidacoes.jpeg", "alt": "Alinhamentos e validações da proposta de relatórios", "label": "Alinhamento e validações"},
+  ]}
+/>
+
+<ImageCompareSlider
+  title="Experiência do legado — Nova proposta"
+  beforeImageSrc="/assets/projects/ticketcase_4/tela_legado.png"
+  beforeAlt="Tela legada de relatórios do TEP"
+  beforeLabel="Legado"
+  afterImageSrc="/assets/projects/ticketcase_4/nova_proposta.png"
+  afterAlt="Nova proposta de relatórios no Portal Ticket"
+  afterLabel="Nova proposta"
+/>
+
+<ProcessImagePairs
+  title="Do wireframe ao high fidelity"
+  wireframeLabel="Wireframe"
+  finalLabel="High fidelity"
+  pairs={[
+    {
+      title: "Consulta de pedidos e documentos fiscais",
+      caption: "Da estrutura de filtros, totalizadores e tabela configurável à interface com identidade visual e status.",
+      wireframeSrc: "/assets/projects/ticketcase_4/wireframe_1.png",
+      wireframeAlt: "Wireframe da consulta de pedidos e documentos fiscais",
+      finalSrc: "/assets/projects/ticketcase_4/High_fidelity_1.png",
+      finalAlt: "High fidelity da consulta de pedidos e documentos fiscais",
+    },
+    {
+      title: "Detalhamento lateral do pedido",
+      caption: "Do painel com abas de resumo, beneficiários, taxas e cancelamentos à versão final do detalhamento.",
+      wireframeSrc: "/assets/projects/ticketcase_4/wireframe_2.png",
+      wireframeAlt: "Wireframe do painel lateral de detalhamento do pedido",
+      finalSrc: "/assets/projects/ticketcase_4/High_fidelity_2.png",
+      finalAlt: "High fidelity do painel lateral de detalhamento do pedido",
+    },
+  ]}
+/>
+
+<ProcessImagePairs
+  title="Artefatos construídos com AI"
+  images={[
+    {"src": "/assets/projects/ticketcase_4/AI_analisepadroes.jpeg", "alt": "Análise de padrões", "label": "Análise de padrões"},
+    {"src": "/assets/projects/ticketcase_4/AI_prototipo_make.png", "alt": "Prototipação com AI", "label": "Prototipação com AI"},
+    {"src": "/assets/projects/ticketcase_4/AI_FAQ.png", "alt": "FAQ com apoio de AI", "label": "FAQ com apoio de AI"},
+    {"src": "/assets/projects/ticketcase_4/AI_analise_resultados.png", "alt": "Análise de resultados", "label": "Análise de resultados"},
+    {"src": "/assets/projects/ticketcase_4/AI_apresentaçao.png", "alt": "Apresentação com apoio de AI", "label": "Apresentação com apoio de AI"},
+  ]}
+/>
+
+<ResultsSection />
+
+<LearningsSection />

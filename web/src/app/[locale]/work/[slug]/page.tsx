@@ -39,6 +39,7 @@ import { ProcessSection } from '@/components/ProcessSection';
 import { EditorialSection } from '@/components/EditorialSection';
 import { ProcessImagesCarousel } from '@/components/ProcessImagesCarousel';
 import { ImageCompareSlider } from '@/components/ImageCompareSlider';
+import { ProcessImagePairs } from '@/components/ProcessImagePairs';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const components: Record<string, (props: any) => React.JSX.Element> = {
@@ -76,6 +77,8 @@ const components: Record<string, (props: any) => React.JSX.Element> = {
     },
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     ImageCompareSlider: (props: any) => <ImageCompareSlider {...props} />,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    ProcessImagePairs: (props: any) => <ProcessImagePairs {...props} />,
 };
 
 
@@ -132,12 +135,14 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             segment={metadata.segment}
             journey={metadata.journey}
             role={metadata.role}
-            period={metadata.date}
+            period={metadata.period ?? metadata.date}
             tags={metadata.chips}
             navigation={<NavigationList locale={locale} />}
         >
             <MDXRemote
                 source={content}
+                // Repository-owned MDX uses array/object props; retain the dangerous-JS guard.
+                options={{ blockJS: false }}
                 components={enrichedComponents}
             />
         </CaseStudyLayout>

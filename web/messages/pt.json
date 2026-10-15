@@ -227,7 +227,10 @@
       "title_line1": "Landing pages e sites",
       "title_line2": "para pequenos negócios.",
       "description": "Do design ao site publicado: uma solução simples para apresentar sua empresa, divulgar um serviço e receber contatos.",
-      "cta": "Conte sobre seu projeto"
+      "cta": "Conte sobre seu projeto",
+      "preview_cta": "Explorar site",
+      "preview_link_label": "Explorar o site CMA Brasil (abre em nova aba)",
+      "preview_alt": "Página inicial do CMA Brasil, com destaque para acolhimento e acesso às reuniões."
     },
     "contact": {
       "title_main": "Entre em",

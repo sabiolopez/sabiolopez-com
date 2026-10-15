@@ -227,7 +227,10 @@
             "title_line1": "Landing pages and websites",
             "title_line2": "for small businesses.",
             "description": "From design to a published site: a simple way to present your business, promote a service and get inbound leads.",
-            "cta": "Tell me about your project"
+            "cta": "Tell me about your project",
+            "preview_cta": "Explore website",
+            "preview_link_label": "Explore the CMA Brasil website (opens in a new tab)",
+            "preview_alt": "CMA Brasil homepage featuring a welcoming message and access to meetings."
         },
         "contact": {
             "title_main": "Get in",

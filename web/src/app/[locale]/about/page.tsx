@@ -6,6 +6,7 @@ import { AboutHero } from "@/components/AboutHero";
 import { Clock, Globe, Target, GraduationCap } from "lucide-react";
 import { AboutProfileImage } from "@/components/AboutProfileImage";
 import { NavigationList } from "@/components/NavigationList";
+import { SmallBusinessSection } from "@/components/SmallBusinessSection";
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -163,6 +164,7 @@ export default async function AboutPage({
                 </div>
             </SectionWrap>
 
+            <SmallBusinessSection />
             <NavigationList locale={locale} />
             <Footer />
         </main>

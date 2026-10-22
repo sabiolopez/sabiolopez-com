@@ -3,7 +3,6 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { SectionWrap } from "@/components/SectionWrap";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
 import { NavigationList } from "@/components/NavigationList";
 
 export default async function HowIWorkPage({

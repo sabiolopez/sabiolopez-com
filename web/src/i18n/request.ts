@@ -3,7 +3,7 @@ import { routing } from './routing';
 import enMessages from '../../messages/en.json';
 import ptMessages from '../../messages/pt.json';
 
-const messagesMap: Record<string, any> = {
+const messagesMap: Record<string, typeof enMessages> = {
     en: enMessages,
     pt: ptMessages
 };

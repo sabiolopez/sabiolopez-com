@@ -1,0 +1,110 @@
+---
+id: "beyond-the-handoff"
+title: "Prototipação com IA e MCP"
+tag: "Ticket Edenred"
+date: "2026"
+order: 0
+description: "Uma prova de conceito para estudar e validar um processo de design assistido por IA com Figma, GitHub Copilot e um Design System compartilhado."
+chips: ["IA aplicada", "MCP", "Prototipação", "Design Systems"]
+cover: "/assets/projects/beyond-the-handoff/figma-mcp-copilot.webp"
+status: "published"
+segment: "Benefícios corporativos B2B"
+journey: "Prova de conceito multidisciplinar"
+role: "Senior Product Designer"
+featured: true
+context: |
+  A Engenharia da Ticket Edenred formou uma equipe com dois desenvolvedores front-end e me selecionou como designer responsável pela POC. Juntos, conduzimos o estudo e a validação do processo de design. Meu papel foi liderar a frente de Design, preparando componentes e instruções para testar como o GitHub Copilot poderia usar o contexto do Figma via MCP na criação e na alteração de interfaces.
+
+  No Design, trabalhei na estrutura que os agentes recebiam: componentes, tokens, nomenclatura de camadas, Auto Layout e comportamento responsivo. A prova de conceito também investigou como Design e Engenharia poderiam evoluir juntos o Delaunay Design System.
+
+  Com a validação e a aprovação da POC, começo uma nova etapa como referência em prototipação com IA e MCP para os designers da tribo.
+problemSection:
+  title: "Dar aos agentes contexto suficiente para prototipar"
+  description: "A integração dependia de três condições: correspondência entre Figma e código, estrutura legível para os agentes e critérios compartilhados de revisão."
+  problems:
+    - title: "Paridade entre design e código"
+      description: "Alinhar os componentes da biblioteca Figma aos componentes implementados em código, reduzindo ambiguidades e divergências."
+    - title: "Legibilidade para IA"
+      description: "Tornar a estrutura, a semântica e o comportamento responsivo das entregas compreensíveis para desenvolvedores e agentes de IA."
+    - title: "Governança compartilhada"
+      description: "Explorar critérios compartilhados para criar, validar e atualizar componentes, envolvendo Design e Engenharia desde o início."
+darkSection:
+  solutionTitle: "Do Figma ao protótipo com MCP"
+  solutionDescription: "Conectamos o Figma ao GitHub Copilot via MCP para usar o contexto de design na criação e na alteração de interfaces. O Code Connect relacionou componentes do Figma a implementações existentes. A mesma base serviu para explorar um segundo fluxo: criar, alterar e revisar componentes do Delaunay Design System com a Engenharia."
+  strategyTitle: "Diretrizes do projeto"
+  strategies:
+    - title: "Paridade antes da automação"
+      description: "Alinhar componentes de design e código antes de automatizar a implementação."
+    - title: "Estrutura legível"
+      description: "Explicitar semântica, tokens e comportamento responsivo."
+    - title: "Instruções especializadas"
+      description: "Organizar construção, auditoria e entrega para implementação em instruções reutilizáveis."
+    - title: "Revisão compartilhada"
+      description: "Envolver Design e Engenharia na revisão das alterações do sistema."
+  carouselImages:
+    - "/assets/projects/beyond-the-handoff/figma-mcp-copilot.webp"
+---
+
+<ProcessSection title="Processo de design">
+  <ProcessGrid>
+    <ProcessStep
+      number="01"
+      title="Prototipação com Figma MCP e GitHub Copilot"
+      description="Exploramos como o Copilot podia usar o contexto do Figma via MCP para compor interfaces com os componentes existentes. Minha contribuição foi preparar esse contexto de design e estruturar as instruções para os agentes."
+    />
+    <ProcessStep
+      number="02"
+      title="Reconstrução do Design System"
+      description="Para estabelecer uma base confiável, reconstruímos a biblioteca Figma do Delaunay DS com assistência de IA, usando os componentes implementados e a documentação do Storybook como referência. A intenção era reduzir o desalinhamento entre as representações do sistema antes de experimentar a automação."
+    />
+    <ProcessStep
+      number="03"
+      title="Conexão entre design e código"
+      description="Utilizamos Code Connect para relacionar componentes do Figma a seus correspondentes em código. O mapeamento buscava apoiar a reutilização de componentes existentes em vez da geração de novas implementações a partir de sua aparência."
+    />
+    <ProcessStep
+      number="04"
+      title="Design preparado para agentes"
+      description="No lado do Design, trabalhei na estruturação das entregas para facilitar seu consumo por agentes de IA: nomenclatura semântica de camadas, composição com componentes existentes, uso de tokens, Auto Layout e regras de comportamento responsivo. A qualidade visual passou a ser acompanhada da qualidade estrutural."
+    />
+    <ProcessStep
+      number="05"
+      title="Skills e orquestração"
+      description="A iniciativa organizou atividades em skills especializadas, com responsabilidades de construção, auditoria, handoff e orquestração no Design. No lado da Engenharia, o inventário incluiu contextualização do projeto, implementação a partir do Figma, regras de negócio e integração com serviços, além de orquestração. O objetivo era tornar as instruções reutilizáveis e contextualizadas, em vez de depender apenas de prompts isolados."
+    />
+    <ProcessStep
+      number="06"
+      title="Evolução compartilhada do sistema"
+      description="O escopo também contemplou a manutenção do Design System. Exploramos o uso de branches no Figma para criar e alterar componentes, com a participação de designers e desenvolvedores front-end na revisão das mudanças."
+    />
+    <ProcessStep
+      number="07"
+      title="Quatro cenários de prototipação"
+      description="Exercitamos a criação e a alteração de componentes, a criação de uma página completa e a edição de uma seção existente."
+    />
+    <ProcessStep
+      number="08"
+      title="Capacitação de designers após a validação"
+      description="Com a POC aprovada, fiquei responsável por apresentar o fluxo, treinar designers de outras equipes da tribo e ajudá-los a aplicá-lo em seus próprios projetos. Essa etapa também inclui compartilhar a abordagem com designers de outras tribos."
+    />
+  </ProcessGrid>
+</ProcessSection>
+
+<ResultsSection
+  title={"Escopo da POC"}
+  results={[
+    {"value": "10", "label": "Skills no escopo", "description": "4 desenvolvidas em Design e 6 identificadas em Engenharia."},
+    {"value": "4", "label": "Cenários testados", "description": "Criação e alteração de componentes e interfaces."},
+    {"value": "2", "label": "Fluxos explorados", "description": "Entrega de produto e evolução do sistema."},
+    {"value": "1", "label": "Design System compartilhado", "description": "Delaunay Design System, da Ticket."}
+  ]}
+/>
+
+<LearningsSection
+  title={"O que este projeto me ensinou"}
+  learnings={[
+    {"title": "A automação exige estrutura.", "description": "A qualidade de uma entrega assistida por IA depende da qualidade do contexto que o agente recebe. A automação não substitui a necessidade de componentes consistentes, regras claras e critérios de revisão."},
+    {"title": "Design tem múltiplos intérpretes.", "description": "Uma interface precisa comunicar intenção aos usuários e aos profissionais responsáveis por sua implementação. Com agentes de IA, a estrutura e a semântica do artefato tornam-se ainda mais importantes."},
+    {"title": "Design Systems são infraestrutura compartilhada.", "description": "A sustentabilidade do sistema depende tanto de suas bibliotecas quanto dos processos pelos quais Design e Engenharia colaboram para mantê-lo e evoluí-lo."}
+  ]}
+/>

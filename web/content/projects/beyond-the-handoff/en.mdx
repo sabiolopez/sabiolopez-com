@@ -1,0 +1,110 @@
+---
+id: "beyond-the-handoff"
+title: "AI Prototyping with MCP"
+tag: "Ticket Edenred"
+date: "2026"
+order: 0
+description: "A proof of concept to study and validate an AI-assisted design workflow with Figma, GitHub Copilot, and a shared design system."
+chips: ["Applied AI", "MCP", "Prototyping", "Design Systems"]
+cover: "/assets/projects/beyond-the-handoff/figma-mcp-copilot.webp"
+status: "published"
+segment: "B2B Employee Benefits"
+journey: "Cross-functional proof of concept"
+role: "Senior Product Designer"
+featured: true
+context: |
+  Engineering at Ticket Edenred formed a team with two front-end developers and selected me as the designer responsible for the POC. Together, we studied and validated the design workflow. I led the design work, preparing components and instructions to test how GitHub Copilot could use Figma context through MCP to create and edit interfaces.
+
+  My design work focused on the structure agents received: components, tokens, layer naming, Auto Layout, and responsive behavior. The proof of concept also explored how Design and Engineering could evolve the Delaunay Design System together.
+
+  With the POC validated and approved, I’m now a point of contact for designers in the tribe who want to prototype with AI and MCP.
+problemSection:
+  title: "Giving agents enough context to prototype"
+  description: "The integration depended on three conditions: correspondence between Figma and code, structure agents could interpret, and shared review criteria."
+  problems:
+    - title: "Design–Code Parity"
+      description: "Align Figma components with their code counterparts, reducing ambiguity and design-system drift."
+    - title: "AI Readability"
+      description: "Make design structure, semantic hierarchy, and responsive behavior understandable to both engineers and AI agents."
+    - title: "Shared Governance"
+      description: "Explore shared standards for creating, reviewing, and updating components, involving Design and Engineering early in the process."
+darkSection:
+  solutionTitle: "From Figma to prototype with MCP"
+  solutionDescription: "We connected Figma to GitHub Copilot through MCP to use design context when creating and editing interfaces. Code Connect mapped Figma components to existing implementations. The same foundation supported a second workflow: creating, updating, and reviewing Delaunay Design System components with Engineering."
+  strategyTitle: "Project guidelines"
+  strategies:
+    - title: "Parity before automation"
+      description: "Align design and code components before automating implementation."
+    - title: "Readable structure"
+      description: "Make semantics, tokens, and responsive behavior explicit."
+    - title: "Specialized instructions"
+      description: "Capture authoring, auditing, and handoff in reusable instructions."
+    - title: "Shared review"
+      description: "Involve Design and Engineering in reviewing changes to the system."
+  carouselImages:
+    - "/assets/projects/beyond-the-handoff/figma-mcp-copilot.webp"
+---
+
+<ProcessSection title="Design process">
+  <ProcessGrid>
+    <ProcessStep
+      number="01"
+      title="Prototyping with Figma MCP and GitHub Copilot"
+      description="We explored how Copilot could use Figma context through MCP to compose interfaces with existing components. I prepared that design context and structured instructions for agents."
+    />
+    <ProcessStep
+      number="02"
+      title="Design system reconstruction"
+      description="To establish a reliable foundation, we used AI-assisted workflows to rebuild the Delaunay DS Figma library, drawing on existing code components and Storybook documentation. The aim was to reduce discrepancies between design and code before experimenting with automation."
+    />
+    <ProcessStep
+      number="03"
+      title="Connecting design and code"
+      description="We used Code Connect to map Figma components to their code counterparts. This was intended to support the reuse of existing components rather than generating new implementations based solely on appearance."
+    />
+    <ProcessStep
+      number="04"
+      title="Designing for agents"
+      description="On the Design side, I worked on structuring deliverables for AI-assisted consumption: semantic layer naming, existing component usage, design tokens, Auto Layout, and responsive behavior. Structural quality became as important to the workflow as visual quality."
+    />
+    <ProcessStep
+      number="05"
+      title="Agent skills and orchestration"
+      description="The initiative organized recurring activities into specialized skills covering design authoring, auditing, handoff, and orchestration. The Engineering inventory also covered project context, Figma-based implementation, business rules, service integration, and orchestration. The goal was to make instructions contextual and reusable instead of relying on isolated prompts."
+    />
+    <ProcessStep
+      number="06"
+      title="Shared system evolution"
+      description="The scope expanded to design system maintenance. We explored Figma branching to create and update components, with designers and front-end engineers involved in reviewing proposed changes."
+    />
+    <ProcessStep
+      number="07"
+      title="Four prototyping scenarios"
+      description="We exercised component creation and modification, full-page creation, and editing a section of an existing page."
+    />
+    <ProcessStep
+      number="08"
+      title="Training designers after validation"
+      description="With the POC approved, I took responsibility for presenting the workflow, training designers on other teams within the tribe, and helping them apply it to their own projects. This phase also includes sharing the approach with designers in other tribes."
+    />
+  </ProcessGrid>
+</ProcessSection>
+
+<ResultsSection
+  title={"POC scope"}
+  results={[
+    {"value": "10", "label": "Skills in scope", "description": "4 developed in Design and 6 identified in Engineering."},
+    {"value": "4", "label": "Scenarios tested", "description": "Creating and modifying components and interfaces."},
+    {"value": "2", "label": "Workflows explored", "description": "Product delivery and system evolution."},
+    {"value": "1", "label": "Shared design system", "description": "Ticket’s Delaunay Design System."}
+  ]}
+/>
+
+<LearningsSection
+  title={"What this project taught me"}
+  learnings={[
+    {"title": "Automation requires structure.", "description": "The quality of AI-assisted delivery depends on the quality of the context agents receive. Automation does not replace the need for consistent components, clear rules, and review criteria."},
+    {"title": "Design has multiple interpreters.", "description": "Interfaces communicate intent to users and the people responsible for implementing them. With AI agents in the workflow, the structure and semantics of design artifacts become even more important."},
+    {"title": "Design systems are shared infrastructure.", "description": "A sustainable design system depends not only on its libraries but also on how Design and Engineering collaborate to maintain and evolve it."}
+  ]}
+/>

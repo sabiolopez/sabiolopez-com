@@ -122,6 +122,17 @@
       "competencies_label": "Competências Centrais",
       "read_more": "Saiba mais",
       "cases": {
+        "beyond-the-handoff": {
+          "tag": "Ticket Edenred",
+          "front_title": "Prototipação com IA e MCP",
+          "back_text": "Estudo e validação de um processo de design com Figma, GitHub Copilot e um Design System compartilhado.",
+          "chips": [
+            "IA aplicada",
+            "MCP",
+            "Prototipação",
+            "Design Systems"
+          ]
+        },
         "case08": {
           "tag": "Ticket Edenred",
           "front_title": "Redesenho da arquitetura de relatórios",

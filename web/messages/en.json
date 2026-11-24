@@ -122,6 +122,17 @@
             "competencies_label": "Core Competencies",
             "read_more": "Learn More",
             "cases": {
+                "beyond-the-handoff": {
+                  "tag": "Ticket Edenred",
+                  "front_title": "AI Prototyping with MCP",
+                  "back_text": "Studying and validating a design workflow with Figma, GitHub Copilot, and a shared design system.",
+                  "chips": [
+                    "Applied AI",
+                    "MCP",
+                    "Prototyping",
+                    "Design Systems"
+                  ]
+                },
                 "case08": {
                     "tag": "Ticket Edenred",
                     "front_title": "Redesigning the Reporting Architecture",
